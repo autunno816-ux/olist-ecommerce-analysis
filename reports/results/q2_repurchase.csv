@@ -1,0 +1,4 @@
+interval_bucket,sort_order,customer_count,customer_share_pct
+0–30 days,1,1416,50.55
+31–90 days,2,492,17.57
+91+ days,3,893,31.88

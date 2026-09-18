@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.duckdb
+*.duckdb.wal
+data/raw/*
+!data/raw/.gitkeep
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/

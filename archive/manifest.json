@@ -1,0 +1,90 @@
+[
+  {
+    "file": "1. sales performance.sql",
+    "sha256": "c465948d6416899573194ad44f0ac0eeb2241bc88e7277e58ac8bff726b00aa6"
+  },
+  {
+    "file": "2.customer behavior.sql",
+    "sha256": "9218ae1bcc2854850c8b9f0a6b957f781118c5d86ac69d2e3cdcd05a10567126"
+  },
+  {
+    "file": "3.delivery & customer satisfaction.sql",
+    "sha256": "0d0717311c0db997a119db6d8dccfed47d8ff445586afc2d26e43d8be6d89f27"
+  },
+  {
+    "file": "Check Data Quality.sql",
+    "sha256": "2611836c82877c746dd7ff88d554ed48aa08a4b36eab53ff89256f01d3919504"
+  },
+  {
+    "file": "Create database and constraints.sql",
+    "sha256": "8ebefe44bd487b588e3eed6e5c5889738c7607ef6990e1dd6b769ee1e375979f"
+  },
+  {
+    "file": "ERD.png",
+    "sha256": "628e74737c820c63b674052e313e3932d175082c6c3628cdec33433f6baaadc3"
+  },
+  {
+    "file": "olist_erd.pgerd",
+    "sha256": "736a796bb6807d7326ece631dd71f16a2fde08cd9bee0a396cb7b4f2c736e114"
+  },
+  {
+    "file": "Q2/amount_share_by_customer_type.png",
+    "sha256": "808dc3886e526f43673fb19129a95f86bb115a00d51ba378e346e843be5a37eb"
+  },
+  {
+    "file": "Q2/average-revenue_by customer_type.png",
+    "sha256": "370077aa52187d69372f36c728df546942c906715e1b65ba9acc703e32af3d83"
+  },
+  {
+    "file": "Q2/repurchase interval share.png",
+    "sha256": "19434a53922ee311df3855d3cae5f4ede9da5a6491c2a460890407d5f0ef7f83"
+  },
+  {
+    "file": "Q2/revenue_contribution_by_customer_class5.png",
+    "sha256": "0a710cbb75bdbd956a3a0fa99d0b016182101a72081bcd774830a46aec951076"
+  },
+  {
+    "file": "Q2/revenue_share_by_customer_type.png",
+    "sha256": "c41a014ae37863ff7dab188580eb87e895c8dd3ddd2d122b105e681de27c5b90"
+  },
+  {
+    "file": "Q2/total_revenue_by_customer_type.png",
+    "sha256": "6a691d1f3e054c59a1aa216c5ecfb834628ddf329c76dc47fd2a6fb45ec791b2"
+  },
+  {
+    "file": "Q3/share between delay and punctual order.png",
+    "sha256": "99baaea0a9503f5a9db25214efdda037aaf82d5b10c746236a61bde30d6fa109"
+  },
+  {
+    "file": "Q3/share_of_delay vs average_review_score.png",
+    "sha256": "b194e82b08b79d79a3500cf58346371c5227fc165af456ad9bc33f6ac0681f3d"
+  },
+  {
+    "file": "Q3/top10 delay delivery state.png",
+    "sha256": "ee38b58e4a8976f32a15347760f52630ed7c24e7d25ffc9c85a62ef86be22e74"
+  },
+  {
+    "file": "Q3/trend of average delivery time vs delay rate percent.png",
+    "sha256": "6a756c71cd6ddb9bb8dfd67a73c7f80d4c3d16118582a835f96047b32fcaac5c"
+  },
+  {
+    "file": "Q1/monthly order volume and sales revenue change/monthly _order_amount_change.png",
+    "sha256": "c2ccf9b1e861571a345e69d7a526d4474f846d6e2a82ab941992c50af0fd77b9"
+  },
+  {
+    "file": "Q1/monthly order volume and sales revenue change/monthly_revenue_change.png",
+    "sha256": "9d2803944ea7d90b792369f321bc9dcdf5e950745bef8f2f5a3fd18ea5d154de"
+  },
+  {
+    "file": "Q1/monthly order volume and sales revenue change/monthly_revenue_growth(17.01-18.08).png",
+    "sha256": "3d2b38f117f337f8444a96e9fbc5113cc03033b1da99a799a32578a51e2d12c3"
+  },
+  {
+    "file": "Q1/monthly order volume and sales revenue change/revenue_share_by_state.png",
+    "sha256": "109357a3571e46e0d46e15794f4d4cb24c211ffd7865c713360739085cae81c2"
+  },
+  {
+    "file": "Q1/monthly order volume and sales revenue change/top 10 revenue share by category.png",
+    "sha256": "169d12c1ee47deb4a449e759a6df2dd05dfd47906f91e02e9156868a60d69b57"
+  }
+]

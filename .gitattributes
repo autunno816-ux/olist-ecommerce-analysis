@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.py text eol=lf
+*.sql text eol=lf
+*.md text eol=lf
+*.csv text eol=lf
+*.png binary
+# Preserve the original research byte-for-byte, including original line endings.
+archive/** -text

@@ -1,0 +1,1520 @@
+{
+  "summary": {
+    "delivered_orders": 96478,
+    "purchasing_customers": 93358,
+    "revenue_brl": "13221498.11",
+    "first_delivered_purchase": "2016-09-15 12:16:38",
+    "last_delivered_purchase": "2018-08-29 15:00:37",
+    "raw_orders": 99441,
+    "first_purchase": "2016-09-04 21:15:19",
+    "last_purchase": "2018-10-17 17:30:18"
+  },
+  "tables": {
+    "q1_monthly": [
+      {
+        "month": "2017-01-01",
+        "order_count": 750,
+        "revenue_brl": "111798.36",
+        "mom_growth_pct": null
+      },
+      {
+        "month": "2017-02-01",
+        "order_count": 1653,
+        "revenue_brl": "234223.40",
+        "mom_growth_pct": 109.51
+      },
+      {
+        "month": "2017-03-01",
+        "order_count": 2546,
+        "revenue_brl": "359198.85",
+        "mom_growth_pct": 53.36
+      },
+      {
+        "month": "2017-04-01",
+        "order_count": 2303,
+        "revenue_brl": "340669.68",
+        "mom_growth_pct": -5.16
+      },
+      {
+        "month": "2017-05-01",
+        "order_count": 3546,
+        "revenue_brl": "489338.25",
+        "mom_growth_pct": 43.64
+      },
+      {
+        "month": "2017-06-01",
+        "order_count": 3135,
+        "revenue_brl": "421923.37",
+        "mom_growth_pct": -13.78
+      },
+      {
+        "month": "2017-07-01",
+        "order_count": 3872,
+        "revenue_brl": "481604.52",
+        "mom_growth_pct": 14.15
+      },
+      {
+        "month": "2017-08-01",
+        "order_count": 4193,
+        "revenue_brl": "554699.70",
+        "mom_growth_pct": 15.18
+      },
+      {
+        "month": "2017-09-01",
+        "order_count": 4150,
+        "revenue_brl": "607399.67",
+        "mom_growth_pct": 9.5
+      },
+      {
+        "month": "2017-10-01",
+        "order_count": 4478,
+        "revenue_brl": "648247.65",
+        "mom_growth_pct": 6.73
+      },
+      {
+        "month": "2017-11-01",
+        "order_count": 7289,
+        "revenue_brl": "987765.37",
+        "mom_growth_pct": 52.37
+      },
+      {
+        "month": "2017-12-01",
+        "order_count": 5513,
+        "revenue_brl": "726033.19",
+        "mom_growth_pct": -26.5
+      },
+      {
+        "month": "2018-01-01",
+        "order_count": 7069,
+        "revenue_brl": "924645.00",
+        "mom_growth_pct": 27.36
+      },
+      {
+        "month": "2018-02-01",
+        "order_count": 6555,
+        "revenue_brl": "826437.13",
+        "mom_growth_pct": -10.62
+      },
+      {
+        "month": "2018-03-01",
+        "order_count": 7003,
+        "revenue_brl": "953356.25",
+        "mom_growth_pct": 15.36
+      },
+      {
+        "month": "2018-04-01",
+        "order_count": 6798,
+        "revenue_brl": "973534.09",
+        "mom_growth_pct": 2.12
+      },
+      {
+        "month": "2018-05-01",
+        "order_count": 6749,
+        "revenue_brl": "977544.69",
+        "mom_growth_pct": 0.41
+      },
+      {
+        "month": "2018-06-01",
+        "order_count": 6099,
+        "revenue_brl": "856077.86",
+        "mom_growth_pct": -12.43
+      },
+      {
+        "month": "2018-07-01",
+        "order_count": 6159,
+        "revenue_brl": "867953.46",
+        "mom_growth_pct": 1.39
+      },
+      {
+        "month": "2018-08-01",
+        "order_count": 6351,
+        "revenue_brl": "838576.64",
+        "mom_growth_pct": -3.38
+      }
+    ],
+    "q1_states": [
+      {
+        "customer_state": "SP",
+        "order_count": 40501,
+        "revenue_brl": "5067633.16",
+        "revenue_share_pct": 38.33
+      },
+      {
+        "customer_state": "RJ",
+        "order_count": 12350,
+        "revenue_brl": "1759651.13",
+        "revenue_share_pct": 13.31
+      },
+      {
+        "customer_state": "MG",
+        "order_count": 11354,
+        "revenue_brl": "1552481.83",
+        "revenue_share_pct": 11.74
+      },
+      {
+        "customer_state": "RS",
+        "order_count": 5345,
+        "revenue_brl": "728897.47",
+        "revenue_share_pct": 5.51
+      },
+      {
+        "customer_state": "PR",
+        "order_count": 4923,
+        "revenue_brl": "666063.51",
+        "revenue_share_pct": 5.04
+      },
+      {
+        "customer_state": "SC",
+        "order_count": 3546,
+        "revenue_brl": "507012.13",
+        "revenue_share_pct": 3.83
+      },
+      {
+        "customer_state": "BA",
+        "order_count": 3256,
+        "revenue_brl": "493584.14",
+        "revenue_share_pct": 3.73
+      },
+      {
+        "customer_state": "DF",
+        "order_count": 2080,
+        "revenue_brl": "296498.41",
+        "revenue_share_pct": 2.24
+      },
+      {
+        "customer_state": "GO",
+        "order_count": 1957,
+        "revenue_brl": "282836.70",
+        "revenue_share_pct": 2.14
+      },
+      {
+        "customer_state": "ES",
+        "order_count": 1995,
+        "revenue_brl": "268643.45",
+        "revenue_share_pct": 2.03
+      },
+      {
+        "customer_state": "PE",
+        "order_count": 1593,
+        "revenue_brl": "251889.49",
+        "revenue_share_pct": 1.91
+      },
+      {
+        "customer_state": "CE",
+        "order_count": 1279,
+        "revenue_brl": "219757.38",
+        "revenue_share_pct": 1.66
+      },
+      {
+        "customer_state": "PA",
+        "order_count": 946,
+        "revenue_brl": "174470.59",
+        "revenue_share_pct": 1.32
+      },
+      {
+        "customer_state": "MT",
+        "order_count": 886,
+        "revenue_brl": "152191.62",
+        "revenue_share_pct": 1.15
+      },
+      {
+        "customer_state": "MA",
+        "order_count": 717,
+        "revenue_brl": "117009.38",
+        "revenue_share_pct": 0.88
+      },
+      {
+        "customer_state": "MS",
+        "order_count": 701,
+        "revenue_brl": "115429.97",
+        "revenue_share_pct": 0.87
+      },
+      {
+        "customer_state": "PB",
+        "order_count": 517,
+        "revenue_brl": "112586.82",
+        "revenue_share_pct": 0.85
+      },
+      {
+        "customer_state": "PI",
+        "order_count": 476,
+        "revenue_brl": "84721.00",
+        "revenue_share_pct": 0.64
+      },
+      {
+        "customer_state": "RN",
+        "order_count": 474,
+        "revenue_brl": "82105.66",
+        "revenue_share_pct": 0.62
+      },
+      {
+        "customer_state": "AL",
+        "order_count": 397,
+        "revenue_brl": "78855.72",
+        "revenue_share_pct": 0.6
+      },
+      {
+        "customer_state": "SE",
+        "order_count": 335,
+        "revenue_brl": "56574.19",
+        "revenue_share_pct": 0.43
+      },
+      {
+        "customer_state": "TO",
+        "order_count": 274,
+        "revenue_brl": "48402.51",
+        "revenue_share_pct": 0.37
+      },
+      {
+        "customer_state": "RO",
+        "order_count": 243,
+        "revenue_brl": "45682.76",
+        "revenue_share_pct": 0.35
+      },
+      {
+        "customer_state": "AM",
+        "order_count": 145,
+        "revenue_brl": "22155.84",
+        "revenue_share_pct": 0.17
+      },
+      {
+        "customer_state": "AC",
+        "order_count": 80,
+        "revenue_brl": "15930.97",
+        "revenue_share_pct": 0.12
+      },
+      {
+        "customer_state": "AP",
+        "order_count": 67,
+        "revenue_brl": "13374.81",
+        "revenue_share_pct": 0.1
+      },
+      {
+        "customer_state": "RR",
+        "order_count": 41,
+        "revenue_brl": "7057.47",
+        "revenue_share_pct": 0.05
+      }
+    ],
+    "q1_categories": [
+      {
+        "product_category": "health_beauty",
+        "revenue_brl": "1233131.72",
+        "items_sold": 9465,
+        "order_count": 8647,
+        "revenue_share_pct": 9.33
+      },
+      {
+        "product_category": "watches_gifts",
+        "revenue_brl": "1166176.98",
+        "items_sold": 5859,
+        "order_count": 5495,
+        "revenue_share_pct": 8.82
+      },
+      {
+        "product_category": "bed_bath_table",
+        "revenue_brl": "1023434.76",
+        "items_sold": 10953,
+        "order_count": 9272,
+        "revenue_share_pct": 7.74
+      },
+      {
+        "product_category": "sports_leisure",
+        "revenue_brl": "954852.55",
+        "items_sold": 8431,
+        "order_count": 7530,
+        "revenue_share_pct": 7.22
+      },
+      {
+        "product_category": "computers_accessories",
+        "revenue_brl": "888724.61",
+        "items_sold": 7644,
+        "order_count": 6530,
+        "revenue_share_pct": 6.72
+      },
+      {
+        "product_category": "furniture_decor",
+        "revenue_brl": "711927.69",
+        "items_sold": 8160,
+        "order_count": 6307,
+        "revenue_share_pct": 5.38
+      },
+      {
+        "product_category": "housewares",
+        "revenue_brl": "615628.69",
+        "items_sold": 6795,
+        "order_count": 5743,
+        "revenue_share_pct": 4.66
+      },
+      {
+        "product_category": "cool_stuff",
+        "revenue_brl": "610204.10",
+        "items_sold": 3718,
+        "order_count": 3559,
+        "revenue_share_pct": 4.62
+      },
+      {
+        "product_category": "auto",
+        "revenue_brl": "578966.65",
+        "items_sold": 4140,
+        "order_count": 3810,
+        "revenue_share_pct": 4.38
+      },
+      {
+        "product_category": "toys",
+        "revenue_brl": "471286.48",
+        "items_sold": 4030,
+        "order_count": 3804,
+        "revenue_share_pct": 3.56
+      },
+      {
+        "product_category": "garden_tools",
+        "revenue_brl": "470495.28",
+        "items_sold": 4268,
+        "order_count": 3448,
+        "revenue_share_pct": 3.56
+      },
+      {
+        "product_category": "baby",
+        "revenue_brl": "400421.84",
+        "items_sold": 2982,
+        "order_count": 2809,
+        "revenue_share_pct": 3.03
+      },
+      {
+        "product_category": "perfumery",
+        "revenue_brl": "390144.65",
+        "items_sold": 3340,
+        "order_count": 3086,
+        "revenue_share_pct": 2.95
+      },
+      {
+        "product_category": "telephony",
+        "revenue_brl": "309860.23",
+        "items_sold": 4430,
+        "order_count": 4093,
+        "revenue_share_pct": 2.34
+      },
+      {
+        "product_category": "office_furniture",
+        "revenue_brl": "268154.31",
+        "items_sold": 1668,
+        "order_count": 1254,
+        "revenue_share_pct": 2.03
+      },
+      {
+        "product_category": "stationery",
+        "revenue_brl": "223788.69",
+        "items_sold": 2466,
+        "order_count": 2264,
+        "revenue_share_pct": 1.69
+      },
+      {
+        "product_category": "computers",
+        "revenue_brl": "218684.14",
+        "items_sold": 199,
+        "order_count": 177,
+        "revenue_share_pct": 1.65
+      },
+      {
+        "product_category": "pet_shop",
+        "revenue_brl": "211695.64",
+        "items_sold": 1924,
+        "order_count": 1688,
+        "revenue_share_pct": 1.6
+      },
+      {
+        "product_category": "musical_instruments",
+        "revenue_brl": "184315.74",
+        "items_sold": 651,
+        "order_count": 611,
+        "revenue_share_pct": 1.39
+      },
+      {
+        "product_category": "small_appliances",
+        "revenue_brl": "182754.12",
+        "items_sold": 658,
+        "order_count": 609,
+        "revenue_share_pct": 1.38
+      },
+      {
+        "product_category": "unclassified",
+        "revenue_brl": "175967.21",
+        "items_sold": 1559,
+        "order_count": 1412,
+        "revenue_share_pct": 1.33
+      },
+      {
+        "product_category": "electronics",
+        "revenue_brl": "155043.93",
+        "items_sold": 2729,
+        "order_count": 2517,
+        "revenue_share_pct": 1.17
+      },
+      {
+        "product_category": "fashion_bags_accessories",
+        "revenue_brl": "149329.39",
+        "items_sold": 1985,
+        "order_count": 1820,
+        "revenue_share_pct": 1.13
+      },
+      {
+        "product_category": "consoles_games",
+        "revenue_brl": "148003.37",
+        "items_sold": 1089,
+        "order_count": 1018,
+        "revenue_share_pct": 1.12
+      },
+      {
+        "product_category": "construction_tools_construction",
+        "revenue_brl": "142108.49",
+        "items_sold": 916,
+        "order_count": 736,
+        "revenue_share_pct": 1.07
+      },
+      {
+        "product_category": "luggage_accessories",
+        "revenue_brl": "138701.63",
+        "items_sold": 1077,
+        "order_count": 1019,
+        "revenue_share_pct": 1.05
+      },
+      {
+        "product_category": "home_appliances_2",
+        "revenue_brl": "107953.95",
+        "items_sold": 231,
+        "order_count": 227,
+        "revenue_share_pct": 0.82
+      },
+      {
+        "product_category": "home_construction",
+        "revenue_brl": "81407.57",
+        "items_sold": 596,
+        "order_count": 483,
+        "revenue_share_pct": 0.62
+      },
+      {
+        "product_category": "home_appliances",
+        "revenue_brl": "78832.48",
+        "items_sold": 754,
+        "order_count": 747,
+        "revenue_share_pct": 0.6
+      },
+      {
+        "product_category": "agro_industry_and_commerce",
+        "revenue_brl": "70566.10",
+        "items_sold": 206,
+        "order_count": 177,
+        "revenue_share_pct": 0.53
+      },
+      {
+        "product_category": "furniture_living_room",
+        "revenue_brl": "67350.70",
+        "items_sold": 495,
+        "order_count": 414,
+        "revenue_share_pct": 0.51
+      },
+      {
+        "product_category": "home_confort",
+        "revenue_brl": "58008.45",
+        "items_sold": 429,
+        "order_count": 392,
+        "revenue_share_pct": 0.44
+      },
+      {
+        "product_category": "fixed_telephony",
+        "revenue_brl": "55315.21",
+        "items_sold": 255,
+        "order_count": 212,
+        "revenue_share_pct": 0.42
+      },
+      {
+        "product_category": "air_conditioning",
+        "revenue_brl": "53323.56",
+        "items_sold": 289,
+        "order_count": 246,
+        "revenue_share_pct": 0.4
+      },
+      {
+        "product_category": "audio",
+        "revenue_brl": "50570.60",
+        "items_sold": 362,
+        "order_count": 348,
+        "revenue_share_pct": 0.38
+      },
+      {
+        "product_category": "small_appliances_home_oven_and_coffee",
+        "revenue_brl": "46589.56",
+        "items_sold": 73,
+        "order_count": 72,
+        "revenue_share_pct": 0.35
+      },
+      {
+        "product_category": "kitchen_dining_laundry_garden_furniture",
+        "revenue_brl": "45531.98",
+        "items_sold": 274,
+        "order_count": 241,
+        "revenue_share_pct": 0.34
+      },
+      {
+        "product_category": "books_general_interest",
+        "revenue_brl": "45302.15",
+        "items_sold": 537,
+        "order_count": 496,
+        "revenue_share_pct": 0.34
+      },
+      {
+        "product_category": "construction_tools_lights",
+        "revenue_brl": "39957.00",
+        "items_sold": 301,
+        "order_count": 242,
+        "revenue_share_pct": 0.3
+      },
+      {
+        "product_category": "construction_tools_safety",
+        "revenue_brl": "38773.22",
+        "items_sold": 183,
+        "order_count": 159,
+        "revenue_share_pct": 0.29
+      },
+      {
+        "product_category": "industry_commerce_and_business",
+        "revenue_brl": "38498.81",
+        "items_sold": 265,
+        "order_count": 232,
+        "revenue_share_pct": 0.29
+      },
+      {
+        "product_category": "food",
+        "revenue_brl": "28731.15",
+        "items_sold": 499,
+        "order_count": 441,
+        "revenue_share_pct": 0.22
+      },
+      {
+        "product_category": "market_place",
+        "revenue_brl": "27795.77",
+        "items_sold": 305,
+        "order_count": 274,
+        "revenue_share_pct": 0.21
+      },
+      {
+        "product_category": "costruction_tools_garden",
+        "revenue_brl": "25096.28",
+        "items_sold": 232,
+        "order_count": 190,
+        "revenue_share_pct": 0.19
+      },
+      {
+        "product_category": "art",
+        "revenue_brl": "23657.30",
+        "items_sold": 197,
+        "order_count": 195,
+        "revenue_share_pct": 0.18
+      },
+      {
+        "product_category": "fashion_shoes",
+        "revenue_brl": "23001.46",
+        "items_sold": 257,
+        "order_count": 235,
+        "revenue_share_pct": 0.17
+      },
+      {
+        "product_category": "drinks",
+        "revenue_brl": "21529.84",
+        "items_sold": 361,
+        "order_count": 287,
+        "revenue_share_pct": 0.16
+      },
+      {
+        "product_category": "signaling_and_security",
+        "revenue_brl": "21315.05",
+        "items_sold": 197,
+        "order_count": 138,
+        "revenue_share_pct": 0.16
+      },
+      {
+        "product_category": "furniture_bedroom",
+        "revenue_brl": "19051.80",
+        "items_sold": 103,
+        "order_count": 90,
+        "revenue_share_pct": 0.14
+      },
+      {
+        "product_category": "books_technical",
+        "revenue_brl": "18702.23",
+        "items_sold": 263,
+        "order_count": 256,
+        "revenue_share_pct": 0.14
+      },
+      {
+        "product_category": "costruction_tools_tools",
+        "revenue_brl": "15903.95",
+        "items_sold": 103,
+        "order_count": 97,
+        "revenue_share_pct": 0.12
+      },
+      {
+        "product_category": "food_drink",
+        "revenue_brl": "14942.88",
+        "items_sold": 269,
+        "order_count": 221,
+        "revenue_share_pct": 0.11
+      },
+      {
+        "product_category": "fashion_male_clothing",
+        "revenue_brl": "10452.33",
+        "items_sold": 125,
+        "order_count": 106,
+        "revenue_share_pct": 0.08
+      },
+      {
+        "product_category": "fashion_underwear_beach",
+        "revenue_brl": "9305.95",
+        "items_sold": 127,
+        "order_count": 117,
+        "revenue_share_pct": 0.07
+      },
+      {
+        "product_category": "christmas_supplies",
+        "revenue_brl": "8737.84",
+        "items_sold": 150,
+        "order_count": 125,
+        "revenue_share_pct": 0.07
+      },
+      {
+        "product_category": "tablets_printing_image",
+        "revenue_brl": "7528.41",
+        "items_sold": 83,
+        "order_count": 79,
+        "revenue_share_pct": 0.06
+      },
+      {
+        "product_category": "cine_photo",
+        "revenue_brl": "6674.47",
+        "items_sold": 70,
+        "order_count": 63,
+        "revenue_share_pct": 0.05
+      },
+      {
+        "product_category": "music",
+        "revenue_brl": "6034.35",
+        "items_sold": 38,
+        "order_count": 38,
+        "revenue_share_pct": 0.05
+      },
+      {
+        "product_category": "dvds_blu_ray",
+        "revenue_brl": "4542.59",
+        "items_sold": 61,
+        "order_count": 56,
+        "revenue_share_pct": 0.03
+      },
+      {
+        "product_category": "party_supplies",
+        "revenue_brl": "4465.19",
+        "items_sold": 42,
+        "order_count": 38,
+        "revenue_share_pct": 0.03
+      },
+      {
+        "product_category": "books_imported",
+        "revenue_brl": "4418.86",
+        "items_sold": 57,
+        "order_count": 50,
+        "revenue_share_pct": 0.03
+      },
+      {
+        "product_category": "furniture_mattress_and_upholstery",
+        "revenue_brl": "4323.38",
+        "items_sold": 37,
+        "order_count": 37,
+        "revenue_share_pct": 0.03
+      },
+      {
+        "product_category": "fashio_female_clothing",
+        "revenue_brl": "2634.94",
+        "items_sold": 45,
+        "order_count": 36,
+        "revenue_share_pct": 0.02
+      },
+      {
+        "product_category": "fashion_sport",
+        "revenue_brl": "2094.52",
+        "items_sold": 29,
+        "order_count": 26,
+        "revenue_share_pct": 0.02
+      },
+      {
+        "product_category": "la_cuisine",
+        "revenue_brl": "2054.99",
+        "items_sold": 14,
+        "order_count": 13,
+        "revenue_share_pct": 0.02
+      },
+      {
+        "product_category": "arts_and_craftmanship",
+        "revenue_brl": "1814.01",
+        "items_sold": 24,
+        "order_count": 23,
+        "revenue_share_pct": 0.01
+      },
+      {
+        "product_category": "diapers_and_hygiene",
+        "revenue_brl": "1500.79",
+        "items_sold": 37,
+        "order_count": 25,
+        "revenue_share_pct": 0.01
+      },
+      {
+        "product_category": "flowers",
+        "revenue_brl": "1110.04",
+        "items_sold": 33,
+        "order_count": 29,
+        "revenue_share_pct": 0.01
+      },
+      {
+        "product_category": "home_comfort_2",
+        "revenue_brl": "760.27",
+        "items_sold": 30,
+        "order_count": 24,
+        "revenue_share_pct": 0.01
+      },
+      {
+        "product_category": "cds_dvds_musicals",
+        "revenue_brl": "730.00",
+        "items_sold": 14,
+        "order_count": 12,
+        "revenue_share_pct": 0.01
+      },
+      {
+        "product_category": "fashion_childrens_clothes",
+        "revenue_brl": "519.95",
+        "items_sold": 7,
+        "order_count": 7,
+        "revenue_share_pct": 0.0
+      },
+      {
+        "product_category": "security_and_services",
+        "revenue_brl": "283.29",
+        "items_sold": 2,
+        "order_count": 2,
+        "revenue_share_pct": 0.0
+      }
+    ],
+    "q2_customer_segments": [
+      {
+        "customer_type": "One-time",
+        "customer_count": 90557,
+        "order_count": 90557,
+        "revenue_brl": "12493089.36",
+        "customer_share_pct": 97.0,
+        "order_share_pct": 93.86,
+        "revenue_share_pct": 94.49,
+        "average_revenue_per_customer_brl": 137.96
+      },
+      {
+        "customer_type": "Repeat",
+        "customer_count": 2801,
+        "order_count": 5921,
+        "revenue_brl": "728408.75",
+        "customer_share_pct": 3.0,
+        "order_share_pct": 6.14,
+        "revenue_share_pct": 5.51,
+        "average_revenue_per_customer_brl": 260.05
+      }
+    ],
+    "q2_quintiles": [
+      {
+        "quintile": 1,
+        "customer_count": 18672,
+        "revenue_brl": "7486237.06",
+        "revenue_share_pct": 56.62
+      },
+      {
+        "quintile": 2,
+        "customer_count": 18672,
+        "revenue_brl": "2608832.91",
+        "revenue_share_pct": 19.73
+      },
+      {
+        "quintile": 3,
+        "customer_count": 18672,
+        "revenue_brl": "1650431.60",
+        "revenue_share_pct": 12.48
+      },
+      {
+        "quintile": 4,
+        "customer_count": 18671,
+        "revenue_brl": "998228.50",
+        "revenue_share_pct": 7.55
+      },
+      {
+        "quintile": 5,
+        "customer_count": 18671,
+        "revenue_brl": "477768.04",
+        "revenue_share_pct": 3.61
+      }
+    ],
+    "q2_repurchase": [
+      {
+        "interval_bucket": "0\u201330 days",
+        "sort_order": 1,
+        "customer_count": 1416,
+        "customer_share_pct": 50.55
+      },
+      {
+        "interval_bucket": "31\u201390 days",
+        "sort_order": 2,
+        "customer_count": 492,
+        "customer_share_pct": 17.57
+      },
+      {
+        "interval_bucket": "91+ days",
+        "sort_order": 3,
+        "customer_count": 893,
+        "customer_share_pct": 31.88
+      }
+    ],
+    "q3_overall": [
+      {
+        "order_count": 96470,
+        "average_delivery_days": 12.5,
+        "late_orders": 7826,
+        "late_rate_pct": 8.11,
+        "calendar_late_orders": 6534,
+        "calendar_late_rate_pct": 6.77
+      }
+    ],
+    "q3_states": [
+      {
+        "customer_state": "AL",
+        "order_count": 397,
+        "late_orders": 95,
+        "average_delivery_days": 24.5,
+        "late_rate_pct": 23.93
+      },
+      {
+        "customer_state": "MA",
+        "order_count": 717,
+        "late_orders": 141,
+        "average_delivery_days": 21.51,
+        "late_rate_pct": 19.67
+      },
+      {
+        "customer_state": "PI",
+        "order_count": 476,
+        "late_orders": 76,
+        "average_delivery_days": 19.39,
+        "late_rate_pct": 15.97
+      },
+      {
+        "customer_state": "CE",
+        "order_count": 1279,
+        "late_orders": 196,
+        "average_delivery_days": 21.2,
+        "late_rate_pct": 15.32
+      },
+      {
+        "customer_state": "SE",
+        "order_count": 335,
+        "late_orders": 51,
+        "average_delivery_days": 21.46,
+        "late_rate_pct": 15.22
+      },
+      {
+        "customer_state": "BA",
+        "order_count": 3256,
+        "late_orders": 457,
+        "average_delivery_days": 19.28,
+        "late_rate_pct": 14.04
+      },
+      {
+        "customer_state": "RJ",
+        "order_count": 12350,
+        "late_orders": 1664,
+        "average_delivery_days": 15.24,
+        "late_rate_pct": 13.47
+      },
+      {
+        "customer_state": "TO",
+        "order_count": 274,
+        "late_orders": 35,
+        "average_delivery_days": 17.6,
+        "late_rate_pct": 12.77
+      },
+      {
+        "customer_state": "PA",
+        "order_count": 946,
+        "late_orders": 117,
+        "average_delivery_days": 23.73,
+        "late_rate_pct": 12.37
+      },
+      {
+        "customer_state": "ES",
+        "order_count": 1995,
+        "late_orders": 244,
+        "average_delivery_days": 15.72,
+        "late_rate_pct": 12.23
+      },
+      {
+        "customer_state": "RR",
+        "order_count": 41,
+        "late_orders": 5,
+        "average_delivery_days": 29.34,
+        "late_rate_pct": 12.2
+      },
+      {
+        "customer_state": "MS",
+        "order_count": 701,
+        "late_orders": 81,
+        "average_delivery_days": 15.54,
+        "late_rate_pct": 11.55
+      },
+      {
+        "customer_state": "PB",
+        "order_count": 517,
+        "late_orders": 57,
+        "average_delivery_days": 20.39,
+        "late_rate_pct": 11.03
+      },
+      {
+        "customer_state": "PE",
+        "order_count": 1593,
+        "late_orders": 172,
+        "average_delivery_days": 18.4,
+        "late_rate_pct": 10.8
+      },
+      {
+        "customer_state": "RN",
+        "order_count": 474,
+        "late_orders": 51,
+        "average_delivery_days": 19.22,
+        "late_rate_pct": 10.76
+      },
+      {
+        "customer_state": "SC",
+        "order_count": 3546,
+        "late_orders": 346,
+        "average_delivery_days": 14.9,
+        "late_rate_pct": 9.76
+      },
+      {
+        "customer_state": "GO",
+        "order_count": 1957,
+        "late_orders": 160,
+        "average_delivery_days": 15.54,
+        "late_rate_pct": 8.18
+      },
+      {
+        "customer_state": "RS",
+        "order_count": 5344,
+        "late_orders": 382,
+        "average_delivery_days": 15.25,
+        "late_rate_pct": 7.15
+      },
+      {
+        "customer_state": "DF",
+        "order_count": 2080,
+        "late_orders": 147,
+        "average_delivery_days": 12.9,
+        "late_rate_pct": 7.07
+      },
+      {
+        "customer_state": "MT",
+        "order_count": 886,
+        "late_orders": 60,
+        "average_delivery_days": 18.0,
+        "late_rate_pct": 6.77
+      },
+      {
+        "customer_state": "SP",
+        "order_count": 40494,
+        "late_orders": 2387,
+        "average_delivery_days": 8.7,
+        "late_rate_pct": 5.89
+      },
+      {
+        "customer_state": "MG",
+        "order_count": 11354,
+        "late_orders": 637,
+        "average_delivery_days": 11.94,
+        "late_rate_pct": 5.61
+      },
+      {
+        "customer_state": "PR",
+        "order_count": 4923,
+        "late_orders": 246,
+        "average_delivery_days": 11.94,
+        "late_rate_pct": 5.0
+      },
+      {
+        "customer_state": "AP",
+        "order_count": 67,
+        "late_orders": 3,
+        "average_delivery_days": 27.18,
+        "late_rate_pct": 4.48
+      },
+      {
+        "customer_state": "AM",
+        "order_count": 145,
+        "late_orders": 6,
+        "average_delivery_days": 26.36,
+        "late_rate_pct": 4.14
+      },
+      {
+        "customer_state": "AC",
+        "order_count": 80,
+        "late_orders": 3,
+        "average_delivery_days": 21.0,
+        "late_rate_pct": 3.75
+      },
+      {
+        "customer_state": "RO",
+        "order_count": 243,
+        "late_orders": 7,
+        "average_delivery_days": 19.28,
+        "late_rate_pct": 2.88
+      }
+    ],
+    "q3_review_scores": [
+      {
+        "delivery_status": "Late",
+        "reviewed_order_count": 7661,
+        "average_review_score": 2.5665
+      },
+      {
+        "delivery_status": "On time",
+        "reviewed_order_count": 88163,
+        "average_review_score": 4.2943
+      }
+    ],
+    "q3_state_reviews": [
+      {
+        "customer_state": "AC",
+        "reviewed_order_count": 80,
+        "late_orders": 3,
+        "late_rate_pct": 3.75,
+        "average_review_score": 4.0875
+      },
+      {
+        "customer_state": "AL",
+        "reviewed_order_count": 394,
+        "late_orders": 92,
+        "late_rate_pct": 23.35,
+        "average_review_score": 3.8528
+      },
+      {
+        "customer_state": "AM",
+        "reviewed_order_count": 144,
+        "late_orders": 6,
+        "late_rate_pct": 4.17,
+        "average_review_score": 4.2431
+      },
+      {
+        "customer_state": "AP",
+        "reviewed_order_count": 66,
+        "late_orders": 3,
+        "late_rate_pct": 4.55,
+        "average_review_score": 4.2424
+      },
+      {
+        "customer_state": "BA",
+        "reviewed_order_count": 3229,
+        "late_orders": 443,
+        "late_rate_pct": 13.72,
+        "average_review_score": 3.93
+      },
+      {
+        "customer_state": "CE",
+        "reviewed_order_count": 1273,
+        "late_orders": 194,
+        "late_rate_pct": 15.24,
+        "average_review_score": 3.9419
+      },
+      {
+        "customer_state": "DF",
+        "reviewed_order_count": 2070,
+        "late_orders": 147,
+        "late_rate_pct": 7.1,
+        "average_review_score": 4.1338
+      },
+      {
+        "customer_state": "ES",
+        "reviewed_order_count": 1969,
+        "late_orders": 234,
+        "late_rate_pct": 11.88,
+        "average_review_score": 4.0797
+      },
+      {
+        "customer_state": "GO",
+        "reviewed_order_count": 1946,
+        "late_orders": 155,
+        "late_rate_pct": 7.97,
+        "average_review_score": 4.1043
+      },
+      {
+        "customer_state": "MA",
+        "reviewed_order_count": 712,
+        "late_orders": 137,
+        "late_rate_pct": 19.24,
+        "average_review_score": 3.8336
+      },
+      {
+        "customer_state": "MG",
+        "reviewed_order_count": 11285,
+        "late_orders": 622,
+        "late_rate_pct": 5.51,
+        "average_review_score": 4.1925
+      },
+      {
+        "customer_state": "MS",
+        "reviewed_order_count": 699,
+        "late_orders": 81,
+        "late_rate_pct": 11.59,
+        "average_review_score": 4.1602
+      },
+      {
+        "customer_state": "MT",
+        "reviewed_order_count": 879,
+        "late_orders": 58,
+        "late_rate_pct": 6.6,
+        "average_review_score": 4.1462
+      },
+      {
+        "customer_state": "PA",
+        "reviewed_order_count": 933,
+        "late_orders": 111,
+        "late_rate_pct": 11.9,
+        "average_review_score": 3.91
+      },
+      {
+        "customer_state": "PB",
+        "reviewed_order_count": 512,
+        "late_orders": 55,
+        "late_rate_pct": 10.74,
+        "average_review_score": 4.0762
+      },
+      {
+        "customer_state": "PE",
+        "reviewed_order_count": 1579,
+        "late_orders": 168,
+        "late_rate_pct": 10.64,
+        "average_review_score": 4.083
+      },
+      {
+        "customer_state": "PI",
+        "reviewed_order_count": 471,
+        "late_orders": 75,
+        "late_rate_pct": 15.92,
+        "average_review_score": 3.9936
+      },
+      {
+        "customer_state": "PR",
+        "reviewed_order_count": 4900,
+        "late_orders": 241,
+        "late_rate_pct": 4.92,
+        "average_review_score": 4.2396
+      },
+      {
+        "customer_state": "RJ",
+        "reviewed_order_count": 12211,
+        "late_orders": 1623,
+        "late_rate_pct": 13.29,
+        "average_review_score": 3.9651
+      },
+      {
+        "customer_state": "RN",
+        "reviewed_order_count": 471,
+        "late_orders": 50,
+        "late_rate_pct": 10.62,
+        "average_review_score": 4.1497
+      },
+      {
+        "customer_state": "RO",
+        "reviewed_order_count": 242,
+        "late_orders": 7,
+        "late_rate_pct": 2.89,
+        "average_review_score": 4.1653
+      },
+      {
+        "customer_state": "RR",
+        "reviewed_order_count": 41,
+        "late_orders": 5,
+        "late_rate_pct": 12.2,
+        "average_review_score": 3.9024
+      },
+      {
+        "customer_state": "RS",
+        "reviewed_order_count": 5326,
+        "late_orders": 378,
+        "late_rate_pct": 7.1,
+        "average_review_score": 4.1856
+      },
+      {
+        "customer_state": "SC",
+        "reviewed_order_count": 3519,
+        "late_orders": 339,
+        "late_rate_pct": 9.63,
+        "average_review_score": 4.1333
+      },
+      {
+        "customer_state": "SE",
+        "reviewed_order_count": 334,
+        "late_orders": 50,
+        "late_rate_pct": 14.97,
+        "average_review_score": 3.9072
+      },
+      {
+        "customer_state": "SP",
+        "reviewed_order_count": 40266,
+        "late_orders": 2349,
+        "late_rate_pct": 5.83,
+        "average_review_score": 4.2465
+      },
+      {
+        "customer_state": "TO",
+        "reviewed_order_count": 273,
+        "late_orders": 35,
+        "late_rate_pct": 12.82,
+        "average_review_score": 4.1538
+      }
+    ]
+  },
+  "source_manifest": [
+    {
+      "table": "customers",
+      "file": "olist_customers_dataset.csv",
+      "rows": 99441,
+      "bytes": 9033957,
+      "sha256": "983a422239e1712ded753b3bf9ecf47dc73f144d306029dcfa99e70a226883d2"
+    },
+    {
+      "table": "orders",
+      "file": "olist_orders_dataset.csv",
+      "rows": 99441,
+      "bytes": 17654914,
+      "sha256": "8df58ef3d2d7e9944010f7beecd9b75367f5588ec6e3c91cec19ae3345ef9ecf"
+    },
+    {
+      "table": "order_items",
+      "file": "olist_order_items_dataset.csv",
+      "rows": 112650,
+      "bytes": 15438671,
+      "sha256": "0bc4d068c4fe38cbb01bd90e8746e3c613fe7b4baef75fab7b0e329701c3e279"
+    },
+    {
+      "table": "order_payments",
+      "file": "olist_order_payments_dataset.csv",
+      "rows": 103886,
+      "bytes": 5777138,
+      "sha256": "4f713964f2815dbbaa40b9488268c55aac3627bfce5aa96cf58d1f3616de3cc0"
+    },
+    {
+      "table": "order_reviews",
+      "file": "olist_order_reviews_dataset.csv",
+      "rows": 99224,
+      "bytes": 14451670,
+      "sha256": "012b61c7593e34f51fa614efdf802b9c7056ce6aae5307ddb93236e7cfc797d7"
+    },
+    {
+      "table": "products",
+      "file": "olist_products_dataset.csv",
+      "rows": 32951,
+      "bytes": 2379446,
+      "sha256": "3e6569628a17fbc75fd206ee357b59e20364b9afa90f5b6cd5b4d624c58aa9cc"
+    },
+    {
+      "table": "sellers",
+      "file": "olist_sellers_dataset.csv",
+      "rows": 3095,
+      "bytes": 174703,
+      "sha256": "1f643d2b950373b85735e7794b20986f528d7a000432e7c6f9bcbb44d0846a0e"
+    },
+    {
+      "table": "geolocations",
+      "file": "olist_geolocation_dataset.csv",
+      "rows": 1000163,
+      "bytes": 61273883,
+      "sha256": "b514f6fc991b9566aeba02aa5d67e2c3630f034b60a0e05aa0d082a3b66d88d6"
+    },
+    {
+      "table": "category_name",
+      "file": "product_category_name_translation.csv",
+      "rows": 71,
+      "bytes": 2613,
+      "sha256": "a81f0d1f27b27e7293f761bc79e3ce8f348ee39c4b3ed3e49bde38f478586278"
+    }
+  ],
+  "quality_checks": [
+    {
+      "check": "orders: duplicate or null primary key",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "customers: duplicate or null primary key",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "products: duplicate or null primary key",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "sellers: duplicate or null primary key",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "category_name: duplicate or null primary key",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "order_items: duplicate composite key",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "order_items: null key component",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "order_payments: duplicate composite key",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "order_payments: null key component",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "order_reviews: duplicate composite key",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "order_reviews: null key component",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "orders.customer_id: orphan or null",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "order_items.order_id: orphan or null",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "order_items.product_id: orphan or null",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "order_items.seller_id: orphan or null",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "order_reviews.order_id: orphan or null",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "order_payments.order_id: orphan or null",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "customers: missing person identifier",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "orders: missing purchase timestamp",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "items: nonpositive or null price",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "reviews: invalid or missing score",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "delivered orders: missing items",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "products: missing category",
+      "affected_rows": 610,
+      "blocking": false
+    },
+    {
+      "check": "products: untranslated nonnull category",
+      "affected_rows": 13,
+      "blocking": false
+    },
+    {
+      "check": "products: missing physical attribute",
+      "affected_rows": 2,
+      "blocking": false
+    },
+    {
+      "check": "delivered orders: missing actual delivery",
+      "affected_rows": 8,
+      "blocking": false
+    },
+    {
+      "check": "orders: carrier before approval",
+      "affected_rows": 1359,
+      "blocking": false
+    },
+    {
+      "check": "orders: customer delivery before carrier",
+      "affected_rows": 23,
+      "blocking": false
+    },
+    {
+      "check": "orders: delivery before purchase",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check": "canceled orders: actual delivery exists",
+      "affected_rows": 6,
+      "blocking": false
+    },
+    {
+      "check": "orders with multiple reviews",
+      "affected_rows": 547,
+      "blocking": false
+    },
+    {
+      "check": "geolocations: exact duplicate rows",
+      "affected_rows": 261831,
+      "blocking": false
+    },
+    {
+      "check": "payments: zero values",
+      "affected_rows": 9,
+      "blocking": false
+    }
+  ],
+  "reconciliations": {
+    "revenue_totals_match": true
+  },
+  "duckdb_version": "1.5.5"
+}

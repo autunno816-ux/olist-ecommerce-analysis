@@ -1,0 +1,34 @@
+check,affected_rows,blocking
+orders: duplicate or null primary key,0,True
+customers: duplicate or null primary key,0,True
+products: duplicate or null primary key,0,True
+sellers: duplicate or null primary key,0,True
+category_name: duplicate or null primary key,0,True
+order_items: duplicate composite key,0,True
+order_items: null key component,0,True
+order_payments: duplicate composite key,0,True
+order_payments: null key component,0,True
+order_reviews: duplicate composite key,0,True
+order_reviews: null key component,0,True
+orders.customer_id: orphan or null,0,True
+order_items.order_id: orphan or null,0,True
+order_items.product_id: orphan or null,0,True
+order_items.seller_id: orphan or null,0,True
+order_reviews.order_id: orphan or null,0,True
+order_payments.order_id: orphan or null,0,True
+customers: missing person identifier,0,True
+orders: missing purchase timestamp,0,True
+items: nonpositive or null price,0,True
+reviews: invalid or missing score,0,True
+delivered orders: missing items,0,True
+products: missing category,610,False
+products: untranslated nonnull category,13,False
+products: missing physical attribute,2,False
+delivered orders: missing actual delivery,8,False
+orders: carrier before approval,1359,False
+orders: customer delivery before carrier,23,False
+orders: delivery before purchase,0,True
+canceled orders: actual delivery exists,6,False
+orders with multiple reviews,547,False
+geolocations: exact duplicate rows,261831,False
+payments: zero values,9,False
