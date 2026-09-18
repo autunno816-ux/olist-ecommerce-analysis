@@ -1,16 +1,16 @@
-# Q1 — Where do sales come from?
+# Sales Performance
 
 [Project overview](../README.md) · [SQL](../sql/01_sales.sql) · [Metric definitions](../docs/methodology.md)
+
+![Power BI — Sales Performance](../powerbi/previews/sales-performance.png)
+
+[Open the interactive report or PDF](../powerbi/README.md).
 
 Sales are concentrated geographically: SP contributes 38.33%, followed by RJ at 13.31% and MG at 11.74%. Together these states contribute 63.38% of delivered-order merchandise sales. The top product category, health and beauty, contributes 9.33%, suggesting less concentration at the individual category level.
 
 ## Monthly sales
 
 The monthly series covers purchase months January 2017–August 2018, filtered to orders recorded as delivered. Month-over-month change uses the previous consecutive month's merchandise value. January has no baseline in this query. The first months have a small base, and final months may be affected by incomplete follow-up of delivery outcomes.
-
-![Monthly delivered orders](figures/Q1/monthly_orders.png)
-![Monthly merchandise sales in BRL](figures/Q1/monthly_revenue.png)
-![Monthly sales growth](figures/Q1/monthly_growth.png)
 
 Evidence: [monthly results](results/q1_monthly.csv).
 
@@ -24,13 +24,9 @@ Evidence: [monthly results](results/q1_monthly.csv).
 | RS | 5345 | 728897.47 | 5.51 |
 | PR | 4923 | 666063.51 | 5.04 |
 
-![State sales shares](figures/Q1/state_revenue.png)
-
 Evidence: [all 27 states](results/q1_states.csv). States refer to the customer address, not seller origin. The denominator is all delivered-order merchandise sales across the full observed history.
 
 ## Product categories
-
-![Top 10 product categories](figures/Q1/category_revenue.png)
 
 Evidence: [all category results](results/q1_categories.csv). Shares use total sales across all categories, including unclassified products; the displayed top 10 therefore do not sum to 100%. An order containing multiple categories contributes to each relevant category's order count, so those counts are not additive.
 

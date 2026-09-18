@@ -2,9 +2,9 @@
 
 [Reviewed project](../README.md) · [Corrections and validation](../docs/validation.md)
 
-These 22 files are preserved byte-for-byte from the original project: five exploratory PostgreSQL SQL files, 15 Q1/Q2/Q3 charts, a PNG ERD and its pgAdmin source. SHA-256 hashes are recorded in [manifest.json](manifest.json).
+These 22 files are preserved byte-for-byte from the original project: five exploratory PostgreSQL SQL files, 15 sales, customer and delivery charts, a PNG ERD and its pgAdmin source. SHA-256 hashes are recorded in [manifest.json](manifest.json).
 
-**Read the reviewed research pages for current findings.** The original monthly-revenue image displays order counts; the Q2 revenue-share chart uses an order-share calculation; the Q3 state comparison stacks days and percentages; original review joins can weight orders more than once. These original artifacts document the research process and have not been silently rewritten.
+**Read the reviewed research pages for current findings.** The original monthly-revenue image displays order counts; the Customer-segment revenue-share chart uses an order-share calculation; the State delivery comparison stacks days and percentages; original review joins can weight orders more than once. These original artifacts document the research process and have not been silently rewritten.
 
 ## SQL and model
 
@@ -16,7 +16,7 @@ These 22 files are preserved byte-for-byte from the original project: five explo
 - [ERD.png](ERD.png)
 - [olist_erd.pgerd](olist_erd.pgerd)
 
-## Q1 original figures
+## Original sales figures
 
 ### monthly _order_amount_change
 
@@ -38,8 +38,7 @@ These 22 files are preserved byte-for-byte from the original project: five explo
 
 ![top 10 revenue share by category](Q1/monthly%20order%20volume%20and%20sales%20revenue%20change/top%2010%20revenue%20share%20by%20category.png)
 
-
-## Q2 original figures
+## Original customer figures
 
 ### amount_share_by_customer_type
 
@@ -65,8 +64,7 @@ These 22 files are preserved byte-for-byte from the original project: five explo
 
 ![total_revenue_by_customer_type](Q2/total_revenue_by_customer_type.png)
 
-
-## Q3 original figures
+## Original delivery figures
 
 ### share between delay and punctual order
 

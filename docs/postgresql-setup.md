@@ -42,9 +42,9 @@ Open and execute these `.sql` files in the Query Tool in this order, connected t
 | --- | --- | --- |
 | 1 | [setup/03_quality.sql](../sql/setup/03_quality.sql) | 34 data-quality checks and source row counts; raises an error on blocking issues. |
 | 2 | [00_model.sql](../sql/00_model.sql) | Order-level sales, customer summaries and review/delivery views. |
-| 3 | [01_sales.sql](../sql/01_sales.sql) | Q1 monthly sales, state shares and categories. |
-| 4 | [02_customers.sql](../sql/02_customers.sql) | Q2 repeat purchasing, spending quintiles and repurchase intervals. |
-| 5 | [03_delivery.sql](../sql/03_delivery.sql) | Q3 delivery rates and review comparisons. |
+| 3 | [01_sales.sql](../sql/01_sales.sql) | Monthly sales, state shares and categories. |
+| 4 | [02_customers.sql](../sql/02_customers.sql) | Repeat purchasing, spending quintiles and repurchase intervals. |
+| 5 | [03_delivery.sql](../sql/03_delivery.sql) | Delivery rates and review comparisons. |
 | 6 | [04_results.sql](../sql/04_results.sql) | SELECT statements to inspect each result table. |
 
 In pgAdmin, select and execute one `SELECT` at a time when a file contains several result sets. For example:

@@ -1,0 +1,696 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
+  "name": "Q2_Customers",
+  "displayName": "Customer Behaviour",
+  "displayOption": "FitToPage",
+  "width": 1600,
+  "height": 1000,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#F2F5F8'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "Q2_Customers_eyebrow",
+      "target": "Q2_Customers_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_eyebrow",
+      "target": "Q2_Customers_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_eyebrow",
+      "target": "Q2_Customers_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_eyebrow",
+      "target": "Q2_Customers_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_eyebrow",
+      "target": "Q2_Customers_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_eyebrow",
+      "target": "Q2_Customers_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_eyebrow",
+      "target": "Q2_Customers_repeat",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_eyebrow",
+      "target": "Q2_Customers_spend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_eyebrow",
+      "target": "Q2_Customers_quintiles",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_eyebrow",
+      "target": "Q2_Customers_repurchase",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_eyebrow",
+      "target": "Q2_Customers_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_heading",
+      "target": "Q2_Customers_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_heading",
+      "target": "Q2_Customers_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_heading",
+      "target": "Q2_Customers_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_heading",
+      "target": "Q2_Customers_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_heading",
+      "target": "Q2_Customers_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_heading",
+      "target": "Q2_Customers_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_heading",
+      "target": "Q2_Customers_repeat",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_heading",
+      "target": "Q2_Customers_spend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_heading",
+      "target": "Q2_Customers_quintiles",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_heading",
+      "target": "Q2_Customers_repurchase",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_heading",
+      "target": "Q2_Customers_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_subtitle",
+      "target": "Q2_Customers_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_subtitle",
+      "target": "Q2_Customers_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_subtitle",
+      "target": "Q2_Customers_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_subtitle",
+      "target": "Q2_Customers_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_subtitle",
+      "target": "Q2_Customers_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_subtitle",
+      "target": "Q2_Customers_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_subtitle",
+      "target": "Q2_Customers_repeat",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_subtitle",
+      "target": "Q2_Customers_spend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_subtitle",
+      "target": "Q2_Customers_quintiles",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_subtitle",
+      "target": "Q2_Customers_repurchase",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_subtitle",
+      "target": "Q2_Customers_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi0",
+      "target": "Q2_Customers_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi0",
+      "target": "Q2_Customers_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi0",
+      "target": "Q2_Customers_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi0",
+      "target": "Q2_Customers_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi0",
+      "target": "Q2_Customers_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi0",
+      "target": "Q2_Customers_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi0",
+      "target": "Q2_Customers_repeat",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi0",
+      "target": "Q2_Customers_spend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi0",
+      "target": "Q2_Customers_quintiles",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi0",
+      "target": "Q2_Customers_repurchase",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi0",
+      "target": "Q2_Customers_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi1",
+      "target": "Q2_Customers_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi1",
+      "target": "Q2_Customers_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi1",
+      "target": "Q2_Customers_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi1",
+      "target": "Q2_Customers_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi1",
+      "target": "Q2_Customers_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi1",
+      "target": "Q2_Customers_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi1",
+      "target": "Q2_Customers_repeat",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi1",
+      "target": "Q2_Customers_spend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi1",
+      "target": "Q2_Customers_quintiles",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi1",
+      "target": "Q2_Customers_repurchase",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi1",
+      "target": "Q2_Customers_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi2",
+      "target": "Q2_Customers_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi2",
+      "target": "Q2_Customers_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi2",
+      "target": "Q2_Customers_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi2",
+      "target": "Q2_Customers_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi2",
+      "target": "Q2_Customers_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi2",
+      "target": "Q2_Customers_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi2",
+      "target": "Q2_Customers_repeat",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi2",
+      "target": "Q2_Customers_spend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi2",
+      "target": "Q2_Customers_quintiles",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi2",
+      "target": "Q2_Customers_repurchase",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi2",
+      "target": "Q2_Customers_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi3",
+      "target": "Q2_Customers_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi3",
+      "target": "Q2_Customers_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi3",
+      "target": "Q2_Customers_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi3",
+      "target": "Q2_Customers_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi3",
+      "target": "Q2_Customers_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi3",
+      "target": "Q2_Customers_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi3",
+      "target": "Q2_Customers_repeat",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi3",
+      "target": "Q2_Customers_spend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi3",
+      "target": "Q2_Customers_quintiles",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi3",
+      "target": "Q2_Customers_repurchase",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_kpi3",
+      "target": "Q2_Customers_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repeat",
+      "target": "Q2_Customers_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repeat",
+      "target": "Q2_Customers_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repeat",
+      "target": "Q2_Customers_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repeat",
+      "target": "Q2_Customers_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repeat",
+      "target": "Q2_Customers_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repeat",
+      "target": "Q2_Customers_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repeat",
+      "target": "Q2_Customers_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repeat",
+      "target": "Q2_Customers_spend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repeat",
+      "target": "Q2_Customers_quintiles",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repeat",
+      "target": "Q2_Customers_repurchase",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repeat",
+      "target": "Q2_Customers_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_spend",
+      "target": "Q2_Customers_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_spend",
+      "target": "Q2_Customers_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_spend",
+      "target": "Q2_Customers_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_spend",
+      "target": "Q2_Customers_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_spend",
+      "target": "Q2_Customers_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_spend",
+      "target": "Q2_Customers_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_spend",
+      "target": "Q2_Customers_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_spend",
+      "target": "Q2_Customers_repeat",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_spend",
+      "target": "Q2_Customers_quintiles",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_spend",
+      "target": "Q2_Customers_repurchase",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_spend",
+      "target": "Q2_Customers_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_quintiles",
+      "target": "Q2_Customers_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_quintiles",
+      "target": "Q2_Customers_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_quintiles",
+      "target": "Q2_Customers_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_quintiles",
+      "target": "Q2_Customers_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_quintiles",
+      "target": "Q2_Customers_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_quintiles",
+      "target": "Q2_Customers_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_quintiles",
+      "target": "Q2_Customers_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_quintiles",
+      "target": "Q2_Customers_repeat",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_quintiles",
+      "target": "Q2_Customers_spend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_quintiles",
+      "target": "Q2_Customers_repurchase",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_quintiles",
+      "target": "Q2_Customers_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repurchase",
+      "target": "Q2_Customers_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repurchase",
+      "target": "Q2_Customers_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repurchase",
+      "target": "Q2_Customers_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repurchase",
+      "target": "Q2_Customers_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repurchase",
+      "target": "Q2_Customers_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repurchase",
+      "target": "Q2_Customers_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repurchase",
+      "target": "Q2_Customers_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repurchase",
+      "target": "Q2_Customers_repeat",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repurchase",
+      "target": "Q2_Customers_spend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repurchase",
+      "target": "Q2_Customers_quintiles",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_repurchase",
+      "target": "Q2_Customers_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_footer",
+      "target": "Q2_Customers_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_footer",
+      "target": "Q2_Customers_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_footer",
+      "target": "Q2_Customers_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_footer",
+      "target": "Q2_Customers_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_footer",
+      "target": "Q2_Customers_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_footer",
+      "target": "Q2_Customers_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_footer",
+      "target": "Q2_Customers_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_footer",
+      "target": "Q2_Customers_repeat",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_footer",
+      "target": "Q2_Customers_spend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_footer",
+      "target": "Q2_Customers_quintiles",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q2_Customers_footer",
+      "target": "Q2_Customers_repurchase",
+      "type": "NoFilter"
+    }
+  ]
+}

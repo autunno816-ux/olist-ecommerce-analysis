@@ -8,7 +8,7 @@ The full local dataset run on 18 September 2026 completed 33 checks across prima
 
 Delivered-order merchandise value independently recomputed from the item table is **R$13,221,498.11**. State, category, customer-segment and spending-quintile totals all reconcile to this exact amount. The order-level model contains **96,478** delivered orders and **93,358** people.
 
-The primary workflow has also been executed directly on **PostgreSQL 18.6**, including schema creation, all nine CSV imports, data-quality checks, Q1/Q2/Q3 queries and CSV export. All **10** PostgreSQL result tables match the published aggregates. The native SQL path runs **34** quality checks: the same 33 checks plus an empty-orders guard. All blocking checks returned zero affected rows.
+The primary workflow has also been executed directly on **PostgreSQL 18.6**, including schema creation, all nine CSV imports, data-quality checks, sales, customer and delivery queries and CSV export. All **10** PostgreSQL result tables match the published aggregates. The native SQL path runs **34** quality checks: the same 33 checks plus an empty-orders guard. All blocking checks returned zero affected rows.
 
 Reproduce through the [PostgreSQL guide](postgresql-setup.md). Evidence: [PostgreSQL validation record](../reports/results/postgres_validation.json), [SQL quality checks](../sql/setup/03_quality.sql), [PostgreSQL regression tests](../tests/postgres_metrics.sql), [initial 33-check results](../reports/results/data_quality.csv) and [metrics and source checksums](../reports/results/metrics.json). The source manifest and chart-generation metadata in `metrics.json` describe the earlier optional helper run; PostgreSQL verification is recorded separately.
 
@@ -33,7 +33,7 @@ Missing category labels and unmatched translations map to `unclassified`; the 13
 
 | Issue | Impact | Resolution |
 | --- | --- | --- |
-| Q2 revenue-share expression summed order counts | High: 6.14% was described as repeat-customer revenue share. | Report order share as 6.14% and money-based revenue share as 5.51%; keep separate fields and tests. |
+| Customer-segment revenue-share expression summed order counts | High: 6.14% was described as repeat-customer revenue share. | Report order share as 6.14% and money-based revenue share as 5.51%; keep separate fields and tests. |
 | Original monthly-revenue image displays an `order_count` legend and order-volume scale | High: the named revenue artifact does not establish a revenue trend. | Generate separate order-count and BRL revenue plots from the reviewed monthly result table. |
 | Original top-10 category pie | Medium: a pie normalises the displayed subset to a full circle, obscuring shares of total sales. | Use ranked bars with each category's share of all sales and an explicit denominator note. |
 | Direct join between orders and reviews | Medium: orders with multiple reviews receive extra weight; state delay rates can also be distorted. | Average reviews within order, then join one row per order. Reviewed late/on-time scores are 2.57 and 4.29. |

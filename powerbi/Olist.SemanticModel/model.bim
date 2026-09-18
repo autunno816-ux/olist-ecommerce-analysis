@@ -1,0 +1,1593 @@
+{
+  "compatibilityLevel": 1606,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"q1_categories\", \"q1_monthly\", \"q1_states\", \"q2_customer_segments\", \"q2_quintiles\", \"q2_repurchase\", \"q3_overall\", \"q3_review_scores\", \"q3_state_reviews\", \"q3_states\", \"CategoryTop10\", \"StateSalesTop10\", \"LateCountTop10\", \"LateRateTop10\", \"DeliveryDaysTop10\", \"RepeatContribution\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "q1_categories",
+        "annotations": [
+          {
+            "name": "OlistSource",
+            "value": "q1_categories.csv"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "导航"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "product_category",
+            "dataType": "string",
+            "lineageTag": "38dc800c-1f9b-46d7-bb13-886b7b2b1b61",
+            "sourceColumn": "product_category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "revenue_brl",
+            "dataType": "double",
+            "formatString": "\"R$ \"#,0.00",
+            "lineageTag": "986c56b0-26a5-4768-8f51-a2dd1c4d0ebf",
+            "sourceColumn": "revenue_brl",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "items_sold",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "85a05b6b-ee87-4707-89ae-90b93afa59f0",
+            "sourceColumn": "items_sold",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "order_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "9e848e2b-e3af-4f16-8d56-36f962855b10",
+            "sourceColumn": "order_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "revenue_share_pct",
+            "dataType": "double",
+            "formatString": "0.00\"%\"",
+            "lineageTag": "4c9710b4-c0dc-4409-aea0-610742af8045",
+            "sourceColumn": "revenue_share_pct",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "d99e9a80-930e-4858-9b7c-99a90fc1e3cf",
+        "measures": [
+          {
+            "name": "Leading category share",
+            "expression": "CALCULATE(MAX(q1_categories[revenue_share_pct]), REMOVEFILTERS(q1_categories)) / 100",
+            "formatString": "0.00%",
+            "lineageTag": "c133fa4a-691a-47de-a0de-6a036d5bc0d5"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "q1_categories",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #table(type table [product_category = nullable text, revenue_brl = nullable number, items_sold = Int64.Type, order_count = Int64.Type, revenue_share_pct = nullable number], {",
+                "    {\"health_beauty\", 1233131.72, 9465, 8647, 9.33},",
+                "    {\"watches_gifts\", 1166176.98, 5859, 5495, 8.82},",
+                "    {\"bed_bath_table\", 1023434.76, 10953, 9272, 7.74},",
+                "    {\"sports_leisure\", 954852.55, 8431, 7530, 7.22},",
+                "    {\"computers_accessories\", 888724.61, 7644, 6530, 6.72},",
+                "    {\"furniture_decor\", 711927.69, 8160, 6307, 5.38},",
+                "    {\"housewares\", 615628.69, 6795, 5743, 4.66},",
+                "    {\"cool_stuff\", 610204.10, 3718, 3559, 4.62},",
+                "    {\"auto\", 578966.65, 4140, 3810, 4.38},",
+                "    {\"toys\", 471286.48, 4030, 3804, 3.56},",
+                "    {\"garden_tools\", 470495.28, 4268, 3448, 3.56},",
+                "    {\"baby\", 400421.84, 2982, 2809, 3.03},",
+                "    {\"perfumery\", 390144.65, 3340, 3086, 2.95},",
+                "    {\"telephony\", 309860.23, 4430, 4093, 2.34},",
+                "    {\"office_furniture\", 268154.31, 1668, 1254, 2.03},",
+                "    {\"stationery\", 223788.69, 2466, 2264, 1.69},",
+                "    {\"computers\", 218684.14, 199, 177, 1.65},",
+                "    {\"pet_shop\", 211695.64, 1924, 1688, 1.60},",
+                "    {\"musical_instruments\", 184315.74, 651, 611, 1.39},",
+                "    {\"small_appliances\", 182754.12, 658, 609, 1.38},",
+                "    {\"unclassified\", 175967.21, 1559, 1412, 1.33},",
+                "    {\"electronics\", 155043.93, 2729, 2517, 1.17},",
+                "    {\"fashion_bags_accessories\", 149329.39, 1985, 1820, 1.13},",
+                "    {\"consoles_games\", 148003.37, 1089, 1018, 1.12},",
+                "    {\"construction_tools_construction\", 142108.49, 916, 736, 1.07},",
+                "    {\"luggage_accessories\", 138701.63, 1077, 1019, 1.05},",
+                "    {\"home_appliances_2\", 107953.95, 231, 227, 0.82},",
+                "    {\"home_construction\", 81407.57, 596, 483, 0.62},",
+                "    {\"home_appliances\", 78832.48, 754, 747, 0.60},",
+                "    {\"agro_industry_and_commerce\", 70566.10, 206, 177, 0.53},",
+                "    {\"furniture_living_room\", 67350.70, 495, 414, 0.51},",
+                "    {\"home_confort\", 58008.45, 429, 392, 0.44},",
+                "    {\"fixed_telephony\", 55315.21, 255, 212, 0.42},",
+                "    {\"air_conditioning\", 53323.56, 289, 246, 0.40},",
+                "    {\"audio\", 50570.60, 362, 348, 0.38},",
+                "    {\"small_appliances_home_oven_and_coffee\", 46589.56, 73, 72, 0.35},",
+                "    {\"kitchen_dining_laundry_garden_furniture\", 45531.98, 274, 241, 0.34},",
+                "    {\"books_general_interest\", 45302.15, 537, 496, 0.34},",
+                "    {\"construction_tools_lights\", 39957.00, 301, 242, 0.30},",
+                "    {\"construction_tools_safety\", 38773.22, 183, 159, 0.29},",
+                "    {\"industry_commerce_and_business\", 38498.81, 265, 232, 0.29},",
+                "    {\"food\", 28731.15, 499, 441, 0.22},",
+                "    {\"market_place\", 27795.77, 305, 274, 0.21},",
+                "    {\"costruction_tools_garden\", 25096.28, 232, 190, 0.19},",
+                "    {\"art\", 23657.30, 197, 195, 0.18},",
+                "    {\"fashion_shoes\", 23001.46, 257, 235, 0.17},",
+                "    {\"drinks\", 21529.84, 361, 287, 0.16},",
+                "    {\"signaling_and_security\", 21315.05, 197, 138, 0.16},",
+                "    {\"furniture_bedroom\", 19051.80, 103, 90, 0.14},",
+                "    {\"books_technical\", 18702.23, 263, 256, 0.14},",
+                "    {\"costruction_tools_tools\", 15903.95, 103, 97, 0.12},",
+                "    {\"food_drink\", 14942.88, 269, 221, 0.11},",
+                "    {\"fashion_male_clothing\", 10452.33, 125, 106, 0.08},",
+                "    {\"fashion_underwear_beach\", 9305.95, 127, 117, 0.07},",
+                "    {\"christmas_supplies\", 8737.84, 150, 125, 0.07},",
+                "    {\"tablets_printing_image\", 7528.41, 83, 79, 0.06},",
+                "    {\"cine_photo\", 6674.47, 70, 63, 0.05},",
+                "    {\"music\", 6034.35, 38, 38, 0.05},",
+                "    {\"dvds_blu_ray\", 4542.59, 61, 56, 0.03},",
+                "    {\"party_supplies\", 4465.19, 42, 38, 0.03},",
+                "    {\"books_imported\", 4418.86, 57, 50, 0.03},",
+                "    {\"furniture_mattress_and_upholstery\", 4323.38, 37, 37, 0.03},",
+                "    {\"fashio_female_clothing\", 2634.94, 45, 36, 0.02},",
+                "    {\"fashion_sport\", 2094.52, 29, 26, 0.02},",
+                "    {\"la_cuisine\", 2054.99, 14, 13, 0.02},",
+                "    {\"arts_and_craftmanship\", 1814.01, 24, 23, 0.01},",
+                "    {\"diapers_and_hygiene\", 1500.79, 37, 25, 0.01},",
+                "    {\"flowers\", 1110.04, 33, 29, 0.01},",
+                "    {\"home_comfort_2\", 760.27, 30, 24, 0.01},",
+                "    {\"cds_dvds_musicals\", 730.00, 14, 12, 0.01},",
+                "    {\"fashion_childrens_clothes\", 519.95, 7, 7, 0.00},",
+                "    {\"security_and_services\", 283.29, 2, 2, 0.00}",
+                "    })",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "q1_monthly",
+        "annotations": [
+          {
+            "name": "OlistSource",
+            "value": "q1_monthly.csv"
+          }
+        ],
+        "columns": [
+          {
+            "name": "month",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "MMM yy",
+            "lineageTag": "89168743-0692-4af7-8e45-3ed697e44892",
+            "sourceColumn": "month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "order_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "71ed2e26-7ee3-4f6c-bd42-d3a2993f8302",
+            "sourceColumn": "order_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "revenue_brl",
+            "dataType": "double",
+            "formatString": "\"R$ \"#,0.00",
+            "lineageTag": "06c24e90-1b9f-48bd-b560-fec6b7617bff",
+            "sourceColumn": "revenue_brl",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "mom_growth_pct",
+            "dataType": "double",
+            "formatString": "0.00\"%\"",
+            "lineageTag": "1ea5f991-86d3-438c-8b08-2aac9c56a136",
+            "sourceColumn": "mom_growth_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "type": "calculated",
+            "name": "Month label",
+            "dataType": "string",
+            "expression": "FORMAT(q1_monthly[month], \"MMM yy\", \"en-US\")",
+            "summarizeBy": "none",
+            "sortByColumn": "month"
+          }
+        ],
+        "lineageTag": "2ab25615-92b3-473d-92cb-67ce4e52cd5a",
+        "measures": [
+          {
+            "name": "Sales (BRL)",
+            "expression": "SUM('q1_monthly'[revenue_brl]) / 1000000",
+            "formatString": "\"R$ \"0.0\"m\"",
+            "lineageTag": "ef0f2bfa-f7e6-47ba-8ca4-69057d963d50"
+          },
+          {
+            "name": "Orders",
+            "expression": "SUM('q1_monthly'[order_count])",
+            "formatString": "#,0",
+            "lineageTag": "af6a9d70-f036-4698-8c6c-e1ef95343aab"
+          },
+          {
+            "name": "Growth",
+            "expression": "VAR v = SELECTEDVALUE(q1_monthly[mom_growth_pct]) RETURN IF(v>=0 && NOT ISBLANK(v),v/100)",
+            "formatString": "0.0%",
+            "lineageTag": "6cf16db2-1080-43ce-a4aa-4b25aea7b0b3"
+          },
+          {
+            "name": "Decline",
+            "expression": "VAR v = SELECTEDVALUE(q1_monthly[mom_growth_pct]) RETURN IF(v<0,v/100)",
+            "formatString": "0.0%",
+            "lineageTag": "abbdaeb5-3386-4215-b454-823a19e277cb"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "q1_monthly",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #table(type table [month = nullable date, order_count = Int64.Type, revenue_brl = nullable number, mom_growth_pct = nullable number], {",
+                "    {#date(2017,1,1), 750, 111798.36, null},",
+                "    {#date(2017,2,1), 1653, 234223.40, 109.51},",
+                "    {#date(2017,3,1), 2546, 359198.85, 53.36},",
+                "    {#date(2017,4,1), 2303, 340669.68, -5.16},",
+                "    {#date(2017,5,1), 3546, 489338.25, 43.64},",
+                "    {#date(2017,6,1), 3135, 421923.37, -13.78},",
+                "    {#date(2017,7,1), 3872, 481604.52, 14.15},",
+                "    {#date(2017,8,1), 4193, 554699.70, 15.18},",
+                "    {#date(2017,9,1), 4150, 607399.67, 9.50},",
+                "    {#date(2017,10,1), 4478, 648247.65, 6.73},",
+                "    {#date(2017,11,1), 7289, 987765.37, 52.37},",
+                "    {#date(2017,12,1), 5513, 726033.19, -26.50},",
+                "    {#date(2018,1,1), 7069, 924645.00, 27.36},",
+                "    {#date(2018,2,1), 6555, 826437.13, -10.62},",
+                "    {#date(2018,3,1), 7003, 953356.25, 15.36},",
+                "    {#date(2018,4,1), 6798, 973534.09, 2.12},",
+                "    {#date(2018,5,1), 6749, 977544.69, 0.41},",
+                "    {#date(2018,6,1), 6099, 856077.86, -12.43},",
+                "    {#date(2018,7,1), 6159, 867953.46, 1.39},",
+                "    {#date(2018,8,1), 6351, 838576.64, -3.38}",
+                "    })",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "q1_states",
+        "annotations": [
+          {
+            "name": "OlistSource",
+            "value": "q1_states.csv"
+          }
+        ],
+        "columns": [
+          {
+            "name": "customer_state",
+            "dataType": "string",
+            "lineageTag": "b0d6efc2-cfd5-4e13-acea-fd1baef1ad16",
+            "sourceColumn": "customer_state",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "order_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "32069a89-81f8-4e04-9cee-bca82e8983f1",
+            "sourceColumn": "order_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "revenue_brl",
+            "dataType": "double",
+            "formatString": "\"R$ \"#,0.00",
+            "lineageTag": "2c507be2-0019-45d2-8c3a-d88d88ce8471",
+            "sourceColumn": "revenue_brl",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "revenue_share_pct",
+            "dataType": "double",
+            "formatString": "0.00\"%\"",
+            "lineageTag": "d15e9a63-2200-46d7-9994-64f48e52c58d",
+            "sourceColumn": "revenue_share_pct",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "645c9d1a-a2a5-4493-84b5-4f6777ffce71",
+        "measures": [
+          {
+            "name": "Total sales",
+            "expression": "CALCULATE(SUM(q1_states[revenue_brl]), REMOVEFILTERS(q1_states)) / 1000000",
+            "formatString": "\"R$ \"0.00\"m\"",
+            "lineageTag": "ad745402-b17a-4f4c-bf0d-a6ee3bd3804f"
+          },
+          {
+            "name": "Delivered orders",
+            "expression": "CALCULATE(SUM(q1_states[order_count]), REMOVEFILTERS(q1_states))",
+            "formatString": "#,0",
+            "lineageTag": "56b8b0c2-dec9-47c9-8607-48c21d55d89f"
+          },
+          {
+            "name": "Top 3 state share",
+            "expression": "DIVIDE(SUMX(TOPN(3,ALL(q1_states),q1_states[revenue_brl],DESC),q1_states[revenue_brl]),CALCULATE(SUM(q1_states[revenue_brl]),REMOVEFILTERS(q1_states)))",
+            "formatString": "0.00%",
+            "lineageTag": "81b12755-5503-439d-aee7-c0786092f8e1"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "q1_states",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #table(type table [customer_state = nullable text, order_count = Int64.Type, revenue_brl = nullable number, revenue_share_pct = nullable number], {",
+                "    {\"SP\", 40501, 5067633.16, 38.33},",
+                "    {\"RJ\", 12350, 1759651.13, 13.31},",
+                "    {\"MG\", 11354, 1552481.83, 11.74},",
+                "    {\"RS\", 5345, 728897.47, 5.51},",
+                "    {\"PR\", 4923, 666063.51, 5.04},",
+                "    {\"SC\", 3546, 507012.13, 3.83},",
+                "    {\"BA\", 3256, 493584.14, 3.73},",
+                "    {\"DF\", 2080, 296498.41, 2.24},",
+                "    {\"GO\", 1957, 282836.70, 2.14},",
+                "    {\"ES\", 1995, 268643.45, 2.03},",
+                "    {\"PE\", 1593, 251889.49, 1.91},",
+                "    {\"CE\", 1279, 219757.38, 1.66},",
+                "    {\"PA\", 946, 174470.59, 1.32},",
+                "    {\"MT\", 886, 152191.62, 1.15},",
+                "    {\"MA\", 717, 117009.38, 0.88},",
+                "    {\"MS\", 701, 115429.97, 0.87},",
+                "    {\"PB\", 517, 112586.82, 0.85},",
+                "    {\"PI\", 476, 84721.00, 0.64},",
+                "    {\"RN\", 474, 82105.66, 0.62},",
+                "    {\"AL\", 397, 78855.72, 0.60},",
+                "    {\"SE\", 335, 56574.19, 0.43},",
+                "    {\"TO\", 274, 48402.51, 0.37},",
+                "    {\"RO\", 243, 45682.76, 0.35},",
+                "    {\"AM\", 145, 22155.84, 0.17},",
+                "    {\"AC\", 80, 15930.97, 0.12},",
+                "    {\"AP\", 67, 13374.81, 0.10},",
+                "    {\"RR\", 41, 7057.47, 0.05}",
+                "    })",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "q2_customer_segments",
+        "annotations": [
+          {
+            "name": "OlistSource",
+            "value": "q2_customer_segments.csv"
+          }
+        ],
+        "columns": [
+          {
+            "name": "customer_type",
+            "dataType": "string",
+            "lineageTag": "123c7f90-c829-42d8-b0b7-70f51ff79dcb",
+            "sourceColumn": "customer_type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "customer_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "2d6c4ea7-8a5b-44d6-b5f0-a28df7662181",
+            "sourceColumn": "customer_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "order_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "086ddf7f-322a-4203-8d33-7639edf6e9ca",
+            "sourceColumn": "order_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "revenue_brl",
+            "dataType": "double",
+            "formatString": "\"R$ \"#,0.00",
+            "lineageTag": "6f33127d-faf8-437b-9b2c-5fcdec658daa",
+            "sourceColumn": "revenue_brl",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "customer_share_pct",
+            "dataType": "double",
+            "formatString": "0.00\"%\"",
+            "lineageTag": "fded6487-90f6-4bf5-8dbf-2b2e2eedf2ec",
+            "sourceColumn": "customer_share_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "order_share_pct",
+            "dataType": "double",
+            "formatString": "0.00\"%\"",
+            "lineageTag": "850750b3-9574-4ad3-8e96-e4ae3274b45e",
+            "sourceColumn": "order_share_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "revenue_share_pct",
+            "dataType": "double",
+            "formatString": "0.00\"%\"",
+            "lineageTag": "b64824b6-0f2e-4791-acd7-eec78e28f459",
+            "sourceColumn": "revenue_share_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "average_revenue_per_customer_brl",
+            "dataType": "double",
+            "formatString": "\"R$ \"#,0.00",
+            "lineageTag": "aae3e62e-5a14-45a5-b30a-5dc4082929b0",
+            "sourceColumn": "average_revenue_per_customer_brl",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "ee6de7c2-493a-4f00-9975-6350ffe16877",
+        "measures": [
+          {
+            "name": "Purchasing customers",
+            "expression": "CALCULATE(SUM(q2_customer_segments[customer_count]),REMOVEFILTERS(q2_customer_segments))",
+            "formatString": "#,0",
+            "lineageTag": "caa78592-7e9f-4b71-a052-ce1dc6fa842b"
+          },
+          {
+            "name": "Repeat customers",
+            "expression": "CALCULATE(SUM(q2_customer_segments[customer_count]),q2_customer_segments[customer_type]=\"Repeat\")",
+            "formatString": "#,0",
+            "lineageTag": "475928a4-510a-4b33-920a-3606015a0a4b"
+          },
+          {
+            "name": "Repeat customer spend",
+            "expression": "CALCULATE(MAX(q2_customer_segments[average_revenue_per_customer_brl]),q2_customer_segments[customer_type]=\"Repeat\")",
+            "formatString": "\"R$ \"#,0.00",
+            "lineageTag": "596b9711-2483-4eac-8029-b60d2f02737e"
+          },
+          {
+            "name": "Spend per customer",
+            "expression": "MAX('q2_customer_segments'[average_revenue_per_customer_brl])",
+            "formatString": "\"R$ \"#,0.00",
+            "lineageTag": "1312df89-7cf3-4422-b442-05be0069550b"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "q2_customer_segments",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #table(type table [customer_type = nullable text, customer_count = Int64.Type, order_count = Int64.Type, revenue_brl = nullable number, customer_share_pct = nullable number, order_share_pct = nullable number, revenue_share_pct = nullable number, average_revenue_per_customer_brl = nullable number], {",
+                "    {\"One-time\", 90557, 90557, 12493089.36, 97.00, 93.86, 94.49, 137.96},",
+                "    {\"Repeat\", 2801, 5921, 728408.75, 3.00, 6.14, 5.51, 260.05}",
+                "    })",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "q2_quintiles",
+        "annotations": [
+          {
+            "name": "OlistSource",
+            "value": "q2_quintiles.csv"
+          }
+        ],
+        "columns": [
+          {
+            "name": "quintile",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "5cc12437-2aed-4bb9-9c73-c90427ae6742",
+            "sourceColumn": "quintile",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "customer_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "c65e2490-e644-4fe1-9c29-0e6514b14697",
+            "sourceColumn": "customer_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "revenue_brl",
+            "dataType": "double",
+            "formatString": "\"R$ \"#,0.00",
+            "lineageTag": "7c0019d4-0af4-457b-b235-8ea81ee243d7",
+            "sourceColumn": "revenue_brl",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "revenue_share_pct",
+            "dataType": "double",
+            "formatString": "0.00\"%\"",
+            "lineageTag": "62d7f0dd-59fe-4fd8-8831-137ec6b6adf7",
+            "sourceColumn": "revenue_share_pct",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "3f7874bc-4d75-494f-a54c-3e8500fe10d2",
+        "measures": [
+          {
+            "name": "Top fifth sales share",
+            "expression": "CALCULATE(MAX(q2_quintiles[revenue_share_pct]),q2_quintiles[quintile]=1)/100",
+            "formatString": "0.00%",
+            "lineageTag": "114e8080-1ce4-4758-8d1a-2438f80688de"
+          },
+          {
+            "name": "Sales share",
+            "expression": "MAX(q2_quintiles[revenue_share_pct])/100",
+            "formatString": "0.00%",
+            "lineageTag": "d69aa76e-5321-471a-98d5-9642e3d3259f"
+          },
+          {
+            "name": "Cumulative share",
+            "expression": "VAR q=MAX(q2_quintiles[quintile]) RETURN DIVIDE(CALCULATE(SUM(q2_quintiles[revenue_brl]),FILTER(ALL(q2_quintiles),q2_quintiles[quintile]<=q)),CALCULATE(SUM(q2_quintiles[revenue_brl]),REMOVEFILTERS(q2_quintiles)))",
+            "formatString": "0.00%",
+            "lineageTag": "3929eaab-765a-49d0-97c8-7cc0278da989"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "q2_quintiles",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #table(type table [quintile = Int64.Type, customer_count = Int64.Type, revenue_brl = nullable number, revenue_share_pct = nullable number], {",
+                "    {1, 18672, 7486237.06, 56.62},",
+                "    {2, 18672, 2608832.91, 19.73},",
+                "    {3, 18672, 1650431.60, 12.48},",
+                "    {4, 18671, 998228.50, 7.55},",
+                "    {5, 18671, 477768.04, 3.61}",
+                "    })",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "q2_repurchase",
+        "annotations": [
+          {
+            "name": "OlistSource",
+            "value": "q2_repurchase.csv"
+          }
+        ],
+        "columns": [
+          {
+            "name": "interval_bucket",
+            "dataType": "string",
+            "lineageTag": "6fa6af79-4620-4baa-851e-04b9ce9ab322",
+            "sortByColumn": "sort_order",
+            "sourceColumn": "interval_bucket",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "sort_order",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "c02147d2-e99a-4331-ba69-45926f0c1648",
+            "sourceColumn": "sort_order",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "customer_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "79d0390d-8cb7-413e-a831-cac948b103fc",
+            "sourceColumn": "customer_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "customer_share_pct",
+            "dataType": "double",
+            "formatString": "0.00\"%\"",
+            "lineageTag": "9d39ed72-5a53-41af-86d0-45400aa067c7",
+            "sourceColumn": "customer_share_pct",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "ff57eba5-d753-4b27-a973-0af08b81a45c",
+        "measures": [
+          {
+            "name": "Repeat customer share",
+            "expression": "MAX(q2_repurchase[customer_share_pct])/100",
+            "formatString": "0.00%",
+            "lineageTag": "44cc3c61-dcd9-49e5-8a4b-a25925518564"
+          },
+          {
+            "name": "Customers",
+            "expression": "SUM('q2_repurchase'[customer_count])",
+            "formatString": "#,0",
+            "lineageTag": "cd64e409-a047-4600-a5e2-3d8434822952"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "q2_repurchase",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #table(type table [interval_bucket = nullable text, sort_order = Int64.Type, customer_count = Int64.Type, customer_share_pct = nullable number], {",
+                "    {\"0–30 days\", 1, 1416, 50.55},",
+                "    {\"31–90 days\", 2, 492, 17.57},",
+                "    {\"91+ days\", 3, 893, 31.88}",
+                "    })",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "q3_overall",
+        "annotations": [
+          {
+            "name": "OlistSource",
+            "value": "q3_overall.csv"
+          }
+        ],
+        "columns": [
+          {
+            "name": "order_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "6e14239b-a4d6-4d65-bca1-1a5988193a80",
+            "sourceColumn": "order_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "average_delivery_days",
+            "dataType": "double",
+            "formatString": "0.00",
+            "lineageTag": "95d6c210-38c5-44e1-a315-c75ba5e41dc9",
+            "sourceColumn": "average_delivery_days",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_orders",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "46aa1ac2-a754-4be9-b2a0-d127e3733bd4",
+            "sourceColumn": "late_orders",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_rate_pct",
+            "dataType": "double",
+            "formatString": "0.00\"%\"",
+            "lineageTag": "c9ad0965-38ab-4a68-a9f6-82ef7fca5907",
+            "sourceColumn": "late_rate_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "calendar_late_orders",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "9c407946-d9f3-4f65-a9d4-dffafe135d8b",
+            "sourceColumn": "calendar_late_orders",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "calendar_late_rate_pct",
+            "dataType": "double",
+            "formatString": "0.00\"%\"",
+            "lineageTag": "c5ad0c11-3a3b-4a5a-a0fa-2c682e8cfa09",
+            "sourceColumn": "calendar_late_rate_pct",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "2fc3111c-f946-44a3-a99e-8069b695dd6a",
+        "measures": [
+          {
+            "name": "Eligible delivered orders",
+            "expression": "MAX('q3_overall'[order_count])",
+            "formatString": "#,0",
+            "lineageTag": "49805abf-3bd2-4745-a206-8b3ff283ed88"
+          },
+          {
+            "name": "Average delivery days",
+            "expression": "MAX('q3_overall'[average_delivery_days])",
+            "formatString": "0.00",
+            "lineageTag": "f6965170-2ca9-425a-a613-8401dc76e16b"
+          },
+          {
+            "name": "Timestamp late rate",
+            "expression": "MAX(q3_overall[late_rate_pct])/100",
+            "formatString": "0.00%",
+            "lineageTag": "f0f5850d-7b5a-4cd7-a0cd-7c4a60c4be00"
+          },
+          {
+            "name": "Calendar-date late rate",
+            "expression": "MAX(q3_overall[calendar_late_rate_pct])/100",
+            "formatString": "0.00%",
+            "lineageTag": "4eb76f20-5d66-41c7-b9e7-bdf13f820cc4"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "q3_overall",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #table(type table [order_count = Int64.Type, average_delivery_days = nullable number, late_orders = Int64.Type, late_rate_pct = nullable number, calendar_late_orders = Int64.Type, calendar_late_rate_pct = nullable number], {",
+                "    {96470, 12.50, 7826, 8.11, 6534, 6.77}",
+                "    })",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "q3_review_scores",
+        "annotations": [
+          {
+            "name": "OlistSource",
+            "value": "q3_review_scores.csv"
+          }
+        ],
+        "columns": [
+          {
+            "name": "delivery_status",
+            "dataType": "string",
+            "lineageTag": "f6620ed3-965e-43f6-8134-b6fe02b20e49",
+            "sourceColumn": "delivery_status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "reviewed_order_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "cccd93ad-5783-491c-a010-d68d230d479a",
+            "sourceColumn": "reviewed_order_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "average_review_score",
+            "dataType": "double",
+            "formatString": "0.00",
+            "lineageTag": "3ef86e1c-4505-4883-8883-025578de5deb",
+            "sourceColumn": "average_review_score",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "0408dbe4-614a-41a0-9b59-4c93921a283b",
+        "measures": [
+          {
+            "name": "Mean review score",
+            "expression": "MAX('q3_review_scores'[average_review_score])",
+            "formatString": "0.00",
+            "lineageTag": "0b79828f-e1d1-4a65-bcee-11c491ed87b4"
+          },
+          {
+            "name": "Reviewed orders",
+            "expression": "SUM('q3_review_scores'[reviewed_order_count])",
+            "formatString": "#,0",
+            "lineageTag": "a8b862fa-a5ce-494c-bacd-28e37d044bf0"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "q3_review_scores",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #table(type table [delivery_status = nullable text, reviewed_order_count = Int64.Type, average_review_score = nullable number], {",
+                "    {\"Late\", 7661, 2.5665},",
+                "    {\"On time\", 88163, 4.2943}",
+                "    })",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "q3_state_reviews",
+        "annotations": [
+          {
+            "name": "OlistSource",
+            "value": "q3_state_reviews.csv"
+          }
+        ],
+        "columns": [
+          {
+            "name": "customer_state",
+            "dataType": "string",
+            "lineageTag": "c46876cf-4697-4a1a-8b03-29de70d4e116",
+            "sourceColumn": "customer_state",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "reviewed_order_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "12803c2f-2689-44ed-b6fc-991a12f808b2",
+            "sourceColumn": "reviewed_order_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_orders",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "8ea13cb4-fc6d-4a3f-a1f7-8e54cb800b3e",
+            "sourceColumn": "late_orders",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_rate_pct",
+            "dataType": "double",
+            "formatString": "0.00\"%\"",
+            "lineageTag": "078519f1-9382-4f87-81ad-94c36ee3d6e7",
+            "sourceColumn": "late_rate_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "average_review_score",
+            "dataType": "double",
+            "formatString": "0.00",
+            "lineageTag": "849659d7-52f0-4453-9723-37f1d28a989c",
+            "sourceColumn": "average_review_score",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "7a84e7b4-82a3-4d4d-bfce-925343cc29e2",
+        "measures": [
+          {
+            "name": "Late rate (reviewed orders)",
+            "expression": "MAX(q3_state_reviews[late_rate_pct])/100",
+            "formatString": "0.00%",
+            "lineageTag": "b7b9b06f-b5f0-4d79-bbae-42d9cb575b5d"
+          },
+          {
+            "name": "Review score",
+            "expression": "MAX('q3_state_reviews'[average_review_score])",
+            "formatString": "0.00",
+            "lineageTag": "fda22286-99a3-4306-8f4b-371d4a519cbe"
+          },
+          {
+            "name": "Reviewed orders by state",
+            "expression": "SUM('q3_state_reviews'[reviewed_order_count])",
+            "formatString": "#,0",
+            "lineageTag": "45034922-7372-4ecc-99f0-7af88c9a1df2"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "q3_state_reviews",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #table(type table [customer_state = nullable text, reviewed_order_count = Int64.Type, late_orders = Int64.Type, late_rate_pct = nullable number, average_review_score = nullable number], {",
+                "    {\"AC\", 80, 3, 3.75, 4.0875},",
+                "    {\"AL\", 394, 92, 23.35, 3.8528},",
+                "    {\"AM\", 144, 6, 4.17, 4.2431},",
+                "    {\"AP\", 66, 3, 4.55, 4.2424},",
+                "    {\"BA\", 3229, 443, 13.72, 3.9300},",
+                "    {\"CE\", 1273, 194, 15.24, 3.9419},",
+                "    {\"DF\", 2070, 147, 7.10, 4.1338},",
+                "    {\"ES\", 1969, 234, 11.88, 4.0797},",
+                "    {\"GO\", 1946, 155, 7.97, 4.1043},",
+                "    {\"MA\", 712, 137, 19.24, 3.8336},",
+                "    {\"MG\", 11285, 622, 5.51, 4.1925},",
+                "    {\"MS\", 699, 81, 11.59, 4.1602},",
+                "    {\"MT\", 879, 58, 6.60, 4.1462},",
+                "    {\"PA\", 933, 111, 11.90, 3.9100},",
+                "    {\"PB\", 512, 55, 10.74, 4.0762},",
+                "    {\"PE\", 1579, 168, 10.64, 4.0830},",
+                "    {\"PI\", 471, 75, 15.92, 3.9936},",
+                "    {\"PR\", 4900, 241, 4.92, 4.2396},",
+                "    {\"RJ\", 12211, 1623, 13.29, 3.9651},",
+                "    {\"RN\", 471, 50, 10.62, 4.1497},",
+                "    {\"RO\", 242, 7, 2.89, 4.1653},",
+                "    {\"RR\", 41, 5, 12.20, 3.9024},",
+                "    {\"RS\", 5326, 378, 7.10, 4.1856},",
+                "    {\"SC\", 3519, 339, 9.63, 4.1333},",
+                "    {\"SE\", 334, 50, 14.97, 3.9072},",
+                "    {\"SP\", 40266, 2349, 5.83, 4.2465},",
+                "    {\"TO\", 273, 35, 12.82, 4.1538}",
+                "    })",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "q3_states",
+        "annotations": [
+          {
+            "name": "OlistSource",
+            "value": "q3_states.csv"
+          }
+        ],
+        "columns": [
+          {
+            "name": "customer_state",
+            "dataType": "string",
+            "lineageTag": "9ecdd76b-5eb0-4c92-9ab1-f0a933266cc5",
+            "sourceColumn": "customer_state",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "order_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "4eef87f9-d691-4151-ba56-11ba33f3e36a",
+            "sourceColumn": "order_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_orders",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "1661eadb-8366-44f1-8ecf-26098a2b6dd9",
+            "sourceColumn": "late_orders",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "average_delivery_days",
+            "dataType": "double",
+            "formatString": "0.00",
+            "lineageTag": "9709ec08-22ce-4a36-85df-cf2c41328328",
+            "sourceColumn": "average_delivery_days",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_rate_pct",
+            "dataType": "double",
+            "formatString": "0.00\"%\"",
+            "lineageTag": "0e23139e-6565-4642-b72e-d87ee729c046",
+            "sourceColumn": "late_rate_pct",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "b2f120d6-5bcc-4725-9272-099384ad7feb",
+        "partitions": [
+          {
+            "name": "q3_states",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #table(type table [customer_state = nullable text, order_count = Int64.Type, late_orders = Int64.Type, average_delivery_days = nullable number, late_rate_pct = nullable number], {",
+                "    {\"AL\", 397, 95, 24.50, 23.93},",
+                "    {\"MA\", 717, 141, 21.51, 19.67},",
+                "    {\"PI\", 476, 76, 19.39, 15.97},",
+                "    {\"CE\", 1279, 196, 21.20, 15.32},",
+                "    {\"SE\", 335, 51, 21.46, 15.22},",
+                "    {\"BA\", 3256, 457, 19.28, 14.04},",
+                "    {\"RJ\", 12350, 1664, 15.24, 13.47},",
+                "    {\"TO\", 274, 35, 17.60, 12.77},",
+                "    {\"PA\", 946, 117, 23.73, 12.37},",
+                "    {\"ES\", 1995, 244, 15.72, 12.23},",
+                "    {\"RR\", 41, 5, 29.34, 12.20},",
+                "    {\"MS\", 701, 81, 15.54, 11.55},",
+                "    {\"PB\", 517, 57, 20.39, 11.03},",
+                "    {\"PE\", 1593, 172, 18.40, 10.80},",
+                "    {\"RN\", 474, 51, 19.22, 10.76},",
+                "    {\"SC\", 3546, 346, 14.90, 9.76},",
+                "    {\"GO\", 1957, 160, 15.54, 8.18},",
+                "    {\"RS\", 5344, 382, 15.25, 7.15},",
+                "    {\"DF\", 2080, 147, 12.90, 7.07},",
+                "    {\"MT\", 886, 60, 18.00, 6.77},",
+                "    {\"SP\", 40494, 2387, 8.70, 5.89},",
+                "    {\"MG\", 11354, 637, 11.94, 5.61},",
+                "    {\"PR\", 4923, 246, 11.94, 5.00},",
+                "    {\"AP\", 67, 3, 27.18, 4.48},",
+                "    {\"AM\", 145, 6, 26.36, 4.14},",
+                "    {\"AC\", 80, 3, 21.00, 3.75},",
+                "    {\"RO\", 243, 7, 19.28, 2.88}",
+                "    })",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "CategoryTop10",
+        "annotations": [
+          {
+            "name": "OlistSource",
+            "value": "top10:q1_categories.csv:revenue_brl"
+          }
+        ],
+        "columns": [
+          {
+            "name": "product_category",
+            "dataType": "string",
+            "lineageTag": "4319fdf1-8ceb-4879-bc02-c297110ec56c",
+            "sourceColumn": "product_category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "revenue_brl",
+            "dataType": "double",
+            "formatString": "\"R$ \"#,0.00",
+            "lineageTag": "7b92171d-4b6a-4a97-9f0d-5ccacf7197f5",
+            "sourceColumn": "revenue_brl",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "items_sold",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "801e41e5-818e-4403-87f9-1c8dacaf2c17",
+            "sourceColumn": "items_sold",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "order_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "f62d79e2-2bc3-42fb-a4dc-c1f52d10c530",
+            "sourceColumn": "order_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "revenue_share_pct",
+            "dataType": "double",
+            "formatString": "0.00\"%\"",
+            "lineageTag": "4c375201-b0d4-4c88-b459-ed254e43eecf",
+            "sourceColumn": "revenue_share_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "type": "calculated",
+            "name": "Category label",
+            "dataType": "string",
+            "expression": "IF(CategoryTop10[product_category] = \"computers_accessories\", \"computers & acc.\", SUBSTITUTE(CategoryTop10[product_category], \"_\", \" \"))",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "9eea7199-8161-4d11-a412-7b9cce2a4734",
+        "measures": [
+          {
+            "name": "Category share of all sales",
+            "expression": "MAX('CategoryTop10'[revenue_share_pct]) / 100",
+            "formatString": "0.00%",
+            "lineageTag": "63850eff-6cbe-4d04-bec8-6dc4da83fc2c"
+          },
+          {
+            "name": "Category sales (BRL)",
+            "expression": "SUM('CategoryTop10'[revenue_brl])",
+            "formatString": "\"R$ \"#,0.00",
+            "lineageTag": "0343a14b-1a72-45ae-a964-96319124ee74"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CategoryTop10",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #table(type table [product_category = nullable text, revenue_brl = nullable number, items_sold = Int64.Type, order_count = Int64.Type, revenue_share_pct = nullable number], {",
+                "    {\"health_beauty\", 1233131.72, 9465, 8647, 9.33},",
+                "    {\"watches_gifts\", 1166176.98, 5859, 5495, 8.82},",
+                "    {\"bed_bath_table\", 1023434.76, 10953, 9272, 7.74},",
+                "    {\"sports_leisure\", 954852.55, 8431, 7530, 7.22},",
+                "    {\"computers_accessories\", 888724.61, 7644, 6530, 6.72},",
+                "    {\"furniture_decor\", 711927.69, 8160, 6307, 5.38},",
+                "    {\"housewares\", 615628.69, 6795, 5743, 4.66},",
+                "    {\"cool_stuff\", 610204.10, 3718, 3559, 4.62},",
+                "    {\"auto\", 578966.65, 4140, 3810, 4.38},",
+                "    {\"toys\", 471286.48, 4030, 3804, 3.56}",
+                "    })",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "StateSalesTop10",
+        "annotations": [
+          {
+            "name": "OlistSource",
+            "value": "top10:q1_states.csv:revenue_brl"
+          }
+        ],
+        "columns": [
+          {
+            "name": "customer_state",
+            "dataType": "string",
+            "lineageTag": "bfaaf25f-3ccf-43af-ad9c-98f27aaa0a07",
+            "sourceColumn": "customer_state",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "order_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "dcaf9b50-0acd-4496-b8e1-44a8c55dda3d",
+            "sourceColumn": "order_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "revenue_brl",
+            "dataType": "double",
+            "formatString": "\"R$ \"#,0.00",
+            "lineageTag": "fdd16c3a-094a-46a9-beb4-c67eaceb3b53",
+            "sourceColumn": "revenue_brl",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "revenue_share_pct",
+            "dataType": "double",
+            "formatString": "0.00\"%\"",
+            "lineageTag": "aa965f44-b5a5-4429-98c1-040842c94338",
+            "sourceColumn": "revenue_share_pct",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "d11ddd53-ab80-4407-b1bb-65c2a18e5968",
+        "measures": [
+          {
+            "name": "Share of all sales",
+            "expression": "MAX('StateSalesTop10'[revenue_share_pct]) / 100",
+            "formatString": "0.00%",
+            "lineageTag": "7b8be9b9-22de-4183-aca2-73a79480bb60"
+          },
+          {
+            "name": "State sales (BRL)",
+            "expression": "SUM('StateSalesTop10'[revenue_brl])",
+            "formatString": "\"R$ \"#,0.00",
+            "lineageTag": "b07c0d33-bb2e-4577-a5af-01c6d2ebd7a4"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "StateSalesTop10",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #table(type table [customer_state = nullable text, order_count = Int64.Type, revenue_brl = nullable number, revenue_share_pct = nullable number], {",
+                "    {\"SP\", 40501, 5067633.16, 38.33},",
+                "    {\"RJ\", 12350, 1759651.13, 13.31},",
+                "    {\"MG\", 11354, 1552481.83, 11.74},",
+                "    {\"RS\", 5345, 728897.47, 5.51},",
+                "    {\"PR\", 4923, 666063.51, 5.04},",
+                "    {\"SC\", 3546, 507012.13, 3.83},",
+                "    {\"BA\", 3256, 493584.14, 3.73},",
+                "    {\"DF\", 2080, 296498.41, 2.24},",
+                "    {\"GO\", 1957, 282836.70, 2.14},",
+                "    {\"ES\", 1995, 268643.45, 2.03}",
+                "    })",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LateCountTop10",
+        "annotations": [
+          {
+            "name": "OlistSource",
+            "value": "top10:q3_states.csv:late_orders"
+          }
+        ],
+        "columns": [
+          {
+            "name": "customer_state",
+            "dataType": "string",
+            "lineageTag": "3a4deaba-9957-48ca-a6d6-c5e561cdcca5",
+            "sourceColumn": "customer_state",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "order_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "d5a6344c-044a-4b2a-bcf0-b65506afbee4",
+            "sourceColumn": "order_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_orders",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "78493b17-67ce-488a-9c3e-43af0b9721dc",
+            "sourceColumn": "late_orders",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "average_delivery_days",
+            "dataType": "double",
+            "formatString": "0.00",
+            "lineageTag": "93fa177d-4b8e-423f-b9f4-3fcf01b38599",
+            "sourceColumn": "average_delivery_days",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_rate_pct",
+            "dataType": "double",
+            "formatString": "0.00\"%\"",
+            "lineageTag": "6c9ca27c-1887-44df-b138-396ba1e175bd",
+            "sourceColumn": "late_rate_pct",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "b5d34fad-0a71-4061-8e3d-8a0706f82c97",
+        "measures": [
+          {
+            "name": "Late orders",
+            "expression": "MAX('LateCountTop10'[late_orders])",
+            "formatString": "#,0",
+            "lineageTag": "18cbd824-85b6-49a9-9425-7115fd1c807c"
+          },
+          {
+            "name": "Eligible orders",
+            "expression": "SUM('LateCountTop10'[order_count])",
+            "formatString": "#,0",
+            "lineageTag": "9fb065f3-194b-4134-bce6-bce6d1728e51"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "LateCountTop10",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #table(type table [customer_state = nullable text, order_count = Int64.Type, late_orders = Int64.Type, average_delivery_days = nullable number, late_rate_pct = nullable number], {",
+                "    {\"SP\", 40494, 2387, 8.70, 5.89},",
+                "    {\"RJ\", 12350, 1664, 15.24, 13.47},",
+                "    {\"MG\", 11354, 637, 11.94, 5.61},",
+                "    {\"BA\", 3256, 457, 19.28, 14.04},",
+                "    {\"RS\", 5344, 382, 15.25, 7.15},",
+                "    {\"SC\", 3546, 346, 14.90, 9.76},",
+                "    {\"PR\", 4923, 246, 11.94, 5.00},",
+                "    {\"ES\", 1995, 244, 15.72, 12.23},",
+                "    {\"CE\", 1279, 196, 21.20, 15.32},",
+                "    {\"PE\", 1593, 172, 18.40, 10.80}",
+                "    })",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LateRateTop10",
+        "annotations": [
+          {
+            "name": "OlistSource",
+            "value": "top10:q3_states.csv:late_rate_pct"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "导航"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "customer_state",
+            "dataType": "string",
+            "lineageTag": "195bfdc1-54f7-4b0e-91de-89c0237d3232",
+            "sourceColumn": "customer_state",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "order_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "adec9bad-bc0f-4ee8-9864-c865985ff955",
+            "sourceColumn": "order_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_orders",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "5fd70655-45eb-4579-9a98-af64d48f6338",
+            "sourceColumn": "late_orders",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "average_delivery_days",
+            "dataType": "double",
+            "formatString": "0.00",
+            "lineageTag": "2b524069-c9d8-45c4-8917-a53afd6eaf62",
+            "sourceColumn": "average_delivery_days",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_rate_pct",
+            "dataType": "double",
+            "formatString": "0.00\"%\"",
+            "lineageTag": "d03a461a-2936-4204-aff1-a0396c507759",
+            "sourceColumn": "late_rate_pct",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "166185a1-35be-4a42-a7c5-c19a762ed824",
+        "measures": [
+          {
+            "name": "Late rate",
+            "expression": "MAX('LateRateTop10'[late_rate_pct])/100",
+            "formatString": "0.00%",
+            "lineageTag": "d77c3c04-56d5-4a46-9eb0-7e2c30e59ad5"
+          },
+          {
+            "name": "Eligible orders in rate ranking",
+            "expression": "SUM('LateRateTop10'[order_count])",
+            "formatString": "#,0",
+            "lineageTag": "4e71ec6e-3329-4fd9-bf5f-8bdffbfb5bf6"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "LateRateTop10",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #table(type table [customer_state = nullable text, order_count = Int64.Type, late_orders = Int64.Type, average_delivery_days = nullable number, late_rate_pct = nullable number], {",
+                "    {\"AL\", 397, 95, 24.50, 23.93},",
+                "    {\"MA\", 717, 141, 21.51, 19.67},",
+                "    {\"PI\", 476, 76, 19.39, 15.97},",
+                "    {\"CE\", 1279, 196, 21.20, 15.32},",
+                "    {\"SE\", 335, 51, 21.46, 15.22},",
+                "    {\"BA\", 3256, 457, 19.28, 14.04},",
+                "    {\"RJ\", 12350, 1664, 15.24, 13.47},",
+                "    {\"TO\", 274, 35, 17.60, 12.77},",
+                "    {\"PA\", 946, 117, 23.73, 12.37},",
+                "    {\"ES\", 1995, 244, 15.72, 12.23}",
+                "    })",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DeliveryDaysTop10",
+        "annotations": [
+          {
+            "name": "OlistSource",
+            "value": "top10:q3_states.csv:late_rate_pct"
+          }
+        ],
+        "columns": [
+          {
+            "name": "customer_state",
+            "dataType": "string",
+            "lineageTag": "2a5180d6-4a4f-40fb-8c2e-09861d8472fa",
+            "sourceColumn": "customer_state",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "order_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "fcde1ac5-5cba-4561-8dac-9187183b59ab",
+            "sourceColumn": "order_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_orders",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "1e7aabfa-4f04-436e-ba2a-69c1cbcc1960",
+            "sourceColumn": "late_orders",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "average_delivery_days",
+            "dataType": "double",
+            "formatString": "0.00",
+            "lineageTag": "8a246c11-54fb-4119-b128-d925ea9c89cf",
+            "sourceColumn": "average_delivery_days",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_rate_pct",
+            "dataType": "double",
+            "formatString": "0.00\"%\"",
+            "lineageTag": "e6957b81-3e4d-48d1-8e4a-c08b5ed35de3",
+            "sourceColumn": "late_rate_pct",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "6c0b4127-b3c2-4491-a992-3f5d49496b46",
+        "measures": [
+          {
+            "name": "Days",
+            "expression": "MAX('DeliveryDaysTop10'[average_delivery_days])",
+            "formatString": "0.00",
+            "lineageTag": "635fb265-d1f4-4b5e-9195-12f32a68ce22"
+          },
+          {
+            "name": "Eligible orders in delivery ranking",
+            "expression": "SUM('DeliveryDaysTop10'[order_count])",
+            "formatString": "#,0",
+            "lineageTag": "11c5c8f3-b7ff-4740-b79b-63daccea481f"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DeliveryDaysTop10",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #table(type table [customer_state = nullable text, order_count = Int64.Type, late_orders = Int64.Type, average_delivery_days = nullable number, late_rate_pct = nullable number], {",
+                "    {\"AL\", 397, 95, 24.50, 23.93},",
+                "    {\"MA\", 717, 141, 21.51, 19.67},",
+                "    {\"PI\", 476, 76, 19.39, 15.97},",
+                "    {\"CE\", 1279, 196, 21.20, 15.32},",
+                "    {\"SE\", 335, 51, 21.46, 15.22},",
+                "    {\"BA\", 3256, 457, 19.28, 14.04},",
+                "    {\"RJ\", 12350, 1664, 15.24, 13.47},",
+                "    {\"TO\", 274, 35, 17.60, 12.77},",
+                "    {\"PA\", 946, 117, 23.73, 12.37},",
+                "    {\"ES\", 1995, 244, 15.72, 12.23}",
+                "    })",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "RepeatContribution",
+        "annotations": [
+          {
+            "name": "OlistSource",
+            "value": "repeat_contribution:q2_customer_segments.csv"
+          }
+        ],
+        "columns": [
+          {
+            "name": "metric",
+            "dataType": "string",
+            "lineageTag": "c8a9f2be-1d4a-49eb-b325-36aed7698112",
+            "sortByColumn": "sort_order",
+            "sourceColumn": "metric",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "share",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "30e66104-9656-4fe6-bcd4-e7602a816978",
+            "sourceColumn": "share",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "sort_order",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "0b1bdf8d-2a93-44ed-9bb5-8712f25bd40a",
+            "sourceColumn": "sort_order",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "b88885a3-995b-4b72-9ea7-1aa7d013f055",
+        "measures": [
+          {
+            "name": "Repeat segment share",
+            "expression": "MAX('RepeatContribution'[share])",
+            "formatString": "0.00%",
+            "lineageTag": "31a8eea1-4169-4a58-8905-2ea26d3e087c"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "RepeatContribution",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #table(type table [metric = nullable text, share = nullable number, sort_order = Int64.Type], {",
+                "    {\"Customers\", 0.03, 1},",
+                "    {\"Orders\", 0.061399999999999996, 2},",
+                "    {\"Sales\", 0.055099999999999996, 3}",
+                "    })",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

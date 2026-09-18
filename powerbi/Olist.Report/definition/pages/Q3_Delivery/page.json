@@ -1,0 +1,816 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
+  "name": "Q3_Delivery",
+  "displayName": "Delivery & Satisfaction",
+  "displayOption": "FitToPage",
+  "width": 1600,
+  "height": 1000,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#F2F5F8'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "Q3_Delivery_eyebrow",
+      "target": "Q3_Delivery_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_eyebrow",
+      "target": "Q3_Delivery_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_eyebrow",
+      "target": "Q3_Delivery_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_eyebrow",
+      "target": "Q3_Delivery_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_eyebrow",
+      "target": "Q3_Delivery_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_eyebrow",
+      "target": "Q3_Delivery_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_eyebrow",
+      "target": "Q3_Delivery_late_count",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_eyebrow",
+      "target": "Q3_Delivery_late_rate",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_eyebrow",
+      "target": "Q3_Delivery_scores",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_eyebrow",
+      "target": "Q3_Delivery_scatter",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_eyebrow",
+      "target": "Q3_Delivery_delivery_days",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_eyebrow",
+      "target": "Q3_Delivery_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_heading",
+      "target": "Q3_Delivery_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_heading",
+      "target": "Q3_Delivery_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_heading",
+      "target": "Q3_Delivery_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_heading",
+      "target": "Q3_Delivery_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_heading",
+      "target": "Q3_Delivery_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_heading",
+      "target": "Q3_Delivery_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_heading",
+      "target": "Q3_Delivery_late_count",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_heading",
+      "target": "Q3_Delivery_late_rate",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_heading",
+      "target": "Q3_Delivery_scores",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_heading",
+      "target": "Q3_Delivery_scatter",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_heading",
+      "target": "Q3_Delivery_delivery_days",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_heading",
+      "target": "Q3_Delivery_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_subtitle",
+      "target": "Q3_Delivery_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_subtitle",
+      "target": "Q3_Delivery_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_subtitle",
+      "target": "Q3_Delivery_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_subtitle",
+      "target": "Q3_Delivery_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_subtitle",
+      "target": "Q3_Delivery_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_subtitle",
+      "target": "Q3_Delivery_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_subtitle",
+      "target": "Q3_Delivery_late_count",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_subtitle",
+      "target": "Q3_Delivery_late_rate",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_subtitle",
+      "target": "Q3_Delivery_scores",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_subtitle",
+      "target": "Q3_Delivery_scatter",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_subtitle",
+      "target": "Q3_Delivery_delivery_days",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_subtitle",
+      "target": "Q3_Delivery_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi0",
+      "target": "Q3_Delivery_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi0",
+      "target": "Q3_Delivery_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi0",
+      "target": "Q3_Delivery_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi0",
+      "target": "Q3_Delivery_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi0",
+      "target": "Q3_Delivery_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi0",
+      "target": "Q3_Delivery_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi0",
+      "target": "Q3_Delivery_late_count",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi0",
+      "target": "Q3_Delivery_late_rate",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi0",
+      "target": "Q3_Delivery_scores",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi0",
+      "target": "Q3_Delivery_scatter",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi0",
+      "target": "Q3_Delivery_delivery_days",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi0",
+      "target": "Q3_Delivery_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi1",
+      "target": "Q3_Delivery_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi1",
+      "target": "Q3_Delivery_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi1",
+      "target": "Q3_Delivery_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi1",
+      "target": "Q3_Delivery_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi1",
+      "target": "Q3_Delivery_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi1",
+      "target": "Q3_Delivery_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi1",
+      "target": "Q3_Delivery_late_count",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi1",
+      "target": "Q3_Delivery_late_rate",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi1",
+      "target": "Q3_Delivery_scores",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi1",
+      "target": "Q3_Delivery_scatter",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi1",
+      "target": "Q3_Delivery_delivery_days",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi1",
+      "target": "Q3_Delivery_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi2",
+      "target": "Q3_Delivery_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi2",
+      "target": "Q3_Delivery_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi2",
+      "target": "Q3_Delivery_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi2",
+      "target": "Q3_Delivery_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi2",
+      "target": "Q3_Delivery_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi2",
+      "target": "Q3_Delivery_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi2",
+      "target": "Q3_Delivery_late_count",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi2",
+      "target": "Q3_Delivery_late_rate",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi2",
+      "target": "Q3_Delivery_scores",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi2",
+      "target": "Q3_Delivery_scatter",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi2",
+      "target": "Q3_Delivery_delivery_days",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi2",
+      "target": "Q3_Delivery_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi3",
+      "target": "Q3_Delivery_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi3",
+      "target": "Q3_Delivery_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi3",
+      "target": "Q3_Delivery_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi3",
+      "target": "Q3_Delivery_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi3",
+      "target": "Q3_Delivery_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi3",
+      "target": "Q3_Delivery_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi3",
+      "target": "Q3_Delivery_late_count",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi3",
+      "target": "Q3_Delivery_late_rate",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi3",
+      "target": "Q3_Delivery_scores",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi3",
+      "target": "Q3_Delivery_scatter",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi3",
+      "target": "Q3_Delivery_delivery_days",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_kpi3",
+      "target": "Q3_Delivery_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_count",
+      "target": "Q3_Delivery_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_count",
+      "target": "Q3_Delivery_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_count",
+      "target": "Q3_Delivery_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_count",
+      "target": "Q3_Delivery_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_count",
+      "target": "Q3_Delivery_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_count",
+      "target": "Q3_Delivery_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_count",
+      "target": "Q3_Delivery_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_count",
+      "target": "Q3_Delivery_late_rate",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_count",
+      "target": "Q3_Delivery_scores",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_count",
+      "target": "Q3_Delivery_scatter",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_count",
+      "target": "Q3_Delivery_delivery_days",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_count",
+      "target": "Q3_Delivery_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_rate",
+      "target": "Q3_Delivery_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_rate",
+      "target": "Q3_Delivery_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_rate",
+      "target": "Q3_Delivery_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_rate",
+      "target": "Q3_Delivery_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_rate",
+      "target": "Q3_Delivery_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_rate",
+      "target": "Q3_Delivery_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_rate",
+      "target": "Q3_Delivery_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_rate",
+      "target": "Q3_Delivery_late_count",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_rate",
+      "target": "Q3_Delivery_scores",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_rate",
+      "target": "Q3_Delivery_scatter",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_rate",
+      "target": "Q3_Delivery_delivery_days",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_late_rate",
+      "target": "Q3_Delivery_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scores",
+      "target": "Q3_Delivery_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scores",
+      "target": "Q3_Delivery_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scores",
+      "target": "Q3_Delivery_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scores",
+      "target": "Q3_Delivery_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scores",
+      "target": "Q3_Delivery_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scores",
+      "target": "Q3_Delivery_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scores",
+      "target": "Q3_Delivery_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scores",
+      "target": "Q3_Delivery_late_count",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scores",
+      "target": "Q3_Delivery_late_rate",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scores",
+      "target": "Q3_Delivery_scatter",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scores",
+      "target": "Q3_Delivery_delivery_days",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scores",
+      "target": "Q3_Delivery_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scatter",
+      "target": "Q3_Delivery_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scatter",
+      "target": "Q3_Delivery_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scatter",
+      "target": "Q3_Delivery_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scatter",
+      "target": "Q3_Delivery_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scatter",
+      "target": "Q3_Delivery_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scatter",
+      "target": "Q3_Delivery_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scatter",
+      "target": "Q3_Delivery_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scatter",
+      "target": "Q3_Delivery_late_count",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scatter",
+      "target": "Q3_Delivery_late_rate",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scatter",
+      "target": "Q3_Delivery_scores",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scatter",
+      "target": "Q3_Delivery_delivery_days",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_scatter",
+      "target": "Q3_Delivery_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_delivery_days",
+      "target": "Q3_Delivery_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_delivery_days",
+      "target": "Q3_Delivery_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_delivery_days",
+      "target": "Q3_Delivery_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_delivery_days",
+      "target": "Q3_Delivery_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_delivery_days",
+      "target": "Q3_Delivery_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_delivery_days",
+      "target": "Q3_Delivery_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_delivery_days",
+      "target": "Q3_Delivery_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_delivery_days",
+      "target": "Q3_Delivery_late_count",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_delivery_days",
+      "target": "Q3_Delivery_late_rate",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_delivery_days",
+      "target": "Q3_Delivery_scores",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_delivery_days",
+      "target": "Q3_Delivery_scatter",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_delivery_days",
+      "target": "Q3_Delivery_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_footer",
+      "target": "Q3_Delivery_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_footer",
+      "target": "Q3_Delivery_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_footer",
+      "target": "Q3_Delivery_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_footer",
+      "target": "Q3_Delivery_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_footer",
+      "target": "Q3_Delivery_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_footer",
+      "target": "Q3_Delivery_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_footer",
+      "target": "Q3_Delivery_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_footer",
+      "target": "Q3_Delivery_late_count",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_footer",
+      "target": "Q3_Delivery_late_rate",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_footer",
+      "target": "Q3_Delivery_scores",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_footer",
+      "target": "Q3_Delivery_scatter",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q3_Delivery_footer",
+      "target": "Q3_Delivery_delivery_days",
+      "type": "NoFilter"
+    }
+  ]
+}

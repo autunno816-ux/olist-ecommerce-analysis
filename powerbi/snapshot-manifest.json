@@ -1,0 +1,219 @@
+{
+  "mode": "Embedded aggregate snapshot; not a live database connection",
+  "sources": [
+    {
+      "file": "q1_categories.csv",
+      "sha256": "4d3da17e6722081bf3789d4133facaf60b7c16656dcbdee8513068cb57dde8bc"
+    },
+    {
+      "file": "q1_monthly.csv",
+      "sha256": "c38fa05505c7544bc46fe9b039bb248206223ec60d7f6d572d650f3e5e396d2a"
+    },
+    {
+      "file": "q1_states.csv",
+      "sha256": "2a26c9d27435d4e8250d715cf97d97cef0bb762907753cd46bd66b32c09974ff"
+    },
+    {
+      "file": "q2_customer_segments.csv",
+      "sha256": "c030ff5cc581155bf6f632726bffc4df7c62a2ef687c1f0b5d4c0745cf0dd09f"
+    },
+    {
+      "file": "q2_quintiles.csv",
+      "sha256": "ed12649e7a553fc18be09191441f6112f0b35efa5da0a1732f9d8d2337648f74"
+    },
+    {
+      "file": "q2_repurchase.csv",
+      "sha256": "5235f4297a6db329436f6cb00c6fa3a69b8079ed73ff4c5addbc9318dc482d14"
+    },
+    {
+      "file": "q3_overall.csv",
+      "sha256": "f9302b0cb414d732f0adaaa0e2983f8ca64036e7d4bb0bffe1dab762da4ceead"
+    },
+    {
+      "file": "q3_review_scores.csv",
+      "sha256": "ebf2f2fce2fbd9d94ddbeb181cf37a36fda212d83e959f0ba9f60c2b888da686"
+    },
+    {
+      "file": "q3_state_reviews.csv",
+      "sha256": "cdf26decabc6b612db39885e972a75c7e2272b580233e4e7792d2277efac3ea8"
+    },
+    {
+      "file": "q3_states.csv",
+      "sha256": "673e7900fc206bfda37b2fa6c71209941da88995a8ab2454e0806388c8a196a7"
+    }
+  ],
+  "tables": [
+    {
+      "table": "q1_categories",
+      "recipe": "q1_categories.csv",
+      "columns": [
+        "product_category",
+        "revenue_brl",
+        "items_sold",
+        "order_count",
+        "revenue_share_pct"
+      ]
+    },
+    {
+      "table": "q1_monthly",
+      "recipe": "q1_monthly.csv",
+      "columns": [
+        "month",
+        "order_count",
+        "revenue_brl",
+        "mom_growth_pct"
+      ]
+    },
+    {
+      "table": "q1_states",
+      "recipe": "q1_states.csv",
+      "columns": [
+        "customer_state",
+        "order_count",
+        "revenue_brl",
+        "revenue_share_pct"
+      ]
+    },
+    {
+      "table": "q2_customer_segments",
+      "recipe": "q2_customer_segments.csv",
+      "columns": [
+        "customer_type",
+        "customer_count",
+        "order_count",
+        "revenue_brl",
+        "customer_share_pct",
+        "order_share_pct",
+        "revenue_share_pct",
+        "average_revenue_per_customer_brl"
+      ]
+    },
+    {
+      "table": "q2_quintiles",
+      "recipe": "q2_quintiles.csv",
+      "columns": [
+        "quintile",
+        "customer_count",
+        "revenue_brl",
+        "revenue_share_pct"
+      ]
+    },
+    {
+      "table": "q2_repurchase",
+      "recipe": "q2_repurchase.csv",
+      "columns": [
+        "interval_bucket",
+        "sort_order",
+        "customer_count",
+        "customer_share_pct"
+      ]
+    },
+    {
+      "table": "q3_overall",
+      "recipe": "q3_overall.csv",
+      "columns": [
+        "order_count",
+        "average_delivery_days",
+        "late_orders",
+        "late_rate_pct",
+        "calendar_late_orders",
+        "calendar_late_rate_pct"
+      ]
+    },
+    {
+      "table": "q3_review_scores",
+      "recipe": "q3_review_scores.csv",
+      "columns": [
+        "delivery_status",
+        "reviewed_order_count",
+        "average_review_score"
+      ]
+    },
+    {
+      "table": "q3_state_reviews",
+      "recipe": "q3_state_reviews.csv",
+      "columns": [
+        "customer_state",
+        "reviewed_order_count",
+        "late_orders",
+        "late_rate_pct",
+        "average_review_score"
+      ]
+    },
+    {
+      "table": "q3_states",
+      "recipe": "q3_states.csv",
+      "columns": [
+        "customer_state",
+        "order_count",
+        "late_orders",
+        "average_delivery_days",
+        "late_rate_pct"
+      ]
+    },
+    {
+      "table": "CategoryTop10",
+      "recipe": "top10:q1_categories.csv:revenue_brl",
+      "columns": [
+        "product_category",
+        "revenue_brl",
+        "items_sold",
+        "order_count",
+        "revenue_share_pct"
+      ]
+    },
+    {
+      "table": "StateSalesTop10",
+      "recipe": "top10:q1_states.csv:revenue_brl",
+      "columns": [
+        "customer_state",
+        "order_count",
+        "revenue_brl",
+        "revenue_share_pct"
+      ]
+    },
+    {
+      "table": "LateCountTop10",
+      "recipe": "top10:q3_states.csv:late_orders",
+      "columns": [
+        "customer_state",
+        "order_count",
+        "late_orders",
+        "average_delivery_days",
+        "late_rate_pct"
+      ]
+    },
+    {
+      "table": "LateRateTop10",
+      "recipe": "top10:q3_states.csv:late_rate_pct",
+      "columns": [
+        "customer_state",
+        "order_count",
+        "late_orders",
+        "average_delivery_days",
+        "late_rate_pct"
+      ]
+    },
+    {
+      "table": "DeliveryDaysTop10",
+      "recipe": "top10:q3_states.csv:late_rate_pct",
+      "columns": [
+        "customer_state",
+        "order_count",
+        "late_orders",
+        "average_delivery_days",
+        "late_rate_pct"
+      ]
+    },
+    {
+      "table": "RepeatContribution",
+      "recipe": "repeat_contribution:q2_customer_segments.csv",
+      "columns": [
+        "metric",
+        "share",
+        "sort_order"
+      ]
+    }
+  ],
+  "cross_visual_interactions": "Disabled: source aggregates have different grains. Native hover, sort and focus remain available."
+}

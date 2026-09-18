@@ -2,11 +2,21 @@
 
 **Three business questions, answered with SQL: where sales come from, who returns, and how delivery relates to customer reviews.**
 
-[Q1: Sales](reports/Q1-sales.md) · [Q2: Customers](reports/Q2-customers.md) · [Q3: Delivery](reports/Q3-delivery.md) · [Methodology](docs/methodology.md)
+[Power BI report](powerbi/README.md) · [Sales Performance](reports/sales-performance.md) · [Customer Behaviour](reports/customer-behaviour.md) · [Delivery & Satisfaction](reports/delivery-satisfaction.md) · [Methodology](docs/methodology.md)
 
 This portfolio project analyses the Brazilian e-commerce dataset published by Olist. It starts with a relational model and data-quality checks, then uses joins, CTEs and window functions to investigate sales concentration, repeat purchasing and delivery performance.
 
-This is a **PostgreSQL / pgAdmin SQL project**. The workflow covers relational modelling, CSV import, data-quality checks and business analysis using joins, CTEs, aggregates and window functions. The primary reproduction path runs entirely in PostgreSQL; Python is not required. [Optional chart automation](docs/optional-automation.md) is provided separately.
+This is a **PostgreSQL / pgAdmin SQL project with a native Power BI presentation**. The workflow covers relational modelling, CSV import, data-quality checks and business analysis using joins, CTEs, aggregates and window functions. The primary reproduction path runs entirely in PostgreSQL; Python is not required. Power BI presents the reviewed SQL aggregates across three English report pages.
+
+## Power BI showcase
+
+[Download the report](powerbi/Olist.pbix) · [View the three-page PDF](powerbi/Olist.pdf) · [Open and refresh instructions](powerbi/README.md)
+
+The PBIX includes an aggregate snapshot and opens without database credentials or raw data. The editable PBIP/PBIR source is versioned alongside the SQL. These previews come from Power BI Desktop's native PDF export.
+
+![Power BI — Sales Performance](powerbi/previews/sales-performance.png)
+![Power BI — Customer Behaviour](powerbi/previews/customer-behaviour.png)
+![Power BI — Delivery & Satisfaction](powerbi/previews/delivery-satisfaction.png)
 
 ## At a glance
 
@@ -24,21 +34,17 @@ The source contains purchases from September 2016 to October 2018. Delivered pur
 
 | Question | Evidence | Business implication to investigate |
 | --- | --- | --- |
-| **Q1. Where are sales concentrated?** | São Paulo accounts for **38.33%** of merchandise sales; SP, RJ and MG together account for **63.38%**. | Prioritise operational capacity in the largest markets and investigate growth elsewhere. |
-| **Q2. How much do repeat customers contribute?** | Repeat customers are **3.00%** of customers, **6.14%** of orders and **5.51%** of sales. The highest-spending fifth contributes **56.62%** of sales. | Test retention initiatives using consistent follow-up windows and a control group. |
-| **Q3. How does delivery relate to reviews?** | **8.11%** of eligible deliveries are late by timestamp. Late orders average **2.57/5**, versus **4.29/5** for on-time orders. | Investigate delay-prone routes and test customer communication improvements. |
+| **Where are sales concentrated?** | São Paulo accounts for **38.33%** of merchandise sales; SP, RJ and MG together account for **63.38%**. | Prioritise operational capacity in the largest markets and investigate growth elsewhere. |
+| **How much do repeat customers contribute?** | Repeat customers are **3.00%** of customers, **6.14%** of orders and **5.51%** of sales. The highest-spending fifth contributes **56.62%** of sales. | Test retention initiatives using consistent follow-up windows and a control group. |
+| **How does delivery relate to reviews?** | **8.11%** of eligible deliveries are late by timestamp. Late orders average **2.57/5**, versus **4.29/5** for on-time orders. | Investigate delay-prone routes and test customer communication improvements. |
 
 These implications are proposals for further work. The dataset does not measure the effect of an intervention, profit or customer lifetime value.
 
-![Repeat customer contribution across customers, orders and merchandise sales](reports/figures/Q2/repeat_contribution.png)
-
-![Order-level review scores by delivery status](reports/figures/Q3/review_scores.png)
-
 ## Explore the research
 
-- [Q1 — Sales performance](reports/Q1-sales.md): monthly volume, revenue growth, state concentration and product categories.
-- [Q2 — Customer behaviour](reports/Q2-customers.md): one-time versus repeat customers, spending quintiles and first repurchase intervals.
-- [Q3 — Delivery and satisfaction](reports/Q3-delivery.md): delivery speed, late-delivery rates, geographic differences and review scores.
+- [Sales Performance](reports/sales-performance.md): monthly volume, revenue growth, state concentration and product categories.
+- [Customer Behaviour](reports/customer-behaviour.md): one-time versus repeat customers, spending quintiles and first repurchase intervals.
+- [Delivery & Satisfaction](reports/delivery-satisfaction.md): delivery speed, late-delivery rates, geographic differences and review scores.
 - [Validation report](docs/validation.md): quality checks, metric corrections, reconciliations and limitations.
 - [Original research archive](archive/README.md): all five original SQL files, 15 original charts and the ERD, preserved for provenance.
 
@@ -49,7 +55,7 @@ Use **PostgreSQL 18** with pgAdmin or the `psql` client. The schema, import scri
 1. Download or clone this repository and obtain the nine CSVs listed in [data/README.md](data/README.md).
 2. Create a new, empty database named `olist_portfolio` and run [the schema SQL](sql/setup/01_schema.sql).
 3. Import the CSVs using pgAdmin's Import/Export Data dialog, or the supplied [psql import script](sql/setup/02_import.psql).
-4. Run [data-quality checks](sql/setup/03_quality.sql), followed by the [analytical model](sql/00_model.sql) and Q1/Q2/Q3 SQL.
+4. Run [data-quality checks](sql/setup/03_quality.sql), followed by the [analytical model](sql/00_model.sql) and sales, customer and delivery SQL.
 5. Inspect the result sets with [04_results.sql](sql/04_results.sql), or export the tables to CSV.
 
 The [step-by-step PostgreSQL guide](docs/postgresql-setup.md) includes the import order, pgAdmin settings and SQL execution sequence.
@@ -69,7 +75,7 @@ Optional SQL-only CSV export:
 psql -X -h localhost -U postgres -d olist_portfolio -v ON_ERROR_STOP=1 -f sql/export_results.psql
 ```
 
-The SQL path returns all 10 analytical result tables. The committed research pages and figures can be viewed immediately; regenerating the presentation images is a separate [optional workflow](docs/optional-automation.md).
+The SQL path returns all 10 analytical result tables. To update the Power BI snapshot from those CSVs, follow the [Power BI refresh workflow](powerbi/README.md). It uses PowerShell and Power BI Desktop; Python is not required. Earlier standalone figures have a separate [optional automation workflow](docs/optional-automation.md).
 
 ## SQL skills demonstrated
 
@@ -83,8 +89,9 @@ The SQL path returns all 10 analytical result tables. The committed research pag
 
 ```text
 sql/setup/            PostgreSQL schema, CSV import and data-quality checks
-sql/                  Analytical model, Q1/Q2/Q3 queries, result display and export
+sql/                  Analytical model, sales, customer and delivery queries, result display and export
 reports/              Research pages, figures and aggregate results
+powerbi/              Native PBIX/PBIP report, PDF, previews and snapshot updater
 docs/                 PostgreSQL setup, metric definitions and validation
 data/                 Dataset instructions; raw CSVs stay local
 archive/              Original PostgreSQL SQL, charts and ERD
@@ -100,7 +107,7 @@ Raw CSVs, database files, environments and credentials are excluded from Git. Th
 - Revenue means **merchandise item value in BRL**, excluding freight. It is not Olist's platform revenue, profit or net revenue after refunds.
 - Customers are identified with `customer_unique_id`; `customer_id` is the order-level customer record.
 - Items are aggregated before joining to orders. Multiple reviews are averaged within each order, so an order receives equal weight in the score comparison.
-- Timestamp-based lateness is kept for comparability. A calendar-date definition produces **6.77%** rather than **8.11%**; [Q3](reports/Q3-delivery.md) explains why.
+- Timestamp-based lateness is kept for comparability. A calendar-date definition produces **6.77%** rather than **8.11%**; [Delivery & Satisfaction](reports/delivery-satisfaction.md) explains why.
 - Repeat purchasing is observed within a finite extract. The 3.00% share is not a cohort retention rate, and first-repeat intervals include same-day purchases.
 
 See [methodology](docs/methodology.md) for populations, denominators, exclusions and temporal caveats.

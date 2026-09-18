@@ -1,10 +1,12 @@
-# Q3 — How does delivery relate to customer satisfaction?
+# Delivery & Satisfaction
 
 [Project overview](../README.md) · [SQL](../sql/03_delivery.sql) · [Metric definitions](../docs/methodology.md)
 
-Among 96,470 delivered orders with actual and estimated delivery dates, mean delivery time is 12.50 calendar days. Using the original timestamp comparison, 7,826 orders are late: 8.11%. Among reviewed eligible orders, late orders average 2.57/5 and on-time orders average 4.29/5.
+![Power BI — Delivery & Satisfaction](../powerbi/previews/delivery-satisfaction.png)
 
-![Delivery status shares](figures/Q3/delivery_status.png)
+[Open the interactive report or PDF](../powerbi/README.md).
+
+Among 96,470 delivered orders with actual and estimated delivery dates, mean delivery time is 12.50 calendar days. Using the original timestamp comparison, 7,826 orders are late: 8.11%. Among reviewed eligible orders, late orders average 2.57/5 and on-time orders average 4.29/5.
 
 ## The definition of “late” changes the answer
 
@@ -27,9 +29,6 @@ Evidence: [overall delivery results](results/q3_overall.csv). Eight orders marke
 | CE | 1279 | 196 | 15.32 | 21.2 |
 | SE | 335 | 51 | 15.22 | 21.46 |
 
-![Top 10 state delay rates](figures/Q3/state_delays.png)
-![Separate panels for delivery days and delay rates](figures/Q3/state_time_and_delay.png)
-
 Evidence: [all state results](results/q3_states.csv). Ranking by percentage exposes high-delay states but can emphasise small populations. Review both counts and rates before prioritising routes. Delivery days and percentages are shown on separate axes; states are discrete categories.
 
 ## Review scores
@@ -38,9 +37,6 @@ Evidence: [all state results](results/q3_states.csv). Ranking by percentage expo
 |---|---|---|
 | Late | 7661 | 2.5665 |
 | On time | 88163 | 4.2943 |
-
-![Order-level review scores](figures/Q3/review_scores.png)
-![State delay rate versus review score](figures/Q3/state_reviews.png)
 
 Evidence: [delivery-status comparison](results/q3_review_scores.csv) and [state comparison](results/q3_state_reviews.csv). Multiple review rows are averaged within an order before aggregation. For the scatter plot, both axes use the same reviewed-order population. Orders without a review do not enter these comparisons.
 

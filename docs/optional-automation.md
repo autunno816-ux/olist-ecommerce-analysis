@@ -4,7 +4,9 @@
 
 The primary project is PostgreSQL / pgAdmin SQL. The SQL workflow reproduces the analysis and exports all 10 result tables without Python.
 
-The Python helper was added during repository preparation to regenerate the presentation figures, run an additional set of checks and support an in-process DuckDB execution option. It is supplementary tooling rather than the original project's required environment.
+The current portfolio presentation uses [native Power BI visuals](../powerbi/README.md), with a PowerShell snapshot updater. Python is not needed to open or refresh that report.
+
+The Python helper regenerates the earlier standalone figures in `reports/figures`, runs additional checks and supports an in-process DuckDB execution option. It does not generate the Power BI report or its native PDF/PNG exports. It is supplementary tooling rather than the original project's required environment.
 
 ## Regenerate the figures
 

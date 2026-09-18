@@ -11,3 +11,5 @@ data/raw/*
 .DS_Store
 Thumbs.db
 .ipynb_checkpoints/
+powerbi/**/.pbi/
+powerbi/**/localSettings.json

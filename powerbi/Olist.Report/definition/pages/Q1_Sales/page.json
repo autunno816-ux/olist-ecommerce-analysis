@@ -1,0 +1,829 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "Q1_Sales",
+  "displayName": "Sales Performance",
+  "displayOption": "FitToPage",
+  "height": 1000,
+  "width": 1600,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#F2F5F8'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "width": {
+            "expr": {
+              "Literal": {
+                "Value": "189L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "Q1_Sales_eyebrow",
+      "target": "Q1_Sales_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_eyebrow",
+      "target": "Q1_Sales_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_eyebrow",
+      "target": "Q1_Sales_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_eyebrow",
+      "target": "Q1_Sales_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_eyebrow",
+      "target": "Q1_Sales_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_eyebrow",
+      "target": "Q1_Sales_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_eyebrow",
+      "target": "Q1_Sales_sales_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_eyebrow",
+      "target": "Q1_Sales_orders_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_eyebrow",
+      "target": "Q1_Sales_states",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_eyebrow",
+      "target": "Q1_Sales_categories",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_eyebrow",
+      "target": "Q1_Sales_growth",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_eyebrow",
+      "target": "Q1_Sales_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_heading",
+      "target": "Q1_Sales_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_heading",
+      "target": "Q1_Sales_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_heading",
+      "target": "Q1_Sales_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_heading",
+      "target": "Q1_Sales_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_heading",
+      "target": "Q1_Sales_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_heading",
+      "target": "Q1_Sales_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_heading",
+      "target": "Q1_Sales_sales_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_heading",
+      "target": "Q1_Sales_orders_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_heading",
+      "target": "Q1_Sales_states",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_heading",
+      "target": "Q1_Sales_categories",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_heading",
+      "target": "Q1_Sales_growth",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_heading",
+      "target": "Q1_Sales_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_subtitle",
+      "target": "Q1_Sales_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_subtitle",
+      "target": "Q1_Sales_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_subtitle",
+      "target": "Q1_Sales_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_subtitle",
+      "target": "Q1_Sales_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_subtitle",
+      "target": "Q1_Sales_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_subtitle",
+      "target": "Q1_Sales_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_subtitle",
+      "target": "Q1_Sales_sales_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_subtitle",
+      "target": "Q1_Sales_orders_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_subtitle",
+      "target": "Q1_Sales_states",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_subtitle",
+      "target": "Q1_Sales_categories",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_subtitle",
+      "target": "Q1_Sales_growth",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_subtitle",
+      "target": "Q1_Sales_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi0",
+      "target": "Q1_Sales_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi0",
+      "target": "Q1_Sales_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi0",
+      "target": "Q1_Sales_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi0",
+      "target": "Q1_Sales_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi0",
+      "target": "Q1_Sales_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi0",
+      "target": "Q1_Sales_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi0",
+      "target": "Q1_Sales_sales_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi0",
+      "target": "Q1_Sales_orders_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi0",
+      "target": "Q1_Sales_states",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi0",
+      "target": "Q1_Sales_categories",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi0",
+      "target": "Q1_Sales_growth",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi0",
+      "target": "Q1_Sales_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi1",
+      "target": "Q1_Sales_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi1",
+      "target": "Q1_Sales_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi1",
+      "target": "Q1_Sales_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi1",
+      "target": "Q1_Sales_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi1",
+      "target": "Q1_Sales_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi1",
+      "target": "Q1_Sales_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi1",
+      "target": "Q1_Sales_sales_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi1",
+      "target": "Q1_Sales_orders_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi1",
+      "target": "Q1_Sales_states",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi1",
+      "target": "Q1_Sales_categories",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi1",
+      "target": "Q1_Sales_growth",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi1",
+      "target": "Q1_Sales_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi2",
+      "target": "Q1_Sales_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi2",
+      "target": "Q1_Sales_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi2",
+      "target": "Q1_Sales_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi2",
+      "target": "Q1_Sales_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi2",
+      "target": "Q1_Sales_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi2",
+      "target": "Q1_Sales_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi2",
+      "target": "Q1_Sales_sales_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi2",
+      "target": "Q1_Sales_orders_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi2",
+      "target": "Q1_Sales_states",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi2",
+      "target": "Q1_Sales_categories",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi2",
+      "target": "Q1_Sales_growth",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi2",
+      "target": "Q1_Sales_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi3",
+      "target": "Q1_Sales_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi3",
+      "target": "Q1_Sales_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi3",
+      "target": "Q1_Sales_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi3",
+      "target": "Q1_Sales_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi3",
+      "target": "Q1_Sales_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi3",
+      "target": "Q1_Sales_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi3",
+      "target": "Q1_Sales_sales_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi3",
+      "target": "Q1_Sales_orders_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi3",
+      "target": "Q1_Sales_states",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi3",
+      "target": "Q1_Sales_categories",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi3",
+      "target": "Q1_Sales_growth",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_kpi3",
+      "target": "Q1_Sales_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_sales_trend",
+      "target": "Q1_Sales_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_sales_trend",
+      "target": "Q1_Sales_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_sales_trend",
+      "target": "Q1_Sales_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_sales_trend",
+      "target": "Q1_Sales_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_sales_trend",
+      "target": "Q1_Sales_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_sales_trend",
+      "target": "Q1_Sales_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_sales_trend",
+      "target": "Q1_Sales_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_sales_trend",
+      "target": "Q1_Sales_orders_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_sales_trend",
+      "target": "Q1_Sales_states",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_sales_trend",
+      "target": "Q1_Sales_categories",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_sales_trend",
+      "target": "Q1_Sales_growth",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_sales_trend",
+      "target": "Q1_Sales_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_orders_trend",
+      "target": "Q1_Sales_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_orders_trend",
+      "target": "Q1_Sales_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_orders_trend",
+      "target": "Q1_Sales_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_orders_trend",
+      "target": "Q1_Sales_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_orders_trend",
+      "target": "Q1_Sales_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_orders_trend",
+      "target": "Q1_Sales_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_orders_trend",
+      "target": "Q1_Sales_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_orders_trend",
+      "target": "Q1_Sales_sales_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_orders_trend",
+      "target": "Q1_Sales_states",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_orders_trend",
+      "target": "Q1_Sales_categories",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_orders_trend",
+      "target": "Q1_Sales_growth",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_orders_trend",
+      "target": "Q1_Sales_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_states",
+      "target": "Q1_Sales_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_states",
+      "target": "Q1_Sales_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_states",
+      "target": "Q1_Sales_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_states",
+      "target": "Q1_Sales_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_states",
+      "target": "Q1_Sales_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_states",
+      "target": "Q1_Sales_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_states",
+      "target": "Q1_Sales_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_states",
+      "target": "Q1_Sales_sales_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_states",
+      "target": "Q1_Sales_orders_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_states",
+      "target": "Q1_Sales_categories",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_states",
+      "target": "Q1_Sales_growth",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_states",
+      "target": "Q1_Sales_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_categories",
+      "target": "Q1_Sales_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_categories",
+      "target": "Q1_Sales_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_categories",
+      "target": "Q1_Sales_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_categories",
+      "target": "Q1_Sales_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_categories",
+      "target": "Q1_Sales_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_categories",
+      "target": "Q1_Sales_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_categories",
+      "target": "Q1_Sales_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_categories",
+      "target": "Q1_Sales_sales_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_categories",
+      "target": "Q1_Sales_orders_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_categories",
+      "target": "Q1_Sales_states",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_categories",
+      "target": "Q1_Sales_growth",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_categories",
+      "target": "Q1_Sales_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_growth",
+      "target": "Q1_Sales_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_growth",
+      "target": "Q1_Sales_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_growth",
+      "target": "Q1_Sales_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_growth",
+      "target": "Q1_Sales_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_growth",
+      "target": "Q1_Sales_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_growth",
+      "target": "Q1_Sales_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_growth",
+      "target": "Q1_Sales_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_growth",
+      "target": "Q1_Sales_sales_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_growth",
+      "target": "Q1_Sales_orders_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_growth",
+      "target": "Q1_Sales_states",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_growth",
+      "target": "Q1_Sales_categories",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_growth",
+      "target": "Q1_Sales_footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_footer",
+      "target": "Q1_Sales_eyebrow",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_footer",
+      "target": "Q1_Sales_heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_footer",
+      "target": "Q1_Sales_subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_footer",
+      "target": "Q1_Sales_kpi0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_footer",
+      "target": "Q1_Sales_kpi1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_footer",
+      "target": "Q1_Sales_kpi2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_footer",
+      "target": "Q1_Sales_kpi3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_footer",
+      "target": "Q1_Sales_sales_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_footer",
+      "target": "Q1_Sales_orders_trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_footer",
+      "target": "Q1_Sales_states",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_footer",
+      "target": "Q1_Sales_categories",
+      "type": "NoFilter"
+    },
+    {
+      "source": "Q1_Sales_footer",
+      "target": "Q1_Sales_growth",
+      "type": "NoFilter"
+    }
+  ]
+}
