@@ -1,0 +1,13 @@
+-- Optional psql CSV export. Creates no charts and needs no Python.
+-- Run from repository root after sql/run_analysis.psql. Overwrites these aggregate CSVs.
+\set ON_ERROR_STOP on
+\copy (SELECT * FROM q1_monthly ORDER BY month) TO 'reports/results/q1_monthly.csv' WITH (FORMAT csv, HEADER true, ENCODING 'UTF8')
+\copy (SELECT * FROM q1_states ORDER BY revenue_brl DESC, customer_state) TO 'reports/results/q1_states.csv' WITH (FORMAT csv, HEADER true, ENCODING 'UTF8')
+\copy (SELECT * FROM q1_categories ORDER BY revenue_brl DESC, product_category) TO 'reports/results/q1_categories.csv' WITH (FORMAT csv, HEADER true, ENCODING 'UTF8')
+\copy (SELECT * FROM q2_customer_segments ORDER BY customer_type) TO 'reports/results/q2_customer_segments.csv' WITH (FORMAT csv, HEADER true, ENCODING 'UTF8')
+\copy (SELECT * FROM q2_quintiles ORDER BY quintile) TO 'reports/results/q2_quintiles.csv' WITH (FORMAT csv, HEADER true, ENCODING 'UTF8')
+\copy (SELECT * FROM q2_repurchase ORDER BY sort_order) TO 'reports/results/q2_repurchase.csv' WITH (FORMAT csv, HEADER true, ENCODING 'UTF8')
+\copy (SELECT * FROM q3_overall) TO 'reports/results/q3_overall.csv' WITH (FORMAT csv, HEADER true, ENCODING 'UTF8')
+\copy (SELECT * FROM q3_states ORDER BY late_rate_pct DESC, customer_state) TO 'reports/results/q3_states.csv' WITH (FORMAT csv, HEADER true, ENCODING 'UTF8')
+\copy (SELECT * FROM q3_review_scores ORDER BY delivery_status) TO 'reports/results/q3_review_scores.csv' WITH (FORMAT csv, HEADER true, ENCODING 'UTF8')
+\copy (SELECT * FROM q3_state_reviews ORDER BY customer_state) TO 'reports/results/q3_state_reviews.csv' WITH (FORMAT csv, HEADER true, ENCODING 'UTF8')

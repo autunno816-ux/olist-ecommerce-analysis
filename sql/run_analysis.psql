@@ -1,0 +1,8 @@
+-- psql entry point after schema creation and CSV import. Run from repository root.
+\set ON_ERROR_STOP on
+\ir setup/03_quality.sql
+\ir 00_model.sql
+\ir 01_sales.sql
+\ir 02_customers.sql
+\ir 03_delivery.sql
+\ir 04_results.sql

@@ -16,7 +16,7 @@ telephony,309860.23,4430,4093,2.34
 office_furniture,268154.31,1668,1254,2.03
 stationery,223788.69,2466,2264,1.69
 computers,218684.14,199,177,1.65
-pet_shop,211695.64,1924,1688,1.6
+pet_shop,211695.64,1924,1688,1.60
 musical_instruments,184315.74,651,611,1.39
 small_appliances,182754.12,658,609,1.38
 unclassified,175967.21,1559,1412,1.33
@@ -27,17 +27,17 @@ construction_tools_construction,142108.49,916,736,1.07
 luggage_accessories,138701.63,1077,1019,1.05
 home_appliances_2,107953.95,231,227,0.82
 home_construction,81407.57,596,483,0.62
-home_appliances,78832.48,754,747,0.6
+home_appliances,78832.48,754,747,0.60
 agro_industry_and_commerce,70566.10,206,177,0.53
 furniture_living_room,67350.70,495,414,0.51
 home_confort,58008.45,429,392,0.44
 fixed_telephony,55315.21,255,212,0.42
-air_conditioning,53323.56,289,246,0.4
+air_conditioning,53323.56,289,246,0.40
 audio,50570.60,362,348,0.38
 small_appliances_home_oven_and_coffee,46589.56,73,72,0.35
 kitchen_dining_laundry_garden_furniture,45531.98,274,241,0.34
 books_general_interest,45302.15,537,496,0.34
-construction_tools_lights,39957.00,301,242,0.3
+construction_tools_lights,39957.00,301,242,0.30
 construction_tools_safety,38773.22,183,159,0.29
 industry_commerce_and_business,38498.81,265,232,0.29
 food,28731.15,499,441,0.22
@@ -69,5 +69,5 @@ diapers_and_hygiene,1500.79,37,25,0.01
 flowers,1110.04,33,29,0.01
 home_comfort_2,760.27,30,24,0.01
 cds_dvds_musicals,730.00,14,12,0.01
-fashion_childrens_clothes,519.95,7,7,0.0
-security_and_services,283.29,2,2,0.0
+fashion_childrens_clothes,519.95,7,7,0.00
+security_and_services,283.29,2,2,0.00

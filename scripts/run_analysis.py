@@ -1,4 +1,4 @@
-"""Load local Olist CSVs, execute reviewed SQL, and export aggregate evidence."""
+"""Optional DuckDB/chart helper. The primary SQL workflow runs directly in PostgreSQL."""
 import argparse
 import csv
 import hashlib
@@ -108,7 +108,8 @@ def run(data_dir, output, charts=True):
         failures = [c for c in checks if c['blocking'] and c['affected_rows']]
         if failures:
             raise ValueError('Blocking quality checks failed; see data_quality.csv: ' + str(failures))
-        for path in sorted((ROOT / 'sql').glob('*.sql')):
+        for path in [ROOT / 'sql' / name for name in
+                     ('00_model.sql', '01_sales.sql', '02_customers.sql', '03_delivery.sql')]:
             db.execute(path.read_text(encoding='utf-8'))
         tables = {name: records(db, 'SELECT * FROM ' + name) for name in VIEWS}
         for name, rows in tables.items():

@@ -1,3 +1,3 @@
 customer_type,customer_count,order_count,revenue_brl,customer_share_pct,order_share_pct,revenue_share_pct,average_revenue_per_customer_brl
-One-time,90557,90557,12493089.36,97.0,93.86,94.49,137.96
-Repeat,2801,5921,728408.75,3.0,6.14,5.51,260.05
+One-time,90557,90557,12493089.36,97.00,93.86,94.49,137.96
+Repeat,2801,5921,728408.75,3.00,6.14,5.51,260.05

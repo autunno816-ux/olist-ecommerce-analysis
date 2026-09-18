@@ -45,4 +45,4 @@ The pipeline validates parent keys and child references before model creation. G
 - Review scores may reflect products, sellers, price, region and timing. Reviews can precede delivery and missing reviews can be selective. No causal model or experiment is included.
 - State averages can obscure within-state variation; small states have less stable rates. No confidence intervals are presented.
 - No margins, refunds, acquisition costs or intervention results are available. Proposed actions are hypotheses to test.
-- SQL execution is verified on DuckDB. Original PostgreSQL files are preserved as research artifacts and are not claimed to run end to end unchanged.
+- PostgreSQL 18.6 is the primary verified execution engine. All 10 result tables were compared against the published aggregates. An optional DuckDB helper can regenerate presentation figures; it is not needed for SQL reproduction. Original exploratory PostgreSQL files remain unchanged in the archive.

@@ -1,0 +1,179 @@
+{
+  "engine": "PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit",
+  "result_tables_matched": 10,
+  "quality_checks": [
+    {
+      "check_name": "canceled orders: actual delivery exists",
+      "affected_rows": 6,
+      "blocking": false
+    },
+    {
+      "check_name": "category_name: duplicate or null primary key",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "customers: duplicate or null primary key",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "customers: missing person identifier",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "delivered orders: missing actual delivery",
+      "affected_rows": 8,
+      "blocking": false
+    },
+    {
+      "check_name": "delivered orders: missing items",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "geolocations: exact duplicate rows",
+      "affected_rows": 261831,
+      "blocking": false
+    },
+    {
+      "check_name": "items: nonpositive or null price",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "order_items.order_id: orphan or null",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "order_items.product_id: orphan or null",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "order_items.seller_id: orphan or null",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "order_items: duplicate composite key",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "order_items: null key component",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "order_payments.order_id: orphan or null",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "order_payments: duplicate composite key",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "order_payments: null key component",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "order_reviews.order_id: orphan or null",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "order_reviews: duplicate composite key",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "order_reviews: null key component",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "orders with multiple reviews",
+      "affected_rows": 547,
+      "blocking": false
+    },
+    {
+      "check_name": "orders.customer_id: orphan or null",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "orders: carrier before approval",
+      "affected_rows": 1359,
+      "blocking": false
+    },
+    {
+      "check_name": "orders: customer delivery before carrier",
+      "affected_rows": 23,
+      "blocking": false
+    },
+    {
+      "check_name": "orders: delivery before purchase",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "orders: duplicate or null primary key",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "orders: empty source table",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "orders: missing purchase timestamp",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "payments: zero values",
+      "affected_rows": 9,
+      "blocking": false
+    },
+    {
+      "check_name": "products: duplicate or null primary key",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "products: missing category",
+      "affected_rows": 610,
+      "blocking": false
+    },
+    {
+      "check_name": "products: missing physical attribute",
+      "affected_rows": 2,
+      "blocking": false
+    },
+    {
+      "check_name": "products: untranslated nonnull category",
+      "affected_rows": 13,
+      "blocking": false
+    },
+    {
+      "check_name": "reviews: invalid or missing score",
+      "affected_rows": 0,
+      "blocking": true
+    },
+    {
+      "check_name": "sellers: duplicate or null primary key",
+      "affected_rows": 0,
+      "blocking": true
+    }
+  ],
+  "regression_checks": "passed",
+  "csv_export": "passed",
+  "data_snapshot": "Source hashes in metrics.json"
+}

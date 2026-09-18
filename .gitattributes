@@ -1,6 +1,7 @@
 * text=auto eol=lf
 *.py text eol=lf
 *.sql text eol=lf
+*.psql text eol=lf
 *.md text eol=lf
 *.csv text eol=lf
 *.png binary

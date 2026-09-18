@@ -8,7 +8,9 @@ The full local dataset run on 18 September 2026 completed 33 checks across prima
 
 Delivered-order merchandise value independently recomputed from the item table is **R$13,221,498.11**. State, category, customer-segment and spending-quintile totals all reconcile to this exact amount. The order-level model contains **96,478** delivered orders and **93,358** people.
 
-Reproduce with `python scripts/run_analysis.py --data-dir data/raw`. Evidence: [all checks](../reports/results/data_quality.csv), [metrics and source checksums](../reports/results/metrics.json), [runner](../scripts/run_analysis.py), [regression tests](../tests/test_metrics.py).
+The primary workflow has also been executed directly on **PostgreSQL 18.6**, including schema creation, all nine CSV imports, data-quality checks, Q1/Q2/Q3 queries and CSV export. All **10** PostgreSQL result tables match the published aggregates. The native SQL path runs **34** quality checks: the same 33 checks plus an empty-orders guard. All blocking checks returned zero affected rows.
+
+Reproduce through the [PostgreSQL guide](postgresql-setup.md). Evidence: [PostgreSQL validation record](../reports/results/postgres_validation.json), [SQL quality checks](../sql/setup/03_quality.sql), [PostgreSQL regression tests](../tests/postgres_metrics.sql), [initial 33-check results](../reports/results/data_quality.csv) and [metrics and source checksums](../reports/results/metrics.json). The source manifest and chart-generation metadata in `metrics.json` describe the earlier optional helper run; PostgreSQL verification is recorded separately.
 
 ## Source issues retained and disclosed
 
@@ -37,12 +39,12 @@ Missing category labels and unmatched translations map to `unclassified`; the 13
 | Direct join between orders and reviews | Medium: orders with multiple reviews receive extra weight; state delay rates can also be distorted. | Average reviews within order, then join one row per order. Reviewed late/on-time scores are 2.57 and 4.29. |
 | Midnight estimated-delivery timestamps | Medium: deliveries on the estimated calendar day can count as late. | Publish timestamp rate 8.11% and calendar-date rate 6.77%, using the same eligible population. |
 | Original state chart stacks days and percentages and calls it a trend | Medium: unrelated units become an artificial stacked total; state order is not time. | Separate panels with named units and ranked states. |
-| Original SQL contains missing separators and a missing opening parenthesis in table creation | Reproducibility: exploratory statements cannot run as one untouched script. | Preserve originals; provide clean executable reviewed SQL and a local loader. |
+| Original SQL contains missing separators and a missing opening parenthesis in table creation | Reproducibility: exploratory statements cannot run as one untouched script. | Preserve originals; provide reviewed PostgreSQL DDL, client-side CSV import and analytical SQL. |
 | Category labels missing or untranslated | Coverage risk if inner-joined or dropped. | Retain an explicit unclassified category in the denominator. |
 
 ## Regression coverage
 
-Small synthetic data distinguishes a 20% revenue share from a 66.67% order share, exercises multi-item and multi-review orders, checks canceled-order exclusions, verifies customer identity and first-repeat intervals, and tests missing delivery dates plus same-day lateness. CI repeats these tests without source data. Full dataset checks and charts are validated locally; CI does not download Kaggle data.
+Native PostgreSQL regression SQL distinguishes a 20% revenue share from a 66.67% order share, exercises multi-item and multi-review orders, checks canceled-order exclusions, verifies customer identity and first-repeat intervals, and tests missing delivery dates plus same-day lateness. Fixtures run in a temporary test schema inside a transaction that is rolled back. CI starts PostgreSQL 18 and runs the schema, analytical scripts and regression SQL without Python in that job. A separate job checks the optional helper. Full dataset checks and charts are validated locally; CI does not download Kaggle data.
 
 ## Presentation review
 

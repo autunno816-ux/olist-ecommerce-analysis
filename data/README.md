@@ -14,13 +14,15 @@ Download the [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.c
 | olist_geolocation_dataset.csv | 1000163 |
 | product_category_name_translation.csv | 71 |
 
-Run from the repository root:
+Use the [PostgreSQL / pgAdmin setup guide](../docs/postgresql-setup.md) to create the tables and import these files. For command-line import, run the following from the repository root after creating the schema:
 
 ```bash
-python scripts/run_analysis.py --data-dir data/raw
+psql -X -h localhost -U postgres -d olist_portfolio -v ON_ERROR_STOP=1 -f sql/setup/02_import.psql
 ```
 
-Alternatively point `--data-dir` at an existing folder. The runner reads CSVs in place and does not modify them. Output goes to `reports/` unless `--output-dir` is set. Do not place raw files in `reports/` or `archive/`; those directories are published.
+The import order is customers, orders, products, sellers, order items, payments, reviews, geolocations and category translation. The `psql` script imports all nine files in one transaction and reads local files without changing them. In pgAdmin, import one table at a time in the same order using CSV format, UTF-8 encoding and Header enabled.
+
+Raw files remain local under the ignored `data/raw/` directory. Do not place raw files in `reports/` or `archive/`; those directories are published.
 
 The source publisher describes the data as anonymised commercial records covering 2016–2018. Attribution belongs to Olist and the dataset contributors. Consult the publisher's page for the dataset's current license and conditions. This repository does not redistribute the raw dataset or change its terms. Only aggregate analytical results are committed.
 

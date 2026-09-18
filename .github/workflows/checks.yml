@@ -8,7 +8,55 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  postgres:
+    name: PostgreSQL SQL checks
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:18
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: ci-only
+          POSTGRES_DB: olist_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      PGHOST: localhost
+      PGPORT: 5432
+      PGUSER: postgres
+      PGPASSWORD: ci-only
+      PGDATABASE: olist_test
+      PGCLIENTENCODING: UTF8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate native schema and analytical SQL
+        run: >-
+          psql -X -v ON_ERROR_STOP=1
+          -f sql/setup/01_schema.sql
+          -f sql/00_model.sql
+          -f sql/01_sales.sql
+          -f sql/02_customers.sql
+          -f sql/03_delivery.sql
+          -f sql/04_results.sql
+      - name: Run PostgreSQL analytical regression checks
+        run: psql -X -v ON_ERROR_STOP=1 -f tests/postgres_metrics.sql
+      - name: Verify empty-source guard explains its failure
+        run: |
+          if psql -X -v ON_ERROR_STOP=1 -f sql/setup/03_quality.sql > quality.log 2>&1; then
+            cat quality.log
+            echo 'Expected an empty-source failure.'
+            exit 1
+          fi
+          cat quality.log
+          grep -Fq 'orders: empty source table: 1 affected rows/entities' quality.log
+
+  optional-helper:
+    name: Optional helper and documentation checks
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

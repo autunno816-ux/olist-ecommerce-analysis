@@ -1,4 +1,4 @@
-# Olist e-commerce analysis
+# Olist e-commerce SQL analysis
 
 **Three business questions, answered with SQL: where sales come from, who returns, and how delivery relates to customer reviews.**
 
@@ -6,7 +6,7 @@
 
 This portfolio project analyses the Brazilian e-commerce dataset published by Olist. It starts with a relational model and data-quality checks, then uses joins, CTEs and window functions to investigate sales concentration, repeat purchasing and delivery performance.
 
-The original research was written in PostgreSQL. This repository also includes a reviewed DuckDB workflow so the results can be reproduced locally without a database server. Python handles CSV loading, validation and chart rendering; the analytical logic lives in SQL.
+This is a **PostgreSQL / pgAdmin SQL project**. The workflow covers relational modelling, CSV import, data-quality checks and business analysis using joins, CTEs, aggregates and window functions. The primary reproduction path runs entirely in PostgreSQL; Python is not required. [Optional chart automation](docs/optional-automation.md) is provided separately.
 
 ## At a glance
 
@@ -42,52 +42,58 @@ These implications are proposals for further work. The dataset does not measure 
 - [Validation report](docs/validation.md): quality checks, metric corrections, reconciliations and limitations.
 - [Original research archive](archive/README.md): all five original SQL files, 15 original charts and the ERD, preserved for provenance.
 
-## Reproduce the results
+## Reproduce with PostgreSQL / pgAdmin
 
-Requires **Python 3.11+**. Tested locally with Python 3.13; CI runs the synthetic analytical tests without downloading the dataset.
+Use **PostgreSQL 18** with pgAdmin or the `psql` client. The schema, import scripts and all analytical queries have been tested on PostgreSQL 18.6 against the full dataset.
 
-```bash
-git clone https://github.com/autunno816-ux/olist-ecommerce-analysis.git
-cd olist-ecommerce-analysis
-python -m venv .venv
-```
+1. Download or clone this repository and obtain the nine CSVs listed in [data/README.md](data/README.md).
+2. Create a new, empty database named `olist_portfolio` and run [the schema SQL](sql/setup/01_schema.sql).
+3. Import the CSVs using pgAdmin's Import/Export Data dialog, or the supplied [psql import script](sql/setup/02_import.psql).
+4. Run [data-quality checks](sql/setup/03_quality.sql), followed by the [analytical model](sql/00_model.sql) and Q1/Q2/Q3 SQL.
+5. Inspect the result sets with [04_results.sql](sql/04_results.sql), or export the tables to CSV.
 
-Activate the environment:
+The [step-by-step PostgreSQL guide](docs/postgresql-setup.md) includes the import order, pgAdmin settings and SQL execution sequence.
 
-```powershell
-# Windows PowerShell
-.venv\Scripts\Activate.ps1
-```
+For `psql`, place the CSVs in `data/raw/` and run these commands **from the repository root**. Replace `postgres` with your PostgreSQL login if different; the client prompts for a password when required.
 
 ```bash
-# macOS / Linux
-source .venv/bin/activate
+createdb -h localhost -U postgres olist_portfolio
+psql -X -h localhost -U postgres -d olist_portfolio -v ON_ERROR_STOP=1 -f sql/setup/01_schema.sql
+psql -X -h localhost -U postgres -d olist_portfolio -v ON_ERROR_STOP=1 -f sql/setup/02_import.psql
+psql -X -h localhost -U postgres -d olist_portfolio -v ON_ERROR_STOP=1 -f sql/run_analysis.psql
 ```
 
-Then install dependencies, download the nine CSVs listed in [data/README.md](data/README.md) into `data/raw/`, and run:
+Optional SQL-only CSV export:
 
 ```bash
-python -m pip install -r requirements.txt
-python -m unittest discover -s tests -v
-python scripts/run_analysis.py --data-dir data/raw
+psql -X -h localhost -U postgres -d olist_portfolio -v ON_ERROR_STOP=1 -f sql/export_results.psql
 ```
 
-The runner checks keys and join coverage, executes the reviewed SQL, reconciles sales totals and writes 10 aggregate result tables, a quality-check table, a source manifest and 17 figures to `reports/`. It stops on blocking quality failures. You can supply an existing CSV folder with `--data-dir` or a separate destination with `--output-dir`. `--no-charts` exports only the evidence tables.
+The SQL path returns all 10 analytical result tables. The committed research pages and figures can be viewed immediately; regenerating the presentation images is a separate [optional workflow](docs/optional-automation.md).
 
-Raw CSVs, databases, environment files and credentials are excluded from Git. The committed aggregates and figures let readers inspect the work without downloading the source data.
+## SQL skills demonstrated
+
+- Relational schema design, primary/composite keys and foreign-key constraints.
+- Data-quality checks for missing fields, duplicate records, join coverage and timestamp consistency.
+- CTEs and grain-aware joins to prevent duplicated order counts and sales.
+- `LAG`, `ROW_NUMBER` and `NTILE` for monthly growth, first repurchases and customer segmentation.
+- Conditional aggregation and window totals for clearly defined rates and shares.
 
 ## Repository guide
 
 ```text
-sql/                  Reviewed analytical model and Q1/Q2/Q3 queries
-scripts/              CSV loading, quality checks and chart rendering
-tests/                Small counterexamples for analytical correctness
-reports/              Research pages, reviewed figures and aggregate results
-docs/                 Metric definitions, data model and validation
+sql/setup/            PostgreSQL schema, CSV import and data-quality checks
+sql/                  Analytical model, Q1/Q2/Q3 queries, result display and export
+reports/              Research pages, figures and aggregate results
+docs/                 PostgreSQL setup, metric definitions and validation
 data/                 Dataset instructions; raw CSVs stay local
 archive/              Original PostgreSQL SQL, charts and ERD
-.github/workflows/    Automated tests and documentation-link checks
+tests/                PostgreSQL regression SQL and optional helper tests
+scripts/              Optional chart automation and repository checks
+.github/workflows/    PostgreSQL checks and optional helper checks
 ```
+
+Raw CSVs, database files, environments and credentials are excluded from Git. The source files in `archive/` preserve the original exploratory work; the reviewed scripts in `sql/` are the runnable edition.
 
 ## Analytical decisions
 
@@ -103,4 +109,4 @@ See [methodology](docs/methodology.md) for populations, denominators, exclusions
 
 Data: [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce), published by Olist on Kaggle. The publisher describes it as anonymised commercial data. The raw dataset is not redistributed here; consult the source page for its terms.
 
-Original SQL analysis and figures: [autunno816-ux](https://github.com/autunno816-ux). Repository packaging, a portable execution workflow and validation refinements were prepared with AI assistance. This is an independent portfolio project, not an official Olist report.
+Original SQL analysis and figures: [autunno816-ux](https://github.com/autunno816-ux). Repository packaging, reproducibility scripts and validation refinements were prepared with AI assistance. This is an independent portfolio project, not an official Olist report.

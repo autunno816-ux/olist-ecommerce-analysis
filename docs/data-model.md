@@ -24,7 +24,7 @@ erDiagram
 | category_name | Category translation | Two source category labels have no matching translation; missing/untranslated products are retained. |
 | geolocations | Postal-coordinate observation | Postal prefix is nonunique; not joined to the analytical model. |
 
-The portable loader preserves IDs and postal codes as strings, casts money to decimals and timestamps to timestamp types, and runs data-quality checks before creating the analytical views. It does not install a PostgreSQL service or alter an existing database.
+The [PostgreSQL schema](../sql/setup/01_schema.sql) preserves IDs and postal prefixes as text, uses `NUMERIC(15,2)` for money and `TIMESTAMP` for source timestamps, and enforces primary keys, composite keys, foreign keys and selected numeric constraints. Run it in a new project database. The [SQL quality checks](../sql/setup/03_quality.sql) then profile source issues before the analytical views are created.
 
 ![Original pgAdmin ERD](../archive/ERD.png)
 

@@ -1,4 +1,5 @@
--- Reviewed execution target: DuckDB. Monetary values remain DECIMAL during aggregation.
+-- Primary execution target: PostgreSQL. Also exercised by the optional DuckDB helper.
+-- Monetary values remain NUMERIC/DECIMAL during aggregation.
 -- Aggregate each one-to-many fact before joining it to orders.
 CREATE OR REPLACE VIEW delivered_orders AS
 WITH item_totals AS (
