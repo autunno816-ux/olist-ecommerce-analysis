@@ -22,6 +22,8 @@ Open the downloaded `.xlsx` in desktop Microsoft Excel. The saved workbook inclu
 
 All 12 native PivotTables are on `pivot diagram`: eight unfiltered research pivots and four slicer-connected pivots. Both slicers connect to all four selected-population pivots, including the distinct-customer pivot. The workbook has **20 native charts: 11 on analysis and nine on Dashboard**, comprising three live charts and six full-history research charts. The original 12 source and working tables and 12 Power Query definitions are retained. The dashboard's order data comes from the existing `fact_orders` query table, with an added `purchase_year` formula column.
 
+The long customer-ID helper on `pivot diagram` is collapsed by default. Expand the row outline beside row 177 only when inspecting the supporting records; the hidden rows continue to drive the distinct-customer KPI and respond to both slicers.
+
 Section bars and alternating white/pale-blue rows organise the analysis and checks tables. Source and working tables use Excel's banded `TableStyleMedium2`; all 12 pivots use the native `OlistPivotBanded` style with alternating pale-blue/white rows, blue headers and totals. The full research remains on `analysis`; dashboard copies provide a compact overview.
 
 ## Original research preserved

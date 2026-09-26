@@ -1,6 +1,6 @@
 {
   "workbook": "Olist_Excel_Analysis.xlsx",
-  "sha256": "a5c9252126ecd083f756edadc8e3e72e6f6d8d15dfc5dfa35f6da4d3abb08cde",
+  "sha256": "5f28015bb217a2aeeb6e1904819797ef38c527a4b1aae293259e3da685e97f27",
   "checks_passed": 32,
   "source_tables_compared": 12,
   "source_populated_cells_compared": 7693932,
@@ -506,5 +506,75 @@
   },
   "intentional_chart_gap": "'pivot diagram'!AB123 is #N/A for November 2016 AOV because no orders exist.",
   "external_power_query_refresh_tested": false,
-  "pass": true
+  "pass": true,
+  "customer_helper_display": {
+    "scenarios": [
+      {
+        "selection": "All",
+        "actual": {
+          "customers": 93358.0,
+          "orders": 96478.0,
+          "gmv": 13221498.11001159
+        },
+        "hidden": true,
+        "pass": true
+      },
+      {
+        "selection": "Year 2017",
+        "actual": {
+          "customers": 42136.0,
+          "orders": 43428.0,
+          "gmv": 5962902.010002091
+        },
+        "hidden": true,
+        "pass": true
+      },
+      {
+        "selection": "State SP",
+        "actual": {
+          "customers": 39156.0,
+          "orders": 40501.0,
+          "gmv": 5067633.160000945
+        },
+        "hidden": true,
+        "pass": true
+      },
+      {
+        "selection": "Year 2018 and SP",
+        "actual": {
+          "customers": 22795.0,
+          "orders": 23335.0,
+          "gmv": 2919328.1699998104
+        },
+        "hidden": true,
+        "pass": true
+      },
+      {
+        "selection": "Year 2016 and AP",
+        "actual": {
+          "customers": 0.0,
+          "orders": 0.0,
+          "gmv": 0.0
+        },
+        "hidden": true,
+        "pass": true
+      },
+      {
+        "selection": "Reset All",
+        "actual": {
+          "customers": 93358.0,
+          "orders": 96478.0,
+          "gmv": 13221498.11001159
+        },
+        "hidden": true,
+        "pass": true
+      }
+    ],
+    "checks_passed": 32,
+    "hidden_rows": "178:100180",
+    "outline_summary_above": true,
+    "customer_pivot": "$B$180:$C$93538",
+    "kpi_formula": "=COUNTA('pivot diagram'!B181:B100180)",
+    "pass": true
+  }
 }

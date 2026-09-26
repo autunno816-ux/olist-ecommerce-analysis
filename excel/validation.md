@@ -8,6 +8,8 @@ The dashboard contains three slicer-controlled sales charts and six full-history
 
 The final inventory confirms 20 chart objects (11 analysis and nine dashboard), 12 pivots and two slicers. The six research charts retain their analysis sources, and the `Dashboard!N85` link points to `analysis!B140`. A before/after comparison found zero mismatches across 989 analysis cells, 208 checks cells and four dashboard KPI cells, with all 11 analysis-chart series and the pivot/slicer sources unchanged. Native visual review covered the three dashboard sections through `A1:W126` and the banded analysis tables.
 
+The customer-ID helper at `pivot diagram!178:100180` is grouped and hidden by default, with its summary above the group at row 177. Its PivotTable, source records and `COUNTA` KPI formula are retained. All six filter scenarios returned the expected GMV, order and distinct-customer counts while the helper stayed collapsed; all 32 workbook controls passed after reset.
+
 ## Controls and definitions
 
 | Full-history metric | Verified result |
@@ -83,4 +85,4 @@ The delivered snapshot opens and filters without the external CSV folder. Native
 
 ## File identity
 
-Workbook SHA-256: `a5c9252126ecd083f756edadc8e3e72e6f6d8d15dfc5dfa35f6da4d3abb08cde`.
+Workbook SHA-256: `5f28015bb217a2aeeb6e1904819797ef38c527a4b1aae293259e3da685e97f27`.
