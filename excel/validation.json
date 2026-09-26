@@ -1,6 +1,6 @@
 {
   "workbook": "Olist_Excel_Analysis.xlsx",
-  "sha256": "5f28015bb217a2aeeb6e1904819797ef38c527a4b1aae293259e3da685e97f27",
+  "sha256": "4322ffd33e426c360643e63e54db323549ab4167fe61a86b60c789c6142b43be",
   "checks_passed": 32,
   "source_tables_compared": 12,
   "source_populated_cells_compared": 7693932,
@@ -576,5 +576,81 @@
     "customer_pivot": "$B$180:$C$93538",
     "kpi_formula": "=COUNTA('pivot diagram'!B181:B100180)",
     "pass": true
+  },
+  "user_english_label_revision": {
+    "date": "2026-09-26",
+    "method": "Published the exact workbook bytes saved by the author; read-only inspection.",
+    "checks_passed": 32,
+    "source_sha256": "4322ffd33e426c360643e63e54db323549ab4167fe61a86b60c789c6142b43be",
+    "workbook_resaved_by_automation": false,
+    "review": {
+      "pass": true,
+      "all_pass": true,
+      "old_bytes": 93009316,
+      "new_bytes": 93012995,
+      "old_sha256": "5f28015bb217a2aeeb6e1904819797ef38c527a4b1aae293259e3da685e97f27",
+      "new_sha256": "4322ffd33e426c360643e63e54db323549ab4167fe61a86b60c789c6142b43be",
+      "label_changes": {
+        "sheet": "pivot diagram",
+        "before": "总计",
+        "after": "Summary",
+        "cells": [
+          "B132",
+          "B38",
+          "G42",
+          "L87",
+          "Q17",
+          "Q31",
+          "X17",
+          "X33"
+        ],
+        "count": 8
+      },
+      "additional_presentation_changes": [
+        {
+          "type": "Chart title",
+          "before": "Top 10 categories by GMV (BRL)",
+          "after": "Top 10 categories by GMV "
+        },
+        {
+          "type": "Chart formatting",
+          "chart": "Indexed GMV, orders and AOV (Jan 2017 = 100)",
+          "details": "Formatting records changed for title, plot area, legend and chart styling; series formulas and cached numeric values remain identical."
+        },
+        {
+          "type": "PivotTable formatting",
+          "details": "Explicit format records were added to nine pivots; native pivot parts were reordered in the ZIP. Calculation definitions are unchanged when matched by PivotTable name."
+        }
+      ],
+      "preserved": {
+        "all_numeric_values_and_cell_formulas": true,
+        "analysis_and_checks_content": true,
+        "controls_pass": 32,
+        "controls_total": 32,
+        "dashboard": {
+          "gmv": 13221498.11,
+          "orders": 96478,
+          "customers": 93358,
+          "aov": 137.04158575023934
+        },
+        "welch": {
+          "t": -5.595997434259582,
+          "df": 3229.060207778023,
+          "p": 2.3767438686897664e-08,
+          "decision": "Reject H0"
+        },
+        "charts": 20,
+        "pivots": 12,
+        "slicer_caches": 2,
+        "slicer_connections": true,
+        "customer_helper_hidden_rows": 100003,
+        "customer_helper_outlined_rows": 100003,
+        "customer_count_formula": "COUNTA('pivot diagram'!B181:B100180)",
+        "pivot_calculation_definitions": true,
+        "edited_chart_series": true
+      },
+      "verification": "Read-only comparison of saved XLSX ZIP contents. No Excel launch, workbook modification, refresh or file copy.",
+      "failed_checks": []
+    }
   }
 }

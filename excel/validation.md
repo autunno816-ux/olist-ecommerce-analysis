@@ -85,4 +85,6 @@ The delivered snapshot opens and filters without the external CSV folder. Native
 
 ## File identity
 
-Workbook SHA-256: `5f28015bb217a2aeeb6e1904819797ef38c527a4b1aae293259e3da685e97f27`.
+The author subsequently saved English PivotTable labels in Excel. This release publishes that exact saved file. Read-only inspection confirmed all 32 cached controls, the headline metrics, Welch results, charts, pivots, slicers and collapsed customer helper; the workbook was not resaved by automation.
+
+Workbook SHA-256: `4322ffd33e426c360643e63e54db323549ab4167fe61a86b60c789c6142b43be`.
