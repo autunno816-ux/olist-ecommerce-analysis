@@ -22,8 +22,10 @@ psql -X -h localhost -U postgres -d olist_portfolio -v ON_ERROR_STOP=1 -f sql/se
 
 The import order is customers, orders, products, sellers, order items, payments, reviews, geolocations and category translation. The `psql` script imports all nine files in one transaction and reads local files without changing them. In pgAdmin, import one table at a time in the same order using CSV format, UTF-8 encoding and Header enabled.
 
-Raw files remain local under the ignored `data/raw/` directory. Do not place raw files in `reports/` or `archive/`; those directories are published.
+For SQL reproduction, keep separate raw CSV files under the ignored `data/raw/` directory. Do not place CSV copies in `reports/` or `archive/`; those directories are published. The [Excel supplement](../excel/README.md) separately includes the source worksheets and derived working tables embedded in the supplied workbook, so its saved dashboard opens without a CSV download.
 
-The source publisher describes the data as anonymised commercial records covering 2016–2018. Attribution belongs to Olist and the dataset contributors. Consult the publisher's page for the dataset's current license and conditions. This repository does not redistribute the raw dataset or change its terms. Only aggregate analytical results are committed.
+The source publisher describes the data as anonymised commercial records covering 2016–2018. Attribution belongs to Olist and the dataset contributors. Consult the publisher's page for the dataset's current license and conditions. This repository publishes aggregate analytical results and the Excel workbook's embedded source and working tables; it does not commit the raw CSV files separately or change the source terms.
+
+The Excel workbook preserves six CSV source queries for orders, order items, payments, products, category translation and customers, plus six derived queries. Their original paths point to the author's local `Desktop/Olist ECOMMERCE/data_excel` folder. To refresh on another machine, follow the [Excel refresh instructions](../excel/README.md#refresh-the-source-data); SQL imports continue to use the nine files listed above.
 
 Source-file SHA-256 hashes and byte counts are saved in [metrics.json](../reports/results/metrics.json). They identify the snapshot used here; a new download may differ and should be revalidated rather than assumed identical.

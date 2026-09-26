@@ -2,11 +2,11 @@
 
 **Three business questions, answered with SQL: where sales come from, who returns, and how delivery relates to customer reviews.**
 
-[Power BI report](powerbi/README.md) · [Sales Performance](reports/sales-performance.md) · [Customer Behaviour](reports/customer-behaviour.md) · [Delivery & Satisfaction](reports/delivery-satisfaction.md) · [Methodology](docs/methodology.md)
+[Power BI report](powerbi/README.md) · [Excel supplement](excel/README.md) · [Sales Performance](reports/sales-performance.md) · [Customer Behaviour](reports/customer-behaviour.md) · [Delivery & Satisfaction](reports/delivery-satisfaction.md) · [Methodology](docs/methodology.md)
 
 This portfolio project analyses the Brazilian e-commerce dataset published by Olist. It starts with a relational model and data-quality checks, then uses joins, CTEs and window functions to investigate sales concentration, repeat purchasing and delivery performance.
 
-This is a **PostgreSQL / pgAdmin SQL project with a native Power BI presentation**. The workflow covers relational modelling, CSV import, data-quality checks and business analysis using joins, CTEs, aggregates and window functions. The primary reproduction path runs entirely in PostgreSQL; Python is not required. Power BI presents the reviewed SQL aggregates across three English report pages.
+This is a **PostgreSQL / pgAdmin SQL project with native Power BI and Excel presentations**. The workflow covers relational modelling, CSV import, data-quality checks and business analysis using joins, CTEs, aggregates and window functions. The primary reproduction path runs entirely in PostgreSQL; Python is not required. Power BI presents the reviewed SQL aggregates across three English report pages. The separate Excel supplement adds a filterable dashboard, native PivotTables and a full-history sales and customer analysis using the same metric definitions.
 
 ## Power BI showcase
 
@@ -18,6 +18,14 @@ The PBIX includes an aggregate snapshot and opens without database credentials o
 ![Power BI — Customer Behaviour](powerbi/previews/customer-behaviour.png)
 ![Power BI — Delivery & Satisfaction](powerbi/previews/delivery-satisfaction.png)
 
+## Excel showcase
+
+[Download the workbook](excel/Olist_Excel_Analysis.xlsx) · [Dashboard and refresh guide](excel/README.md) · [Excel validation](excel/validation.md)
+
+The workbook opens with a saved data snapshot. Purchase-year and customer-state slicers update four KPI cards and three charts together. Its analysis sheet retains the full-history category, customer and repurchase findings. The original 12 source and working tables and 12 Power Query definitions are preserved; the supporting PivotTables are native Excel objects.
+
+![Excel — Sales and Customer Dashboard](excel/dashboard.png)
+
 ## At a glance
 
 | Measure | Result | Scope |
@@ -28,7 +36,7 @@ The PBIX includes an aggregate snapshot and opens without database credentials o
 | Merchandise sales | R$13,221,498.11 | Item prices; excludes freight |
 | Delivery-eligible orders | 96,470 | Delivered, with actual and estimated delivery dates |
 
-The source contains purchases from September 2016 to October 2018. Delivered purchases end in August 2018. The monthly sales charts focus on January 2017–August 2018; other headline results use the full observed delivered-order history. These are historical observations, not current Olist performance.
+The source contains purchases from September 2016 to October 2018. Delivered purchases end in August 2018. The SQL and Power BI monthly sales charts focus on January 2017–August 2018; the Excel dashboard and other headline results use the full observed delivered-order history. The [Excel guide](excel/README.md) reconciles the different monthly windows. These are historical observations, not current Olist performance.
 
 ## What the analysis found
 
@@ -45,6 +53,7 @@ These implications are proposals for further work. The dataset does not measure 
 - [Sales Performance](reports/sales-performance.md): monthly volume, revenue growth, state concentration and product categories.
 - [Customer Behaviour](reports/customer-behaviour.md): one-time versus repeat customers, spending quintiles and first repurchase intervals.
 - [Delivery & Satisfaction](reports/delivery-satisfaction.md): delivery speed, late-delivery rates, geographic differences and review scores.
+- [Excel supplement](excel/README.md): interactive year/state dashboard, full-history analysis and native Excel refresh instructions.
 - [Validation report](docs/validation.md): quality checks, metric corrections, reconciliations and limitations.
 - [Original research archive](archive/README.md): all five original SQL files, 15 original charts and the ERD, preserved for provenance.
 
@@ -92,6 +101,7 @@ sql/setup/            PostgreSQL schema, CSV import and data-quality checks
 sql/                  Analytical model, sales, customer and delivery queries, result display and export
 reports/              Research pages, figures and aggregate results
 powerbi/              Native PBIX/PBIP report, PDF, previews and snapshot updater
+excel/                Native Excel workbook, dashboard preview, usage and validation
 docs/                 PostgreSQL setup, metric definitions and validation
 data/                 Dataset instructions; raw CSVs stay local
 archive/              Original PostgreSQL SQL, charts and ERD
@@ -100,7 +110,7 @@ scripts/              Optional chart automation and repository checks
 .github/workflows/    PostgreSQL checks and optional helper checks
 ```
 
-Raw CSVs, database files, environments and credentials are excluded from Git. The source files in `archive/` preserve the original exploratory work; the reviewed scripts in `sql/` are the runnable edition.
+Separate raw CSVs, database files, environments and credentials are excluded from Git. The Excel workbook embeds the source and working worksheets supplied with the original workbook. The source files in `archive/` preserve the original exploratory work; the reviewed scripts in `sql/` are the runnable edition.
 
 ## Analytical decisions
 
@@ -114,6 +124,6 @@ See [methodology](docs/methodology.md) for populations, denominators, exclusions
 
 ## Source and attribution
 
-Data: [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce), published by Olist on Kaggle. The publisher describes it as anonymised commercial data. The raw dataset is not redistributed here; consult the source page for its terms.
+Data: [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce), published by Olist on Kaggle. The publisher describes it as anonymised commercial data. The Excel supplement includes embedded source worksheets and derived analytical tables; raw CSV files are not committed separately. Consult the publisher's page for the dataset's terms; this project does not replace or alter them.
 
 Original SQL analysis and figures: [autunno816-ux](https://github.com/autunno816-ux). Repository packaging, reproducibility scripts and validation refinements were prepared with AI assistance. This is an independent portfolio project, not an official Olist report.

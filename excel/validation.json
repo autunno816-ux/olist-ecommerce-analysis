@@ -1,0 +1,187 @@
+{
+  "workbook": "Olist_Excel_Analysis.xlsx",
+  "sha256": "c2976fad9980805901467b7d57ce5f8ddd3a99bf6864be5b0d2c5419e20dace8",
+  "checks_passed": 21,
+  "source_tables_compared": 12,
+  "source_populated_cells_compared": 7693932,
+  "source_value_mismatches": 0,
+  "scenarios": [
+    {
+      "scenario": "All",
+      "expected": {
+        "label": "All",
+        "year": null,
+        "state": null,
+        "gmv": 13221498.11,
+        "orders": 96478,
+        "customers": 93358,
+        "aov": 137.0415857501192
+      },
+      "actual": {
+        "gmv": 13221498.11001159,
+        "orders": 96478.0,
+        "customers": 93358.0,
+        "aov": 137.04158575023934
+      },
+      "pass": true
+    },
+    {
+      "scenario": "Year 2017",
+      "expected": {
+        "label": "Year 2017",
+        "year": 2017,
+        "state": null,
+        "gmv": 5962902.01,
+        "orders": 43428,
+        "customers": 42136,
+        "aov": 137.30547135488624
+      },
+      "actual": {
+        "gmv": 5962902.010002091,
+        "orders": 43428.0,
+        "customers": 42136.0,
+        "aov": 137.30547135493438
+      },
+      "pass": true
+    },
+    {
+      "scenario": "State SP",
+      "expected": {
+        "label": "State SP",
+        "year": null,
+        "state": "SP",
+        "gmv": 5067633.16,
+        "orders": 40501,
+        "customers": 39156,
+        "aov": 125.12365521838967
+      },
+      "actual": {
+        "gmv": 5067633.160000945,
+        "orders": 40501.0,
+        "customers": 39156.0,
+        "aov": 125.123655218413
+      },
+      "pass": true
+    },
+    {
+      "scenario": "Year 2018 and SP",
+      "expected": {
+        "label": "Year 2018 and SP",
+        "year": 2018,
+        "state": "SP",
+        "gmv": 2919328.17,
+        "orders": 23335,
+        "customers": 22795,
+        "aov": 125.10512834797514
+      },
+      "actual": {
+        "gmv": 2919328.1699998104,
+        "orders": 23335.0,
+        "customers": 22795.0,
+        "aov": 125.10512834796702
+      },
+      "pass": true
+    },
+    {
+      "scenario": "Year 2016 and AP",
+      "expected": {
+        "label": "Year 2016 and AP",
+        "year": 2016,
+        "state": "AP",
+        "gmv": 0.0,
+        "orders": 0,
+        "customers": 0,
+        "aov": null
+      },
+      "actual": {
+        "gmv": 0.0,
+        "orders": 0.0,
+        "customers": 0.0,
+        "aov": "n.a."
+      },
+      "pass": true
+    },
+    {
+      "scenario": "Reset All",
+      "expected": {
+        "label": "Reset All",
+        "year": null,
+        "state": null,
+        "gmv": 13221498.11,
+        "orders": 96478,
+        "customers": 93358,
+        "aov": 137.0415857501192
+      },
+      "actual": {
+        "gmv": 13221498.11001159,
+        "orders": 96478.0,
+        "customers": 93358.0,
+        "aov": 137.04158575023934
+      },
+      "pass": true
+    }
+  ],
+  "native": {
+    "sheets": [
+      "Dashboard",
+      "analysis",
+      "pivot diagram",
+      "checks",
+      "orders",
+      "order_items",
+      "order_payments",
+      "products",
+      "product_category",
+      "customers",
+      "fact_sales",
+      "fact sales delivered",
+      "fact orders",
+      "unique customers",
+      "customer_order_behaviour",
+      "purchase_interval"
+    ],
+    "pivot_count": 10,
+    "pivot_outside_support": [],
+    "charts": 3,
+    "slicer_count": 2,
+    "query_count": 12,
+    "connections": 12,
+    "links": null,
+    "slicers": [
+      {
+        "name": "PurchaseYear",
+        "connected_pivots": 4,
+        "controls": 1
+      },
+      {
+        "name": "CustomerState",
+        "connected_pivots": 4,
+        "controls": 1
+      }
+    ],
+    "chart_series": [
+      {
+        "title": "Monthly GMV (BRL)",
+        "formula": "=SERIES(\"Monthly GMV (BRL)\",'pivot diagram'!$L$102:$L$125,'pivot diagram'!$M$102:$M$125,1)"
+      },
+      {
+        "title": "Monthly delivered orders",
+        "formula": "=SERIES(\"Monthly delivered orders\",'pivot diagram'!$L$102:$L$125,'pivot diagram'!$N$102:$N$125,1)"
+      },
+      {
+        "title": "Top states by GMV (BRL)",
+        "formula": "=SERIES(\"Top states by GMV (BRL)\",'pivot diagram'!$Q$102:$Q$111,'pivot diagram'!$R$102:$R$111,1)"
+      }
+    ]
+  },
+  "errors": {
+    "Dashboard": [],
+    "analysis": [],
+    "checks": []
+  },
+  "interval": {
+    "91_365": 811.0,
+    "over365": 82.0
+  },
+  "pass": true
+}

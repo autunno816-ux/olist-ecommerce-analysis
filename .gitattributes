@@ -7,3 +7,4 @@
 *.png binary
 # Preserve the original research byte-for-byte, including original line endings.
 archive/** -text
+*.xlsx binary
