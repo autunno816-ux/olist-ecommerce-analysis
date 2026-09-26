@@ -1,6 +1,6 @@
 {
   "workbook": "Olist_Excel_Analysis.xlsx",
-  "sha256": "626d1d1e577c20402c106402ca692369c7b2d355652ae8522a7f43a9fdedb802",
+  "sha256": "a5c9252126ecd083f756edadc8e3e72e6f6d8d15dfc5dfa35f6da4d3abb08cde",
   "checks_passed": 32,
   "source_tables_compared": 12,
   "source_populated_cells_compared": 7693932,
@@ -23,6 +23,8 @@
         "customers": 93358.0,
         "aov": 137.04158575023934
       },
+      "research_unchanged": true,
+      "live_chart_totals_match": true,
       "pass": true
     },
     {
@@ -42,6 +44,8 @@
         "customers": 42136.0,
         "aov": 137.30547135493438
       },
+      "research_unchanged": true,
+      "live_chart_totals_match": true,
       "pass": true
     },
     {
@@ -61,6 +65,8 @@
         "customers": 39156.0,
         "aov": 125.123655218413
       },
+      "research_unchanged": true,
+      "live_chart_totals_match": true,
       "pass": true
     },
     {
@@ -80,6 +86,8 @@
         "customers": 22795.0,
         "aov": 125.10512834796702
       },
+      "research_unchanged": true,
+      "live_chart_totals_match": true,
       "pass": true
     },
     {
@@ -99,6 +107,8 @@
         "customers": 0.0,
         "aov": "n.a."
       },
+      "research_unchanged": true,
+      "live_chart_totals_match": true,
       "pass": true
     },
     {
@@ -118,6 +128,8 @@
         "customers": 93358.0,
         "aov": 137.04158575023934
       },
+      "research_unchanged": true,
+      "live_chart_totals_match": true,
       "pass": true
     }
   ],
@@ -170,11 +182,37 @@
       {
         "title": "Top states by GMV (BRL)",
         "formula": "=SERIES(\"Top states by GMV (BRL)\",'pivot diagram'!$Q$102:$Q$111,'pivot diagram'!$R$102:$R$111,1)"
+      },
+      {
+        "title": "Indexed GMV, orders and AOV (Jan 2017 = 100)",
+        "formula": "=SERIES(\"GMV\",analysis!$B$210:$B$229,analysis!$C$210:$C$229,1)"
+      },
+      {
+        "title": "Top 10 categories by GMV (BRL)",
+        "formula": "=SERIES(\"GMV\",analysis!$B$60:$B$69,analysis!$C$60:$C$69,1)"
+      },
+      {
+        "title": "Category GMV Pareto (ranked categories)",
+        "formula": "=SERIES(\"GMV\",'pivot diagram'!$X$41:$X$112,'pivot diagram'!$Y$41:$Y$112,1)"
+      },
+      {
+        "title": "Customer, order and GMV shares",
+        "formula": "=SERIES(\"One-time customer\",analysis!$B$173:$B$175,analysis!$C$173:$C$175,1)"
+      },
+      {
+        "title": "Orders per repeat customer",
+        "formula": "=SERIES(\"Customers\",analysis!$I$161:$I$162,analysis!$J$161:$J$162,1)"
+      },
+      {
+        "title": "Time to second purchase (calendar days)",
+        "formula": "=SERIES(\"Customers\",analysis!$I$71:$I$76,analysis!$J$71:$J$76,1)"
       }
     ],
-    "dashboard_charts": 3,
+    "dashboard_charts": 9,
     "analysis_charts": 11,
-    "total_charts": 14
+    "total_charts": 20,
+    "dashboard_live_charts": 3,
+    "dashboard_full_history_charts": 6
   },
   "errors": {
     "Dashboard": [],
@@ -188,6 +226,170 @@
   "research_scope_checks_passed": 130,
   "research_scope_pass": true,
   "original_chart_subjects_preserved": 13,
+  "style_change_preservation": {
+    "all_preserved": true,
+    "mismatch_count": 0,
+    "compared_cell_counts": {
+      "Dashboard": 4,
+      "analysis": 989,
+      "checks": 208
+    }
+  },
+  "dashboard_expansion": {
+    "dashboard_charts": 9,
+    "analysis_charts": 11,
+    "total_charts": 20,
+    "checks_passed": 32,
+    "added_charts": [
+      {
+        "title": "Indexed GMV, orders and AOV (Jan 2017 = 100)",
+        "range": "B56:L70",
+        "name": "ResearchGrowth"
+      },
+      {
+        "title": "Top 10 categories by GMV (BRL)",
+        "range": "N56:W70",
+        "name": "ResearchCategory"
+      },
+      {
+        "title": "Category GMV Pareto (ranked categories)",
+        "range": "B72:L86",
+        "name": "ResearchPareto"
+      },
+      {
+        "title": "Customer, order and GMV shares",
+        "range": "B93:L107",
+        "name": "ResearchShares"
+      },
+      {
+        "title": "Orders per repeat customer",
+        "range": "N93:W107",
+        "name": "ResearchRepeatDepth"
+      },
+      {
+        "title": "Time to second purchase (calendar days)",
+        "range": "B109:L123",
+        "name": "ResearchInterval"
+      }
+    ],
+    "ttest_card": {
+      "T76": 137.95829543834876,
+      "T77": 122.95855832384238,
+      "T79": -5.595997434259582,
+      "T80": 2.3767438686897664e-08
+    },
+    "table_bands": {
+      "analysis_rows_25_26": [
+        16445930.0,
+        16777215.0
+      ],
+      "checks_rows_7_8": [
+        16445930.0,
+        16777215.0
+      ]
+    },
+    "source_table_styles": [
+      {
+        "table": "olist_orders_dataset",
+        "striped": true
+      },
+      {
+        "table": "olist_order_items_dataset",
+        "striped": true
+      },
+      {
+        "table": "olist_order_payments_dataset",
+        "striped": true
+      },
+      {
+        "table": "olist_products_dataset",
+        "striped": true
+      },
+      {
+        "table": "product_category_name_translation",
+        "striped": true
+      },
+      {
+        "table": "olist_customers_dataset",
+        "striped": true
+      },
+      {
+        "table": "fact_sales",
+        "striped": true
+      },
+      {
+        "table": "fact_sales_delivered",
+        "striped": true
+      },
+      {
+        "table": "fact_orders",
+        "striped": true
+      },
+      {
+        "table": "unique_customers",
+        "striped": true
+      },
+      {
+        "table": "customer_order_behaviour",
+        "striped": true
+      },
+      {
+        "table": "repeat_interval",
+        "striped": true
+      }
+    ],
+    "pivot_table_styles": [
+      {
+        "name": "FullCustomerType",
+        "striped": true
+      },
+      {
+        "name": "DashboardState",
+        "striped": true
+      },
+      {
+        "name": "RepeatOrderFrequency",
+        "striped": true
+      },
+      {
+        "name": "FullCategory",
+        "striped": true
+      },
+      {
+        "name": "DashboardCustomers",
+        "striped": true
+      },
+      {
+        "name": "FullTotals",
+        "striped": true
+      },
+      {
+        "name": "DashboardMonthly",
+        "striped": true
+      },
+      {
+        "name": "DashboardTotals",
+        "striped": true
+      },
+      {
+        "name": "CustomerAOVStatistics",
+        "striped": true
+      },
+      {
+        "name": "FullMonthly",
+        "striped": true
+      },
+      {
+        "name": "FullInterval",
+        "striped": true
+      },
+      {
+        "name": "FullState",
+        "striped": true
+      }
+    ],
+    "pivot_table_style": "OlistPivotBanded"
+  },
   "restored_ttest": {
     "one_time_n": 90557.0,
     "repeat_n": 2801.0,

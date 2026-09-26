@@ -2,28 +2,33 @@
 
 [Project overview](../README.md) · [SQL methodology](../docs/methodology.md) · [Excel validation](validation.md) · [Research preservation map](preservation-map.md)
 
-An interactive Excel supplement to the PostgreSQL project, built from the same historical Olist data. Purchase-year and customer-state slicers connect four KPI cards to monthly GMV, monthly orders and top-state charts.
+An Excel supplement to the PostgreSQL project, built from the same historical Olist data. The dashboard combines a filterable sales overview with six full-history research charts and a customer-level AOV comparison linked to the detailed Welch test.
 
 [Download the workbook](Olist_Excel_Analysis.xlsx)
 
 ![Excel dashboard](dashboard.png)
 
+[Products and growth overview](dashboard-products.png) · [Customer overview](dashboard-customers.png) · [Analysis tables](analysis-banded.png)
+
 ## Use the workbook
 
 Open the downloaded `.xlsx` in desktop Microsoft Excel. The saved workbook includes its data snapshot and can be explored without connecting to PostgreSQL or downloading CSVs separately.
 
-1. Start on `dashboard`. Select a purchase year, a customer state, or both.
-2. Read merchandise GMV, delivered orders, distinct purchasing customers and average order value together with the three charts. All use the same selected orders.
+1. Start on `Dashboard`. Select a purchase year, a customer state, or both.
+2. Read the four KPI cards and three charts in the upper sales area together. Merchandise GMV, delivered orders, distinct purchasing customers, order AOV and these charts all use the selected orders.
 3. Use each slicer's clear button to return to the full delivered-order history.
-4. Open `analysis` for the original research: monthly and indexed growth, category concentration and pricing, customer contribution, Welch t-test, repeat-order frequency, first-repeat timing and state comparisons. These tables and charts do not respond to dashboard slicers.
+4. Scroll to the clearly labelled research sections for indexed growth, top categories, category Pareto, customer contribution, repeat depth and first-repeat timing. These six charts and the customer-level AOV card use the full research population and remain unchanged by the slicers. The index chart retains its January 2017–August 2018 window.
+5. Follow the customer AOV card's test link to `analysis!B140`. Open `analysis` for all original research tables and its 11 charts, including category pricing, exact repeat frequencies and state comparisons.
 
-All 12 native PivotTables are on `pivot diagram`. Eight support the full-history analysis; four support the dashboard. Both slicers connect to all four dashboard pivots, including the distinct-customer pivot. There are 11 native analysis charts and three live dashboard charts. The original 12 source and working tables and 12 Power Query definitions are preserved. The dashboard's order data comes from the existing `fact_orders` query table, with an added `purchase_year` formula column.
+All 12 native PivotTables are on `pivot diagram`: eight unfiltered research pivots and four slicer-connected pivots. Both slicers connect to all four selected-population pivots, including the distinct-customer pivot. The workbook has **20 native charts: 11 on analysis and nine on Dashboard**, comprising three live charts and six full-history research charts. The original 12 source and working tables and 12 Power Query definitions are retained. The dashboard's order data comes from the existing `fact_orders` query table, with an added `purchase_year` formula column.
+
+Section bars and alternating white/pale-blue rows organise the analysis and checks tables. Source and working tables use Excel's banded `TableStyleMedium2`; all 12 pivots use the native `OlistPivotBanded` style with alternating pale-blue/white rows, blue headers and totals. The full research remains on `analysis`; dashboard copies provide a compact overview.
 
 ## Original research preserved
 
-The original workbook's 33 chart objects repeated 13 distinct subjects across worksheets. All 13 subjects are retained in 14 editable charts, with duplicate copies consolidated and formatting standardised. The [preservation map](preservation-map.md) records the original and current locations of every subject and supporting analytical block.
+The original workbook's 33 chart objects repeated 13 distinct subjects across worksheets. All 13 subjects remain in the complete analysis and live dashboard; six research views are additionally displayed on the dashboard. The resulting 20 editable charts retain the original analytical scope. The [preservation map](preservation-map.md) records the original and current locations, including the dashboard overview copies.
 
-The customer analysis retains the original **customer-level Welch t-test**: t = −5.5959974343, with a two-sided Excel p-value of approximately 2.38 × 10⁻⁸. Each customer contributes one average order value to this test. The repeat-customer mean is R$122.96; segment order-weighted AOV remains a separate R$123.02 measure. See the [test definitions and interpretation](customer-welch-note.md).
+The customer analysis retains the original **customer-level Welch t-test**: t = −5.5959974343, with a two-sided Excel p-value of approximately 2.38 × 10⁻⁸. Each customer contributes one average order value to this test. The dashboard's full-history customer AOV card compares R$137.96 for one-time customers with R$122.96 for repeat customers. Segment order-weighted repeat AOV remains a separate R$123.02 measure. See the [test definitions and interpretation](customer-welch-note.md).
 
 ![Customer-level Welch t-test and repeat-purchase detail](analysis-ttest.png)
 
@@ -76,7 +81,7 @@ The saved snapshot, native pivot refresh and Excel recalculation were verified. 
 
 ## Validation and source
 
-The source preservation comparison checked **7,693,932 nonempty cells** across the original 12 source and working tables and found **zero mismatches** in the original table ranges. Separately, **32 workbook checks**, **six native slicer scenarios** and **130 independent saved-file checks** passed, including research coverage, restored calculations, chart series and shifted references. The dashboard and four analysis previews were visually inspected. See [Excel validation](validation.md) for the verification scope.
+The expanded workbook passed **32 workbook checks** and **six native slicer scenarios**. In every scenario, the monthly GMV and order chart totals matched the filtered KPIs, while the six research views remained unchanged. The expansion preserved **989 analysis cells, 208 checks cells, four KPI cells, all 11 analysis-chart series and the pivot/slicer sources**, with zero mismatches. The original source comparison covered 7,693,932 nonempty cells, and the restored research passed 130 independent saved-file checks. Dashboard and analysis previews were visually reviewed. See [Excel validation](validation.md) for the verification scope.
 
 Data: [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce), published by Olist on Kaggle and described by the publisher as anonymised commercial data. This workbook embeds the source worksheets and derived working tables supplied with the original Excel analysis. Raw CSVs are not committed separately. Consult the publisher's page for the dataset's terms; this project does not replace or alter them.
 

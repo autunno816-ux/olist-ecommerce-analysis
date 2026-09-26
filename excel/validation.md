@@ -1,6 +1,12 @@
 # Excel validation
 
-Validated on 26 September 2026 against the same original CSV snapshot as the reviewed PostgreSQL project.
+Validated on 26 September 2026 against the same original CSV snapshot as the reviewed PostgreSQL project. The expanded nine-chart dashboard passed native interaction checks, formula/data-preservation checks and visual review.
+
+## Expanded dashboard verification
+
+The dashboard contains three slicer-controlled sales charts and six full-history research charts. The latter cover indexed growth, top categories, Pareto concentration, customer/order/GMV shares, repeat depth and first-repeat intervals. A separate full-history customer AOV card links to the Welch test. The research charts and card remained unchanged through all six upper sales selections.
+
+The final inventory confirms 20 chart objects (11 analysis and nine dashboard), 12 pivots and two slicers. The six research charts retain their analysis sources, and the `Dashboard!N85` link points to `analysis!B140`. A before/after comparison found zero mismatches across 989 analysis cells, 208 checks cells and four dashboard KPI cells, with all 11 analysis-chart series and the pivot/slicer sources unchanged. Native visual review covered the three dashboard sections through `A1:W126` and the banded analysis tables.
 
 ## Controls and definitions
 
@@ -29,13 +35,13 @@ The saved workbook was reopened in desktop Microsoft Excel 16.0. Native slicer s
 
 The zero-result selection returns zero GMV, orders and customers, with `n.a.` for AOV. Both slicers were cleared before the final save. The all-history controls were then rechecked.
 
-Both slicers connect to the same four dashboard PivotTables. The distinct-customer pivot contains one row per selected person, so the KPI does not sum overlapping monthly/state customer counts. The three charts reference formula-backed cells tied to the filtered pivots. Their calendar stays fixed at September 2016-August 2018; excluded months show zero selected orders and GMV.
+Both slicers connect to the same four selected-population PivotTables. The distinct-customer pivot contains one row per selected person, so the KPI does not sum overlapping monthly/state customer counts. The upper three charts reference formula-backed cells tied to the filtered pivots. Their calendar stays fixed at September 2016-August 2018; excluded months show zero selected orders and GMV. All six scenarios passed both the monthly GMV/order chart totals check and the research-invariance check: the six research charts and customer-level AOV card retained the same full-history values, including when the upper selection contained no orders.
 
 ## Workbook reconciliation
 
 All **32 controls** on `checks` passed in the saved all-history view: the original 21 controls plus 11 checks for the restored analysis. They compare source tables, headline metrics, monthly/state/category totals, customer segments, repeat intervals and dashboard values, and verify Welch statistics, customer-level means, repeat frequency and indexed-series baselines. Full-history dashboard controls ask the reader to check filters when a selection differs from the full population.
 
-No unexpected cached formula errors were found in `Dashboard`, `analysis` or `checks`. The workbook has **12 native PivotTables**, all on `pivot diagram` (eight full-history analysis and four dashboard), two native slicer caches and **14 editable Excel charts** (11 analysis and three dashboard). It has no external workbook links. All 12 original Power Query definitions and their connections were retained. The intentional `#N/A` in `'pivot diagram'!AB123` creates the November 2016 AOV chart gap because that month has no orders.
+No unexpected formula errors were found in `Dashboard`, `analysis` or `checks`. The workbook has **12 native PivotTables**, all on `pivot diagram` (eight unfiltered research and four slicer-connected), two native slicer caches and **20 editable Excel charts** (11 analysis and nine dashboard). The dashboard contains three live charts plus six full-history research charts. There are no external workbook links, and all 12 original Power Query definitions and connections are retained. The intentional `#N/A` in `'pivot diagram'!AB123` creates the November 2016 AOV chart gap because that month has no orders.
 
 Twelve retained source tables were compared with the original workbook over 7,693,932 populated cells. There were zero value mismatches. The original `fact_orders` columns A:I are unchanged; the added `purchase_year` formula column supplies the year slicer.
 
@@ -43,7 +49,9 @@ Twelve retained source tables were compared with the original workbook over 7,69
 
 The original workbook contains 33 chart objects representing 13 distinct subjects. All 13 subjects are retained, with duplicate chart copies consolidated. The [preservation map](preservation-map.md) records original and restored ranges for the chart subjects and substantive analytical blocks. Source-cell preservation was checked separately from preservation of the research scope.
 
-An independent inspection of the saved workbook's ZIP/XML contents passed **130 checks**, including all 13 subjects, restored test statistics, exact repeat-order frequencies, indexed values, shifted formula references and chart series point counts. The final saved workbook was checked again after all six slicer scenarios, with both filters cleared; all 32 workbook controls still passed.
+The expanded dashboard adds six overview copies of existing research charts. All 11 analysis charts and the detailed calculations remain in place. Formatting changes apply banded `TableStyleMedium2` to the 12 retained tables and alternating white/pale-blue rows across 14 analysis/checks table bodies. All 12 pivots use the native custom `OlistPivotBanded` style; four rendered pivot samples confirmed visible alternating pale-blue/white bands, blue headers and totals. After this final style change, the before/after comparison again found zero mismatches in the preserved analysis/checks/KPI cells, analysis-chart series and pivot/slicer sources, and all 32 workbook controls passed.
+
+The restored research passed **130 independent ZIP/XML checks**, including all 13 subjects, restored test statistics, exact repeat-order frequencies, indexed values, shifted formula references and chart series point counts. The subsequent dashboard expansion passed the preservation comparison described above. All 32 workbook controls passed again after all six native slicer scenarios, with both filters cleared for the saved view.
 
 | Restored calculation | Verified result |
 | --- | --- |
@@ -69,10 +77,10 @@ An independent CSV/SciPy calculation reproduced the Welch result. Using the full
 
 ## Visual and refresh verification
 
-The dashboard and four restored analysis pages were rendered through native Excel and visually inspected: [dashboard](dashboard.png), [Welch test and repeat-purchase detail](analysis-ttest.png), [growth](analysis-growth.png), [category ranking and Pareto](analysis-pareto.png), and [pricing and repeat timing](analysis-scatter.png). Reconciliation views were also reviewed. Controls, titles, currency formats, typography and chart labels were checked for legibility.
+Native Excel previews were visually inspected: [live sales overview](dashboard.png), [products and growth](dashboard-products.png), [customer overview](dashboard-customers.png), [banded analysis tables](analysis-banded.png), [Welch test](analysis-ttest.png), [growth](analysis-growth.png), [category Pareto](analysis-pareto.png), and [pricing and repeat timing](analysis-scatter.png). The review checked all dashboard sections, scope labels, source-table and analysis banding, chart labels, and readable text without clipping or unintended black fills.
 
 The delivered snapshot opens and filters without the external CSV folder. Native PivotTables were rebuilt/refreshed from retained tables and formulas recalculated. External Power Query `Refresh All` was not run as part of this release. Its source queries still refer to the original local CSV folder. Follow the [refresh steps](README.md#refresh-the-source-data) before attempting to load a different dataset; independent controls and written insights must also be updated.
 
 ## File identity
 
-Workbook SHA-256: `626d1d1e577c20402c106402ca692369c7b2d355652ae8522a7f43a9fdedb802`.
+Workbook SHA-256: `a5c9252126ecd083f756edadc8e3e72e6f6d8d15dfc5dfa35f6da4d3abb08cde`.

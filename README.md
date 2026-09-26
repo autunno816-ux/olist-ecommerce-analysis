@@ -22,9 +22,11 @@ The PBIX includes an aggregate snapshot and opens without database credentials o
 
 [Download the workbook](excel/Olist_Excel_Analysis.xlsx) · [Dashboard and refresh guide](excel/README.md) · [Excel validation](excel/validation.md)
 
-The workbook opens with a saved data snapshot. Purchase-year and customer-state slicers update four KPI cards and three charts together. Its analysis sheet retains the full-history category, customer and repurchase findings. The original 12 source and working tables and 12 Power Query definitions are preserved; the supporting PivotTables are native Excel objects.
+The workbook opens with a saved data snapshot. Purchase-year and customer-state slicers update four KPI cards and three charts in the upper dashboard area. Separate research sections add six full-history charts and a customer-level AOV card linked to the original Welch test. All detailed research and 11 charts remain on `analysis`. The original 12 source and working tables and 12 Power Query definitions are retained; the supporting PivotTables and all 20 charts are native Excel objects.
 
 ![Excel — Sales and Customer Dashboard](excel/dashboard.png)
+
+[Products and growth](excel/dashboard-products.png) · [Customer overview](excel/dashboard-customers.png) · [Research preservation map](excel/preservation-map.md)
 
 ## At a glance
 
@@ -36,7 +38,7 @@ The workbook opens with a saved data snapshot. Purchase-year and customer-state 
 | Merchandise sales | R$13,221,498.11 | Item prices; excludes freight |
 | Delivery-eligible orders | 96,470 | Delivered, with actual and estimated delivery dates |
 
-The source contains purchases from September 2016 to October 2018. Delivered purchases end in August 2018. The SQL and Power BI monthly sales charts focus on January 2017–August 2018; the Excel dashboard and other headline results use the full observed delivered-order history. The [Excel guide](excel/README.md) reconciles the different monthly windows. These are historical observations, not current Olist performance.
+The source contains purchases from September 2016 to October 2018. Delivered purchases end in August 2018. The SQL and Power BI monthly sales charts focus on January 2017–August 2018. Excel's monthly levels and other headline results use the full observed delivered-order history; its indexed growth comparison intentionally retains January 2017–August 2018. The [Excel guide](excel/README.md) reconciles the different monthly windows. These are historical observations, not current Olist performance.
 
 ## What the analysis found
 

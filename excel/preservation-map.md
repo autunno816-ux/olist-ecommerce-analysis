@@ -1,10 +1,10 @@
 # Original research preservation map
 
-Verified on 26 September 2026. Native Excel recalculation, six slicer scenarios and an independent saved-file review confirmed the locations and controls below. See [validation](validation.md) and the [customer-level Welch note](customer-welch-note.md).
+Verified on 26 September 2026 by native Excel recalculation, six slicer scenarios, independent saved-file review and a before/after comparison of the dashboard expansion. The six additional dashboard research views retained their analysis sources and remained unchanged under every filter scenario. See [validation](validation.md) and the [customer-level Welch note](customer-welch-note.md).
 
 The refinement preserves the original analytical questions, calculations, distributions and chart subjects. It standardises formatting and consolidates duplicate chart copies. The analytical scope includes the customer-level Welch t-test, indexed monthly comparison, category price and Pareto analysis, customer shares, full repeat-order frequency distribution, first-repeat intervals and state comparisons.
 
-The original workbook contains **33 chart objects representing 13 distinct subjects**: 13 charts on `analysis`, with additional copies on `pivot diagram` and `Dashboard`. The revised layout contains **11 native analysis charts plus three live dashboard charts**. Every original subject has a mapped replacement, with series and calculated results checked.
+The original workbook contains **33 chart objects representing 13 distinct subjects**: 13 charts on `analysis`, with additional copies on `pivot diagram` and `Dashboard`. The expanded layout contains **20 charts: 11 on analysis and nine on Dashboard**. The dashboard contains three live charts plus six unfiltered research views. Every original subject remains mapped to the complete research; the six overview copies do not replace analytical detail.
 
 ## Original chart subjects
 
@@ -27,6 +27,23 @@ Original locations refer to the supplied workbook before refinement. An anchor i
 | C13 | State order count versus AOV | `analysis!BN21:BU37` | `'pivot diagram'!BQ1:BW12`; `analysis!BI1:BL31` | State scatter with stated sample and units | `analysis!I315:M336`; verified |
 
 The restored state scatter uses the top 10 states by delivered orders, the same ten-state set as the original selected major-state comparison. Rebuilt chart series exclude summary rows. The dashboard monthly-order chart at `Dashboard!B37:O50` supplements these 13 subjects. C01 and C11 reproduce the full-history subjects when the dashboard slicers are cleared; their filtered state is an additional interactive view.
+
+## Additional dashboard research views
+
+These six charts use the existing unfiltered research sources. Dashboard section bars at rows 53 and 89 identify the research areas. The upper three live charts retain their existing locations and filter behavior. Source bindings, filter invariance and native visual output were checked for the additions.
+
+| Original subject | Complete analysis chart | Dashboard overview copy | Expansion verification |
+| --- | --- | --- | --- |
+| C04 — Indexed GMV, orders and AOV | `analysis!I207:M229` | `Dashboard!B56:L70` | PASS |
+| C05 — Top 10 categories by GMV | `analysis!B263:G284` | `Dashboard!N56:W70` | PASS |
+| C06 — Category GMV Pareto | `analysis!I263:M284` | `Dashboard!B72:L86` | PASS |
+| C08 — Customer/order/GMV shares | `analysis!B182:G202` | `Dashboard!B93:L107` | PASS |
+| C09 — Repeat depth | `analysis!I182:M202` | `Dashboard!N93:W107` | PASS |
+| C10 — Time to second purchase | `analysis!I289:M310` | `Dashboard!B109:L123` | PASS |
+
+The full-history customer AOV card occupies `Dashboard!N72:W86`. Its mean values are at `T76:T77`, t statistic at `T79`, p-value at `T80`, and test link at `N85` points to `analysis!B140`. These values use equal customer weighting and do not follow the dashboard slicers. The detailed test and exact repeat-frequency tables remain on `analysis`. A compact findings area at `Dashboard!N109:W123` complements the chart views; the complete dashboard occupies `A1:W126`.
+
+Research views use September 2016–August 2018, with the intentionally retained exception of the indexed comparison: January 2017–August 2018, January 2017 = 100.
 
 ## Calculations and supporting detail
 
@@ -55,6 +72,6 @@ The restored state scatter uses the top 10 states by delivered orders, the same 
 | Repeat-frequency reconciliation | 2,801 people; weighted bucket orders sum to 5,921; exactly two = 91.86004998%; three-plus = 228 people |
 | First-repeat intervals | Same day / 1–7 / 8–30 / 31–90 / 91–365 / over 365 days → 829/199/388/492/811/82 |
 | Welch t-test | t ≈ −5.5959974343; df ≈ 3,229.060207778; original Excel two-sided p ≈ 2.3767438687 × 10⁻⁸ |
-| Chart coverage | All C01–C13 mapped; 11 native analysis charts + 3 live dashboard charts; series checked and native previews visually inspected |
+| Chart coverage | All C01–C13 mapped; 11 analysis + nine dashboard charts; six added research views retain their source bindings and are unchanged by filters |
 
-Source-table preservation and research-scope preservation were verified separately. The comparison of 7,693,932 nonempty source/working cells found zero mismatches. The restored research also passed 32 workbook controls and 130 independent saved-file checks, covering analytical blocks, shifted formulas, chart subjects and series point counts. Six native slicer scenarios passed; final saved filters are cleared. The dashboard and four restored analysis previews were visually inspected.
+Source-table preservation and research-scope preservation were verified separately. The source comparison covered 7,693,932 nonempty cells with zero mismatches, and the restored research passed 130 independent saved-file checks. The expanded dashboard passed all 32 workbook controls and six native slicer scenarios: monthly GMV and order chart totals matched the filtered KPIs, while all six research views remained unchanged. A further comparison found zero mismatches across 989 analysis cells, 208 checks cells and four KPI cells; all 11 analysis-chart series and pivot/slicer sources were preserved. Native dashboard and analysis previews were visually inspected.
