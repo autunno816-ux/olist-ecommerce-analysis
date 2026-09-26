@@ -1,6 +1,6 @@
 # Olist Excel analysis
 
-[Project overview](../README.md) · [SQL methodology](../docs/methodology.md) · [Excel validation](validation.md)
+[Project overview](../README.md) · [SQL methodology](../docs/methodology.md) · [Excel validation](validation.md) · [Research preservation map](preservation-map.md)
 
 An interactive Excel supplement to the PostgreSQL project, built from the same historical Olist data. Purchase-year and customer-state slicers connect four KPI cards to monthly GMV, monthly orders and top-state charts.
 
@@ -15,9 +15,21 @@ Open the downloaded `.xlsx` in desktop Microsoft Excel. The saved workbook inclu
 1. Start on `dashboard`. Select a purchase year, a customer state, or both.
 2. Read merchandise GMV, delivered orders, distinct purchasing customers and average order value together with the three charts. All use the same selected orders.
 3. Use each slicer's clear button to return to the full delivered-order history.
-4. Open `analysis` for the full-history category, customer-segment and first-repeat findings. These tables and written insights do not respond to dashboard slicers.
+4. Open `analysis` for the original research: monthly and indexed growth, category concentration and pricing, customer contribution, Welch t-test, repeat-order frequency, first-repeat timing and state comparisons. These tables and charts do not respond to dashboard slicers.
 
-All 10 native PivotTables are on `pivot diagram`. Six support the full-history analysis; four support the dashboard. Both slicers connect to all four dashboard pivots, including the distinct-customer pivot. The original 12 source and working tables and 12 Power Query definitions are preserved. The dashboard's order data comes from the existing `fact_orders` query table, with an added `purchase_year` formula column.
+All 12 native PivotTables are on `pivot diagram`. Eight support the full-history analysis; four support the dashboard. Both slicers connect to all four dashboard pivots, including the distinct-customer pivot. There are 11 native analysis charts and three live dashboard charts. The original 12 source and working tables and 12 Power Query definitions are preserved. The dashboard's order data comes from the existing `fact_orders` query table, with an added `purchase_year` formula column.
+
+## Original research preserved
+
+The original workbook's 33 chart objects repeated 13 distinct subjects across worksheets. All 13 subjects are retained in 14 editable charts, with duplicate copies consolidated and formatting standardised. The [preservation map](preservation-map.md) records the original and current locations of every subject and supporting analytical block.
+
+The customer analysis retains the original **customer-level Welch t-test**: t = −5.5959974343, with a two-sided Excel p-value of approximately 2.38 × 10⁻⁸. Each customer contributes one average order value to this test. The repeat-customer mean is R$122.96; segment order-weighted AOV remains a separate R$123.02 measure. See the [test definitions and interpretation](customer-welch-note.md).
+
+![Customer-level Welch t-test and repeat-purchase detail](analysis-ttest.png)
+
+Other native Excel previews: [indexed and monthly growth](analysis-growth.png) · [category ranking and Pareto analysis](analysis-pareto.png) · [category pricing and repeat timing](analysis-scatter.png).
+
+The exact repeat-order distribution is retained: 2/3/4/5/6/7/9/15 orders correspond to 2,573/181/28/9/5/3/1/1 customers. Category analysis retains all 72 categories, average item price and the cumulative GMV curve: the first 18 categories cross 80% of GMV.
 
 ## Metric definitions
 
@@ -34,7 +46,7 @@ The Power Query order table aggregates item values to one row per delivered orde
 
 With both filters cleared, the controls are **R$13,221,498.11 GMV**, **96,478 delivered orders**, **93,358 purchasing customers** and **R$137.04 AOV**. Delivered purchases span **15 September 2016–29 August 2018**.
 
-The Excel monthly charts cover the full delivered-order history. The SQL and Power BI monthly series deliberately covers January 2017–August 2018 and totals R$13,181,027.13 across 96,211 orders. The difference is 267 delivered orders worth R$40,470.98 purchased in 2016; the two scopes reconcile. The full-history monthly analysis includes November 2016 as a zero-order month.
+Excel's monthly levels and full-history analyses cover September 2016–August 2018. The original indexed comparison intentionally covers January 2017–August 2018, with January 2017 = 100 for GMV, orders and AOV. The SQL and Power BI monthly series uses that same January 2017–August 2018 window and totals R$13,181,027.13 across 96,211 orders. The full-history difference is 267 delivered orders worth R$40,470.98 purchased in 2016; the two scopes reconcile. November 2016 is retained as a zero-order month, with unavailable AOV shown as a gap.
 
 ## Six findings
 
@@ -64,7 +76,7 @@ The saved snapshot, native pivot refresh and Excel recalculation were verified. 
 
 ## Validation and source
 
-The preservation comparison checked **7,693,932 nonempty cells** across the original 12 source and working tables and found **zero mismatches** in the original table ranges. The added year column supports the dashboard filters. See [Excel validation](validation.md) for metric checks and native workbook verification.
+The source preservation comparison checked **7,693,932 nonempty cells** across the original 12 source and working tables and found **zero mismatches** in the original table ranges. Separately, **32 workbook checks**, **six native slicer scenarios** and **130 independent saved-file checks** passed, including research coverage, restored calculations, chart series and shifted references. The dashboard and four analysis previews were visually inspected. See [Excel validation](validation.md) for the verification scope.
 
 Data: [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce), published by Olist on Kaggle and described by the publisher as anonymised commercial data. This workbook embeds the source worksheets and derived working tables supplied with the original Excel analysis. Raw CSVs are not committed separately. Consult the publisher's page for the dataset's terms; this project does not replace or alter them.
 

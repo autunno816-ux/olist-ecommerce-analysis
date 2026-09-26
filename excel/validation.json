@@ -1,7 +1,7 @@
 {
   "workbook": "Olist_Excel_Analysis.xlsx",
-  "sha256": "c2976fad9980805901467b7d57ce5f8ddd3a99bf6864be5b0d2c5419e20dace8",
-  "checks_passed": 21,
+  "sha256": "626d1d1e577c20402c106402ca692369c7b2d355652ae8522a7f43a9fdedb802",
+  "checks_passed": 32,
   "source_tables_compared": 12,
   "source_populated_cells_compared": 7693932,
   "source_value_mismatches": 0,
@@ -140,9 +140,8 @@
       "customer_order_behaviour",
       "purchase_interval"
     ],
-    "pivot_count": 10,
+    "pivot_count": 12,
     "pivot_outside_support": [],
-    "charts": 3,
     "slicer_count": 2,
     "query_count": 12,
     "connections": 12,
@@ -172,7 +171,10 @@
         "title": "Top states by GMV (BRL)",
         "formula": "=SERIES(\"Top states by GMV (BRL)\",'pivot diagram'!$Q$102:$Q$111,'pivot diagram'!$R$102:$R$111,1)"
       }
-    ]
+    ],
+    "dashboard_charts": 3,
+    "analysis_charts": 11,
+    "total_charts": 14
   },
   "errors": {
     "Dashboard": [],
@@ -183,5 +185,124 @@
     "91_365": 811.0,
     "over365": 82.0
   },
+  "research_scope_checks_passed": 130,
+  "research_scope_pass": true,
+  "original_chart_subjects_preserved": 13,
+  "restored_ttest": {
+    "one_time_n": 90557.0,
+    "repeat_n": 2801.0,
+    "one_time_mean": 137.95829543834876,
+    "repeat_mean": 122.95855832384238,
+    "one_time_sd": 211.7013125775874,
+    "repeat_sd": 136.8878164626965,
+    "difference": -14.999737114506374,
+    "se": 2.680440313048682,
+    "t": -5.595997434259582,
+    "df": 3229.060207778023,
+    "p": 2.3767438686897664e-08,
+    "decision": "Reject H0",
+    "ci_lower": -20.255273573786937,
+    "ci_upper": -9.744200655225809
+  },
+  "independent_ttest_from_csv": {
+    "one_time_n": 90557,
+    "repeat_n": 2801,
+    "one_time_mean": 137.95829543823226,
+    "repeat_mean": 122.95855832384126,
+    "one_time_sd": 211.70131257759022,
+    "repeat_sd": 136.88781646269734,
+    "t": -5.5959974342165,
+    "p": 2.376740337558702e-08,
+    "df": 3229.060207778028,
+    "p_integer_df": 2.3767438692743723e-08,
+    "ci": [
+      -20.2552735369266,
+      -9.74420069185539
+    ]
+  },
+  "restored_frequency": [
+    [
+      2.0,
+      2573.0,
+      0.9186004998214923
+    ],
+    [
+      3.0,
+      181.0,
+      0.06461977865048198
+    ],
+    [
+      4.0,
+      28.0,
+      0.009996429846483398
+    ],
+    [
+      5.0,
+      9.0,
+      0.0032131381649410924
+    ],
+    [
+      6.0,
+      5.0,
+      0.001785076758300607
+    ],
+    [
+      7.0,
+      3.0,
+      0.0010710460549803642
+    ],
+    [
+      9.0,
+      1.0,
+      0.0003570153516601214
+    ],
+    [
+      15.0,
+      1.0,
+      0.0003570153516601214
+    ]
+  ],
+  "restored_indices_last": [
+    "2018-08",
+    750.0795539398083,
+    846.8,
+    88.57812398911294
+  ],
+  "saved_workbook_check_cells": {
+    "F7": "PASS",
+    "F8": "PASS",
+    "F9": "PASS",
+    "F10": "PASS",
+    "F11": "PASS",
+    "F12": "PASS",
+    "F13": "PASS",
+    "F14": "PASS",
+    "F15": "PASS",
+    "F16": "PASS",
+    "F17": "PASS",
+    "F18": "PASS",
+    "F19": "PASS",
+    "F20": "PASS",
+    "F21": "PASS",
+    "F22": "PASS",
+    "F23": "PASS",
+    "F24": "PASS",
+    "F25": "PASS",
+    "F26": "PASS",
+    "F27": "PASS",
+    "F44": "PASS",
+    "F45": "PASS",
+    "F46": "PASS",
+    "F47": "PASS",
+    "F48": "PASS",
+    "F49": "PASS",
+    "F50": "PASS",
+    "F51": "PASS",
+    "F52": "PASS",
+    "F53": "PASS",
+    "F54": "PASS"
+  },
+  "intentional_chart_gap": "'pivot diagram'!AB123 is #N/A for November 2016 AOV because no orders exist.",
+  "external_power_query_refresh_tested": false,
   "pass": true
 }
